@@ -15,5 +15,7 @@ namespace grupo3.prototipos.CAI
         public DateTime FechaArriboVuelo { get; set; }
         public string TiempoDeVueloVuelo { get; set; }
         public string AerolineaVuelo { get; set; }
+
+        //CAMBIO PRUEBA
     }
 }
