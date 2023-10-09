@@ -8,5 +8,6 @@ namespace grupo3.prototipos.CAI
 {
     internal class Parada
     {
+        //a
     }
 }
