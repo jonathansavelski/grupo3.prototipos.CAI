@@ -17,5 +17,6 @@ namespace grupo3.prototipos.CAI
         public string AerolineaVuelo { get; set; }
 
         //CAMBIO PRUEBA
+        //cambiosssssssssssssssssssss
     }
 }
