@@ -50,5 +50,10 @@ namespace grupo3.prototipos.CAI
                 VuelosListView.Items.Add(item); //Llenamos la grilla
             }
         }
+
+        private void VuelosListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
