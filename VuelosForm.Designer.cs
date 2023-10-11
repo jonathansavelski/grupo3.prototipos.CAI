@@ -60,6 +60,7 @@
             dateTimePicker1 = new DateTimePicker();
             AplicarFiltrosButton = new Button();
             lblFechaSalida = new Label();
+            button1 = new Button();
             grpVuelo.SuspendLayout();
             MasInformacionGrp.SuspendLayout();
             SuspendLayout();
@@ -126,9 +127,9 @@
             InformacionVueloButton.Location = new Point(12, 226);
             InformacionVueloButton.Margin = new Padding(3, 2, 3, 2);
             InformacionVueloButton.Name = "InformacionVueloButton";
-            InformacionVueloButton.Size = new Size(168, 22);
+            InformacionVueloButton.Size = new Size(136, 30);
             InformacionVueloButton.TabIndex = 6;
-            InformacionVueloButton.Text = "Ver información del vuelo";
+            InformacionVueloButton.Text = "Ver más información";
             InformacionVueloButton.UseVisualStyleBackColor = true;
             InformacionVueloButton.Click += InformacionVueloButton_Click;
             // 
@@ -159,7 +160,7 @@
             // lblTarifas
             // 
             lblTarifas.AutoSize = true;
-            lblTarifas.Location = new Point(12, 124);
+            lblTarifas.Location = new Point(12, 133);
             lblTarifas.Name = "lblTarifas";
             lblTarifas.Size = new Size(43, 15);
             lblTarifas.TabIndex = 4;
@@ -293,11 +294,21 @@
             lblFechaSalida.TabIndex = 14;
             lblFechaSalida.Text = "Filtrar por FechaSalida:";
             // 
+            // button1
+            // 
+            button1.Location = new Point(154, 227);
+            button1.Name = "button1";
+            button1.Size = new Size(136, 29);
+            button1.TabIndex = 15;
+            button1.Text = "Añadir a itinerario";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // VuelosForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1078, 536);
+            Controls.Add(button1);
             Controls.Add(lblFechaSalida);
             Controls.Add(AplicarFiltrosButton);
             Controls.Add(dateTimePicker1);
@@ -347,5 +358,6 @@
         private ColumnHeader CodigoServicioHeader;
         private ColumnHeader DescripcionServicioHeader;
         private ColumnHeader TarifaServicioHeader;
+        private Button button1;
     }
 }
