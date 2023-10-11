@@ -16,5 +16,10 @@ namespace grupo3.prototipos.CAI
         {
             InitializeComponent();
         }
+
+        private void CrucerosForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

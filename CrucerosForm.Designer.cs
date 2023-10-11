@@ -291,6 +291,7 @@
             Controls.Add(grpCrucero);
             Name = "CrucerosForm";
             Text = "CrucerosForm";
+            Load += CrucerosForm_Load;
             grpCrucero.ResumeLayout(false);
             MasInformacionGrp.ResumeLayout(false);
             MasInformacionGrp.PerformLayout();
