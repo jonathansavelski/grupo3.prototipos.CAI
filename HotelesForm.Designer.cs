@@ -66,7 +66,7 @@
             grpHotel.Margin = new Padding(3, 4, 3, 4);
             grpHotel.Name = "grpHotel";
             grpHotel.Padding = new Padding(3, 4, 3, 4);
-            grpHotel.Size = new Size(834, 245);
+            grpHotel.Size = new Size(1039, 245);
             grpHotel.TabIndex = 5;
             grpHotel.TabStop = false;
             grpHotel.Text = "Hoteles disponibles:";
@@ -79,7 +79,7 @@
             listViewHoteles.Margin = new Padding(3, 4, 3, 4);
             listViewHoteles.MultiSelect = false;
             listViewHoteles.Name = "listViewHoteles";
-            listViewHoteles.Size = new Size(820, 209);
+            listViewHoteles.Size = new Size(1005, 201);
             listViewHoteles.TabIndex = 0;
             listViewHoteles.UseCompatibleStateImageBehavior = false;
             listViewHoteles.View = View.Details;
