@@ -91,7 +91,7 @@
             grpPaquete.Controls.Add(lvPaquetes);
             grpPaquete.Location = new Point(9, 39);
             grpPaquete.Name = "grpPaquete";
-            grpPaquete.Size = new Size(1043, 190);
+            grpPaquete.Size = new Size(1132, 190);
             grpPaquete.TabIndex = 18;
             grpPaquete.TabStop = false;
             grpPaquete.Text = "Listado de paquetes disponibles. Seleccione:";
@@ -103,49 +103,56 @@
             lvPaquetes.Location = new Point(3, 18);
             lvPaquetes.MultiSelect = false;
             lvPaquetes.Name = "lvPaquetes";
-            lvPaquetes.Size = new Size(1023, 158);
+            lvPaquetes.Size = new Size(1123, 158);
             lvPaquetes.TabIndex = 1;
             lvPaquetes.UseCompatibleStateImageBehavior = false;
             lvPaquetes.View = View.Details;
             // 
             // CodigoPaqueteHeader
             // 
-            CodigoPaqueteHeader.Text = "CodigoPaquete";
+            CodigoPaqueteHeader.Text = "Código paquete";
             CodigoPaqueteHeader.Width = 100;
             // 
             // CodigoCiudadOrigenPaqueteHeader
             // 
-            CodigoCiudadOrigenPaqueteHeader.Text = "CodigoCiudadOrigen";
-            CodigoCiudadOrigenPaqueteHeader.Width = 125;
+            CodigoCiudadOrigenPaqueteHeader.Text = "Código ciudad origen";
+            CodigoCiudadOrigenPaqueteHeader.TextAlign = HorizontalAlignment.Center;
+            CodigoCiudadOrigenPaqueteHeader.Width = 150;
             // 
             // CodigoCiudadDestinoPaqueteHeader
             // 
-            CodigoCiudadDestinoPaqueteHeader.Text = "CodigoCiudadDestino";
-            CodigoCiudadDestinoPaqueteHeader.Width = 130;
+            CodigoCiudadDestinoPaqueteHeader.Text = "Código ciudad destino";
+            CodigoCiudadDestinoPaqueteHeader.TextAlign = HorizontalAlignment.Center;
+            CodigoCiudadDestinoPaqueteHeader.Width = 150;
             // 
             // FechaInicioActHeader
             // 
-            FechaInicioActHeader.Text = "FechaInicioActividades";
-            FechaInicioActHeader.Width = 135;
+            FechaInicioActHeader.Text = "Fecha inicio actividades";
+            FechaInicioActHeader.TextAlign = HorizontalAlignment.Center;
+            FechaInicioActHeader.Width = 150;
             // 
             // FechaFinActHeader
             // 
-            FechaFinActHeader.Text = "FechaFinActividades";
-            FechaFinActHeader.Width = 120;
+            FechaFinActHeader.Text = "Fecha fin actividades";
+            FechaFinActHeader.TextAlign = HorizontalAlignment.Center;
+            FechaFinActHeader.Width = 150;
             // 
             // CapacidadAdultosHeader
             // 
-            CapacidadAdultosHeader.Text = "CapacidadAdultos";
+            CapacidadAdultosHeader.Text = "Capacidad adultos";
+            CapacidadAdultosHeader.TextAlign = HorizontalAlignment.Center;
             CapacidadAdultosHeader.Width = 110;
             // 
             // CapacidadMenoresHeader
             // 
-            CapacidadMenoresHeader.Text = "CapacidadMenores";
-            CapacidadMenoresHeader.Width = 110;
+            CapacidadMenoresHeader.Text = "Capacidad menores";
+            CapacidadMenoresHeader.TextAlign = HorizontalAlignment.Center;
+            CapacidadMenoresHeader.Width = 130;
             // 
             // CantidadPaquetesDisponiblesHeader
             // 
-            CantidadPaquetesDisponiblesHeader.Text = "CantidadPaquetesDisponibles";
+            CantidadPaquetesDisponiblesHeader.Text = "Cantidad paquetes disponibles";
+            CantidadPaquetesDisponiblesHeader.TextAlign = HorizontalAlignment.Center;
             CantidadPaquetesDisponiblesHeader.Width = 180;
             // 
             // btnAñadirItPaquete
@@ -189,12 +196,13 @@
             // 
             // CodigoAdicionalHeader
             // 
-            CodigoAdicionalHeader.Text = "CodigoAdicional";
+            CodigoAdicionalHeader.Text = "Codigo de adicional";
             CodigoAdicionalHeader.Width = 105;
             // 
             // DescripcionAdicionalHeader
             // 
-            DescripcionAdicionalHeader.Text = "Descripción";
+            DescripcionAdicionalHeader.Text = "Descripción del adicional";
+            DescripcionAdicionalHeader.TextAlign = HorizontalAlignment.Center;
             DescripcionAdicionalHeader.Width = 150;
             // 
             // lvTarifas
@@ -202,24 +210,26 @@
             lvTarifas.Columns.AddRange(new ColumnHeader[] { TarifaAdultosHeader, TarifaMenoresHeader, TarifaInfantesHeader });
             lvTarifas.Location = new Point(6, 42);
             lvTarifas.Name = "lvTarifas";
-            lvTarifas.Size = new Size(378, 67);
+            lvTarifas.Size = new Size(332, 67);
             lvTarifas.TabIndex = 23;
             lvTarifas.UseCompatibleStateImageBehavior = false;
             lvTarifas.View = View.Details;
             // 
             // TarifaAdultosHeader
             // 
-            TarifaAdultosHeader.Text = "TarifaAdultos";
+            TarifaAdultosHeader.Text = "Tarifa adultos";
             TarifaAdultosHeader.Width = 100;
             // 
             // TarifaMenoresHeader
             // 
-            TarifaMenoresHeader.Text = "TarifaMenores";
+            TarifaMenoresHeader.Text = "Tarifa menores";
+            TarifaMenoresHeader.TextAlign = HorizontalAlignment.Center;
             TarifaMenoresHeader.Width = 100;
             // 
             // TarifaInfantesHeader
             // 
-            TarifaInfantesHeader.Text = "TarifaInfantes";
+            TarifaInfantesHeader.Text = "Tarifa infantes";
+            TarifaInfantesHeader.TextAlign = HorizontalAlignment.Center;
             TarifaInfantesHeader.Width = 100;
             // 
             // grpMasInformacionPaquete
@@ -268,7 +278,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 532);
+            ClientSize = new Size(1151, 532);
             Controls.Add(grpMasInformacionPaquete);
             Controls.Add(btnAñadirItPaquete);
             Controls.Add(btnMasInfoPaquete);
