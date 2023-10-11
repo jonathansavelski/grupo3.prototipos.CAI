@@ -21,5 +21,10 @@ namespace grupo3.prototipos.CAI
         {
 
         }
+
+        private void lblTarifas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
