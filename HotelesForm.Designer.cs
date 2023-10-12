@@ -65,11 +65,20 @@
             CodigoHeader = new ColumnHeader();
             DescripcionHeader = new ColumnHeader();
             TarifaHeader = new ColumnHeader();
-            TarifasListView = new ListView();
-            FechaDesdeHeader = new ColumnHeader();
             PrecioPorPasajeroHeader = new ColumnHeader();
+            TarifasListView = new ListView();
+            NombreHotelHeader = new ColumnHeader();
+            TarifaHotelHeader = new ColumnHeader();
+            FechaDesdeHeader = new ColumnHeader();
             FechaHastaHeader = new ColumnHeader();
             DisponibilidadHeader = new ColumnHeader();
+            CapacidadHotelHeader = new ColumnHeader();
+            MaxAdultosHotelHeader = new ColumnHeader();
+            MaxMenoresHotelHeader = new ColumnHeader();
+            MaxInfantesHotelHeader = new ColumnHeader();
+            FechaDesdeHotelHeader = new ColumnHeader();
+            FechaHastaHotelHeader = new ColumnHeader();
+            DisponibilidadHotelHeader = new ColumnHeader();
             grpHotel.SuspendLayout();
             MasInformacionGrp.SuspendLayout();
             SuspendLayout();
@@ -81,7 +90,7 @@
             grpHotel.Margin = new Padding(3, 4, 3, 4);
             grpHotel.Name = "grpHotel";
             grpHotel.Padding = new Padding(3, 4, 3, 4);
-            grpHotel.Size = new Size(1214, 245);
+            grpHotel.Size = new Size(1229, 245);
             grpHotel.TabIndex = 5;
             grpHotel.TabStop = false;
             grpHotel.Text = "Hoteles disponibles:";
@@ -94,7 +103,7 @@
             listViewHoteles.Margin = new Padding(3, 4, 3, 4);
             listViewHoteles.MultiSelect = false;
             listViewHoteles.Name = "listViewHoteles";
-            listViewHoteles.Size = new Size(1184, 201);
+            listViewHoteles.Size = new Size(1198, 201);
             listViewHoteles.TabIndex = 0;
             listViewHoteles.UseCompatibleStateImageBehavior = false;
             listViewHoteles.View = View.Details;
@@ -289,7 +298,7 @@
             MasInformacionGrp.Margin = new Padding(3, 4, 3, 4);
             MasInformacionGrp.Name = "MasInformacionGrp";
             MasInformacionGrp.Padding = new Padding(3, 4, 3, 4);
-            MasInformacionGrp.Size = new Size(1213, 329);
+            MasInformacionGrp.Size = new Size(1228, 329);
             MasInformacionGrp.TabIndex = 20;
             MasInformacionGrp.TabStop = false;
             MasInformacionGrp.Text = "Más información:";
@@ -318,7 +327,7 @@
             listView1.Location = new Point(14, 60);
             listView1.Margin = new Padding(3, 4, 3, 4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(1183, 100);
+            listView1.Size = new Size(1197, 100);
             listView1.TabIndex = 2;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -340,28 +349,39 @@
             TarifaHeader.TextAlign = HorizontalAlignment.Center;
             TarifaHeader.Width = 100;
             // 
-            // TarifasListView
-            // 
-            TarifasListView.Location = new Point(14, 201);
-            TarifasListView.Margin = new Padding(3, 4, 3, 4);
-            TarifasListView.Name = "TarifasListView";
-            TarifasListView.Size = new Size(1183, 104);
-            TarifasListView.TabIndex = 1;
-            TarifasListView.UseCompatibleStateImageBehavior = false;
-            TarifasListView.View = View.Details;
-            // 
-          
-            // FechaDesdeHeader
-            // 
-            FechaDesdeHeader.Text = "Fecha Desde";
-            FechaDesdeHeader.TextAlign = HorizontalAlignment.Center;
-            FechaDesdeHeader.Width = 120;
-            // 
             // PrecioPorPasajeroHeader
             // 
             PrecioPorPasajeroHeader.Text = "Precio Por Pasajero";
             PrecioPorPasajeroHeader.TextAlign = HorizontalAlignment.Center;
             PrecioPorPasajeroHeader.Width = 150;
+            // 
+            // TarifasListView
+            // 
+            TarifasListView.Columns.AddRange(new ColumnHeader[] { NombreHotelHeader, TarifaHotelHeader, CapacidadHotelHeader, MaxAdultosHotelHeader, MaxMenoresHotelHeader, MaxInfantesHotelHeader, FechaDesdeHotelHeader, FechaHastaHotelHeader, DisponibilidadHotelHeader });
+            TarifasListView.Location = new Point(14, 201);
+            TarifasListView.Margin = new Padding(3, 4, 3, 4);
+            TarifasListView.Name = "TarifasListView";
+            TarifasListView.Size = new Size(1197, 104);
+            TarifasListView.TabIndex = 1;
+            TarifasListView.UseCompatibleStateImageBehavior = false;
+            TarifasListView.View = View.Details;
+            // 
+            // NombreHotelHeader
+            // 
+            NombreHotelHeader.Text = "Nombre";
+            NombreHotelHeader.Width = 100;
+            // 
+            // TarifaHotelHeader
+            // 
+            TarifaHotelHeader.Text = "Tarifa";
+            TarifaHotelHeader.TextAlign = HorizontalAlignment.Center;
+            TarifaHotelHeader.Width = 100;
+            // 
+            // FechaDesdeHeader
+            // 
+            FechaDesdeHeader.Text = "Fecha Desde";
+            FechaDesdeHeader.TextAlign = HorizontalAlignment.Center;
+            FechaDesdeHeader.Width = 120;
             // 
             // FechaHastaHeader
             // 
@@ -374,6 +394,45 @@
             DisponibilidadHeader.Text = "Disponibilidad";
             DisponibilidadHeader.TextAlign = HorizontalAlignment.Center;
             DisponibilidadHeader.Width = 120;
+            // 
+            // CapacidadHotelHeader
+            // 
+            CapacidadHotelHeader.Text = "Capacidad";
+            CapacidadHotelHeader.TextAlign = HorizontalAlignment.Center;
+            CapacidadHotelHeader.Width = 100;
+            // 
+            // MaxAdultosHotelHeader
+            // 
+            MaxAdultosHotelHeader.Text = "Max. Adultos";
+            MaxAdultosHotelHeader.Width = 100;
+            // 
+            // MaxMenoresHotelHeader
+            // 
+            MaxMenoresHotelHeader.Text = "Max. Menores";
+            MaxMenoresHotelHeader.TextAlign = HorizontalAlignment.Center;
+            MaxMenoresHotelHeader.Width = 110;
+            // 
+            // MaxInfantesHotelHeader
+            // 
+            MaxInfantesHotelHeader.Text = "Max. Infantes";
+            MaxInfantesHotelHeader.Width = 100;
+            // 
+            // FechaDesdeHotelHeader
+            // 
+            FechaDesdeHotelHeader.Text = "Fecha desde";
+            FechaDesdeHotelHeader.Width = 100;
+            // 
+            // FechaHastaHotelHeader
+            // 
+            FechaHastaHotelHeader.Text = "Fecha hasta";
+            FechaHastaHotelHeader.TextAlign = HorizontalAlignment.Center;
+            FechaHastaHotelHeader.Width = 100;
+            // 
+            // DisponibilidadHotelHeader
+            // 
+            DisponibilidadHotelHeader.Text = "Disponibilidad";
+            DisponibilidadHotelHeader.TextAlign = HorizontalAlignment.Center;
+            DisponibilidadHotelHeader.Width = 110;
             // 
             // HotelesForm
             // 
@@ -451,5 +510,14 @@
         private ColumnHeader DisponibilidadHeader;
         private ColumnHeader AeropuertoParadaHeader;
         private ColumnHeader TiempoParadaHeader;
+        private ColumnHeader NombreHotelHeader;
+        private ColumnHeader TarifaHotelHeader;
+        private ColumnHeader CapacidadHotelHeader;
+        private ColumnHeader MaxAdultosHotelHeader;
+        private ColumnHeader MaxMenoresHotelHeader;
+        private ColumnHeader MaxInfantesHotelHeader;
+        private ColumnHeader FechaDesdeHotelHeader;
+        private ColumnHeader FechaHastaHotelHeader;
+        private ColumnHeader DisponibilidadHotelHeader;
     }
 }
