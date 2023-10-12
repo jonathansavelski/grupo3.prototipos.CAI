@@ -30,7 +30,7 @@
         {
             grpMenu = new GroupBox();
             btnMenu7 = new Button();
-            btnMenu6 = new Button();
+            ItinerarioBtn = new Button();
             ConsultaDisponibilidadCrucerosBtn = new Button();
             ConsultaDisponibilidadHotelesBtn = new Button();
             ConsultaDisponibilidadPaquetesBtn = new Button();
@@ -42,7 +42,7 @@
             // grpMenu
             // 
             grpMenu.Controls.Add(btnMenu7);
-            grpMenu.Controls.Add(btnMenu6);
+            grpMenu.Controls.Add(ItinerarioBtn);
             grpMenu.Controls.Add(ConsultaDisponibilidadCrucerosBtn);
             grpMenu.Controls.Add(ConsultaDisponibilidadHotelesBtn);
             grpMenu.Controls.Add(ConsultaDisponibilidadPaquetesBtn);
@@ -67,15 +67,16 @@
             btnMenu7.Text = "Prereserva/reserva";
             btnMenu7.UseVisualStyleBackColor = true;
             // 
-            // btnMenu6
+            // ItinerarioBtn
             // 
-            btnMenu6.Location = new Point(167, 347);
-            btnMenu6.Margin = new Padding(3, 4, 3, 4);
-            btnMenu6.Name = "btnMenu6";
-            btnMenu6.Size = new Size(294, 37);
-            btnMenu6.TabIndex = 5;
-            btnMenu6.Text = "Itinerario";
-            btnMenu6.UseVisualStyleBackColor = true;
+            ItinerarioBtn.Location = new Point(167, 347);
+            ItinerarioBtn.Margin = new Padding(3, 4, 3, 4);
+            ItinerarioBtn.Name = "ItinerarioBtn";
+            ItinerarioBtn.Size = new Size(294, 37);
+            ItinerarioBtn.TabIndex = 5;
+            ItinerarioBtn.Text = "Itinerario";
+            ItinerarioBtn.UseVisualStyleBackColor = true;
+            ItinerarioBtn.Click += ItinerarioBtn_Click;
             // 
             // ConsultaDisponibilidadCrucerosBtn
             // 
@@ -151,7 +152,7 @@
         private GroupBox grpMenu;
         private Button CargaDatosBtn;
         private Button btnMenu7;
-        private Button btnMenu6;
+        private Button ItinerarioBtn;
         private Button ConsultaDisponibilidadCrucerosBtn;
         private Button ConsultaDisponibilidadHotelesBtn;
         private Button ConsultaDisponibilidadPaquetesBtn;

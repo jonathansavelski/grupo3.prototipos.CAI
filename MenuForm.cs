@@ -46,5 +46,11 @@ namespace grupo3.prototipos.CAI
             CrucerosForm crucerosForm = new CrucerosForm();
             crucerosForm.Show();
         }
+
+        private void ItinerarioBtn_Click(object sender, EventArgs e)
+        {
+            ArmadoItinerarioForm armadoItinerarioForm = new ArmadoItinerarioForm();
+            armadoItinerarioForm.Show();
+        }
     }
 }
