@@ -31,11 +31,11 @@
             grpMenu = new GroupBox();
             btnMenu7 = new Button();
             btnMenu6 = new Button();
-            btnMenu4 = new Button();
-            btnMenu3 = new Button();
-            btnMenu5 = new Button();
-            btnMenu2 = new Button();
-            btnMenu1 = new Button();
+            ConsultaDisponibilidadCrucerosBtn = new Button();
+            ConsultaDisponibilidadHotelesBtn = new Button();
+            ConsultaDisponibilidadPaquetesBtn = new Button();
+            ConsultaDisponibilidadVuelosBtn = new Button();
+            CargaDatosBtn = new Button();
             grpMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,90 +43,102 @@
             // 
             grpMenu.Controls.Add(btnMenu7);
             grpMenu.Controls.Add(btnMenu6);
-            grpMenu.Controls.Add(btnMenu4);
-            grpMenu.Controls.Add(btnMenu3);
-            grpMenu.Controls.Add(btnMenu5);
-            grpMenu.Controls.Add(btnMenu2);
-            grpMenu.Controls.Add(btnMenu1);
-            grpMenu.Location = new Point(97, 29);
+            grpMenu.Controls.Add(ConsultaDisponibilidadCrucerosBtn);
+            grpMenu.Controls.Add(ConsultaDisponibilidadHotelesBtn);
+            grpMenu.Controls.Add(ConsultaDisponibilidadPaquetesBtn);
+            grpMenu.Controls.Add(ConsultaDisponibilidadVuelosBtn);
+            grpMenu.Controls.Add(CargaDatosBtn);
+            grpMenu.Location = new Point(111, 39);
+            grpMenu.Margin = new Padding(3, 4, 3, 4);
             grpMenu.Name = "grpMenu";
-            grpMenu.Size = new Size(518, 380);
+            grpMenu.Padding = new Padding(3, 4, 3, 4);
+            grpMenu.Size = new Size(592, 507);
             grpMenu.TabIndex = 0;
             grpMenu.TabStop = false;
             grpMenu.Text = "Menú principal";
             // 
             // btnMenu7
             // 
-            btnMenu7.Location = new Point(146, 294);
+            btnMenu7.Location = new Point(167, 392);
+            btnMenu7.Margin = new Padding(3, 4, 3, 4);
             btnMenu7.Name = "btnMenu7";
-            btnMenu7.Size = new Size(257, 28);
+            btnMenu7.Size = new Size(294, 37);
             btnMenu7.TabIndex = 6;
             btnMenu7.Text = "Prereserva/reserva";
             btnMenu7.UseVisualStyleBackColor = true;
             // 
             // btnMenu6
             // 
-            btnMenu6.Location = new Point(146, 260);
+            btnMenu6.Location = new Point(167, 347);
+            btnMenu6.Margin = new Padding(3, 4, 3, 4);
             btnMenu6.Name = "btnMenu6";
-            btnMenu6.Size = new Size(257, 28);
+            btnMenu6.Size = new Size(294, 37);
             btnMenu6.TabIndex = 5;
             btnMenu6.Text = "Itinerario";
             btnMenu6.UseVisualStyleBackColor = true;
             // 
-            // btnMenu4
+            // ConsultaDisponibilidadCrucerosBtn
             // 
-            btnMenu4.Location = new Point(148, 171);
-            btnMenu4.Name = "btnMenu4";
-            btnMenu4.Size = new Size(255, 28);
-            btnMenu4.TabIndex = 4;
-            btnMenu4.Text = "Consulta disponibilidad cruceros";
-            btnMenu4.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadCrucerosBtn.Location = new Point(169, 228);
+            ConsultaDisponibilidadCrucerosBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadCrucerosBtn.Name = "ConsultaDisponibilidadCrucerosBtn";
+            ConsultaDisponibilidadCrucerosBtn.Size = new Size(291, 37);
+            ConsultaDisponibilidadCrucerosBtn.TabIndex = 4;
+            ConsultaDisponibilidadCrucerosBtn.Text = "Consulta disponibilidad cruceros";
+            ConsultaDisponibilidadCrucerosBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadCrucerosBtn.Click += ConsultaDisponibilidadCrucerosBtn_Click;
             // 
-            // btnMenu3
+            // ConsultaDisponibilidadHotelesBtn
             // 
-            btnMenu3.Location = new Point(148, 137);
-            btnMenu3.Name = "btnMenu3";
-            btnMenu3.Size = new Size(255, 28);
-            btnMenu3.TabIndex = 3;
-            btnMenu3.Text = "Consulta disponibilidad hoteles";
-            btnMenu3.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadHotelesBtn.Location = new Point(169, 183);
+            ConsultaDisponibilidadHotelesBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadHotelesBtn.Name = "ConsultaDisponibilidadHotelesBtn";
+            ConsultaDisponibilidadHotelesBtn.Size = new Size(291, 37);
+            ConsultaDisponibilidadHotelesBtn.TabIndex = 3;
+            ConsultaDisponibilidadHotelesBtn.Text = "Consulta disponibilidad hoteles";
+            ConsultaDisponibilidadHotelesBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadHotelesBtn.Click += ConsultaDisponibilidadHotelesBtn_Click;
             // 
-            // btnMenu5
+            // ConsultaDisponibilidadPaquetesBtn
             // 
-            btnMenu5.Location = new Point(148, 205);
-            btnMenu5.Name = "btnMenu5";
-            btnMenu5.Size = new Size(255, 31);
-            btnMenu5.TabIndex = 2;
-            btnMenu5.Text = "Consulta disponibilidad paquetes";
-            btnMenu5.UseVisualStyleBackColor = true;
-            btnMenu5.Click += btnMenu5_Click;
+            ConsultaDisponibilidadPaquetesBtn.Location = new Point(169, 273);
+            ConsultaDisponibilidadPaquetesBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadPaquetesBtn.Name = "ConsultaDisponibilidadPaquetesBtn";
+            ConsultaDisponibilidadPaquetesBtn.Size = new Size(291, 41);
+            ConsultaDisponibilidadPaquetesBtn.TabIndex = 2;
+            ConsultaDisponibilidadPaquetesBtn.Text = "Consulta disponibilidad paquetes";
+            ConsultaDisponibilidadPaquetesBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadPaquetesBtn.Click += ConsultaDisponibilidadPaquetesBtn_Click;
             // 
-            // btnMenu2
+            // ConsultaDisponibilidadVuelosBtn
             // 
-            btnMenu2.Location = new Point(146, 102);
-            btnMenu2.Name = "btnMenu2";
-            btnMenu2.Size = new Size(257, 29);
-            btnMenu2.TabIndex = 1;
-            btnMenu2.Text = "Consulta disponibilidad vuelos";
-            btnMenu2.UseVisualStyleBackColor = true;
-            btnMenu2.Click += btnMenu2_Click;
+            ConsultaDisponibilidadVuelosBtn.Location = new Point(167, 136);
+            ConsultaDisponibilidadVuelosBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadVuelosBtn.Name = "ConsultaDisponibilidadVuelosBtn";
+            ConsultaDisponibilidadVuelosBtn.Size = new Size(294, 39);
+            ConsultaDisponibilidadVuelosBtn.TabIndex = 1;
+            ConsultaDisponibilidadVuelosBtn.Text = "Consulta disponibilidad vuelos";
+            ConsultaDisponibilidadVuelosBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadVuelosBtn.Click += ConsultaDisponibilidadVuelosBtn_Click;
             // 
-            // btnMenu1
+            // CargaDatosBtn
             // 
-            btnMenu1.Location = new Point(146, 34);
-            btnMenu1.Name = "btnMenu1";
-            btnMenu1.Size = new Size(257, 39);
-            btnMenu1.TabIndex = 0;
-            btnMenu1.Text = "Carga datos pasajero";
-            btnMenu1.UseVisualStyleBackColor = true;
-            btnMenu1.Click += btnMenu1_Click;
+            CargaDatosBtn.Location = new Point(167, 45);
+            CargaDatosBtn.Margin = new Padding(3, 4, 3, 4);
+            CargaDatosBtn.Name = "CargaDatosBtn";
+            CargaDatosBtn.Size = new Size(294, 52);
+            CargaDatosBtn.TabIndex = 0;
+            CargaDatosBtn.Text = "Carga datos pasajero";
+            CargaDatosBtn.UseVisualStyleBackColor = true;
+            CargaDatosBtn.Click += CargaDatosBtn_Click;
             // 
             // MenuForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(grpMenu);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menú";
@@ -137,12 +149,12 @@
         #endregion
 
         private GroupBox grpMenu;
-        private Button btnMenu1;
+        private Button CargaDatosBtn;
         private Button btnMenu7;
         private Button btnMenu6;
-        private Button btnMenu4;
-        private Button btnMenu3;
-        private Button btnMenu5;
-        private Button btnMenu2;
+        private Button ConsultaDisponibilidadCrucerosBtn;
+        private Button ConsultaDisponibilidadHotelesBtn;
+        private Button ConsultaDisponibilidadPaquetesBtn;
+        private Button ConsultaDisponibilidadVuelosBtn;
     }
 }

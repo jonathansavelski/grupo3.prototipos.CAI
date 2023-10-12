@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            AñadirAlItinerarioCrucerosButton = new Button();
             lblFechaSalida = new Label();
             AplicarFiltrosButton = new Button();
             dateTimePicker1 = new DateTimePicker();
-            InformacionVueloButton = new Button();
+            InformacionCruceroButton = new Button();
             grpCrucero = new GroupBox();
             VuelosListView = new ListView();
             OrigenCruceroHeader = new ColumnHeader();
@@ -60,15 +60,15 @@
             MasInformacionGrp.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // AñadirAlItinerarioCrucerosButton
             // 
-            button1.Location = new Point(179, 333);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(155, 39);
-            button1.TabIndex = 21;
-            button1.Text = "Añadir a itinerario";
-            button1.UseVisualStyleBackColor = true;
+            AñadirAlItinerarioCrucerosButton.Location = new Point(179, 333);
+            AñadirAlItinerarioCrucerosButton.Margin = new Padding(3, 4, 3, 4);
+            AñadirAlItinerarioCrucerosButton.Name = "AñadirAlItinerarioCrucerosButton";
+            AñadirAlItinerarioCrucerosButton.Size = new Size(155, 39);
+            AñadirAlItinerarioCrucerosButton.TabIndex = 21;
+            AñadirAlItinerarioCrucerosButton.Text = "Añadir a itinerario";
+            AñadirAlItinerarioCrucerosButton.UseVisualStyleBackColor = true;
             // 
             // lblFechaSalida
             // 
@@ -96,14 +96,14 @@
             dateTimePicker1.Size = new Size(290, 27);
             dateTimePicker1.TabIndex = 18;
             // 
-            // InformacionVueloButton
+            // InformacionCruceroButton
             // 
-            InformacionVueloButton.Location = new Point(18, 332);
-            InformacionVueloButton.Name = "InformacionVueloButton";
-            InformacionVueloButton.Size = new Size(155, 40);
-            InformacionVueloButton.TabIndex = 17;
-            InformacionVueloButton.Text = "Ver más información";
-            InformacionVueloButton.UseVisualStyleBackColor = true;
+            InformacionCruceroButton.Location = new Point(12, 333);
+            InformacionCruceroButton.Name = "InformacionCruceroButton";
+            InformacionCruceroButton.Size = new Size(155, 39);
+            InformacionCruceroButton.TabIndex = 17;
+            InformacionCruceroButton.Text = "Ver más información";
+            InformacionCruceroButton.UseVisualStyleBackColor = true;
             // 
             // grpCrucero
             // 
@@ -121,11 +121,11 @@
             // 
             VuelosListView.Columns.AddRange(new ColumnHeader[] { OrigenCruceroHeader, DestinoCruceroHeader, FechaSalidaCruceroHeader, FechaArriboCruceroHeader });
             VuelosListView.FullRowSelect = true;
-            VuelosListView.Location = new Point(6, 28);
+            VuelosListView.Location = new Point(15, 28);
             VuelosListView.Margin = new Padding(3, 4, 3, 4);
             VuelosListView.MultiSelect = false;
             VuelosListView.Name = "VuelosListView";
-            VuelosListView.Size = new Size(1131, 209);
+            VuelosListView.Size = new Size(1113, 197);
             VuelosListView.TabIndex = 0;
             VuelosListView.UseCompatibleStateImageBehavior = false;
             VuelosListView.View = View.Details;
@@ -143,15 +143,15 @@
             // 
             // FechaSalidaCruceroHeader
             // 
-            FechaSalidaCruceroHeader.Text = "Fecha de Salida (mes/dia/año/hora)";
+            FechaSalidaCruceroHeader.Text = "Fecha de Salida";
             FechaSalidaCruceroHeader.TextAlign = HorizontalAlignment.Center;
-            FechaSalidaCruceroHeader.Width = 280;
+            FechaSalidaCruceroHeader.Width = 150;
             // 
             // FechaArriboCruceroHeader
             // 
-            FechaArriboCruceroHeader.Text = "Fecha de Arribo (mes/dia/año/hora)";
+            FechaArriboCruceroHeader.Text = "Fecha de Arribo";
             FechaArriboCruceroHeader.TextAlign = HorizontalAlignment.Center;
-            FechaArriboCruceroHeader.Width = 280;
+            FechaArriboCruceroHeader.Width = 150;
             // 
             // MasInformacionGrp
             // 
@@ -189,10 +189,10 @@
             // TarifasListView
             // 
             TarifasListView.Columns.AddRange(new ColumnHeader[] { NombreHeader, TarifaHeader, CapacidadHeader, MaxAdultosHeader, MaxMenoresHeader, MaxInfantesHeader, DisponibilidadHeader });
-            TarifasListView.Location = new Point(14, 201);
+            TarifasListView.Location = new Point(15, 201);
             TarifasListView.Margin = new Padding(3, 4, 3, 4);
             TarifasListView.Name = "TarifasListView";
-            TarifasListView.Size = new Size(1084, 104);
+            TarifasListView.Size = new Size(1113, 104);
             TarifasListView.TabIndex = 1;
             TarifasListView.UseCompatibleStateImageBehavior = false;
             TarifasListView.View = View.Details;
@@ -240,10 +240,10 @@
             // ParadasListView
             // 
             ParadasListView.Columns.AddRange(new ColumnHeader[] { CódigoCiudadHeader, DesdeDiaHeader, HastaDiaHeader, DesdeHoraHeader, HastaHoraHeader });
-            ParadasListView.Location = new Point(14, 60);
+            ParadasListView.Location = new Point(15, 60);
             ParadasListView.Margin = new Padding(3, 4, 3, 4);
             ParadasListView.Name = "ParadasListView";
-            ParadasListView.Size = new Size(1084, 87);
+            ParadasListView.Size = new Size(1113, 87);
             ParadasListView.TabIndex = 0;
             ParadasListView.UseCompatibleStateImageBehavior = false;
             ParadasListView.View = View.Details;
@@ -283,11 +283,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1167, 714);
             Controls.Add(MasInformacionGrp);
-            Controls.Add(button1);
+            Controls.Add(AñadirAlItinerarioCrucerosButton);
             Controls.Add(lblFechaSalida);
             Controls.Add(AplicarFiltrosButton);
             Controls.Add(dateTimePicker1);
-            Controls.Add(InformacionVueloButton);
+            Controls.Add(InformacionCruceroButton);
             Controls.Add(grpCrucero);
             Name = "CrucerosForm";
             Text = "CrucerosForm";
@@ -301,11 +301,11 @@
 
         #endregion
 
-        private Button button1;
+        private Button AñadirAlItinerarioCrucerosButton;
         private Label lblFechaSalida;
         private Button AplicarFiltrosButton;
         private DateTimePicker dateTimePicker1;
-        private Button InformacionVueloButton;
+        private Button InformacionCruceroButton;
         private GroupBox grpCrucero;
         private ListView VuelosListView;
         private ColumnHeader OrigenCruceroHeader;

@@ -17,22 +17,34 @@ namespace grupo3.prototipos.CAI
             InitializeComponent();
         }
 
-        private void btnMenu1_Click(object sender, EventArgs e)
+        private void CargaDatosBtn_Click(object sender, EventArgs e)
         {
             CargaDatosViajeroForm cargaDatosViajero = new CargaDatosViajeroForm();
             cargaDatosViajero.Show();
         }
 
-        private void btnMenu2_Click(object sender, EventArgs e)
+        private void ConsultaDisponibilidadVuelosBtn_Click(object sender, EventArgs e)
         {
             VuelosForm vuelosForm = new VuelosForm();
             vuelosForm.Show();
         }
 
-        private void btnMenu5_Click(object sender, EventArgs e)
+        private void ConsultaDisponibilidadPaquetesBtn_Click(object sender, EventArgs e)
         {
             PaquetesForm paquetesForm = new PaquetesForm();
             paquetesForm.Show();
+        }
+
+        private void ConsultaDisponibilidadHotelesBtn_Click(object sender, EventArgs e)
+        {
+            HotelesForm hotelesForm = new HotelesForm();
+            hotelesForm.Show();
+        }
+
+        private void ConsultaDisponibilidadCrucerosBtn_Click(object sender, EventArgs e)
+        {
+            CrucerosForm crucerosForm = new CrucerosForm();
+            crucerosForm.Show();
         }
     }
 }

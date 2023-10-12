@@ -55,18 +55,33 @@
             CheckIn = new ColumnHeader();
             CheckOut = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
-            InformacionHotelButton = new Button();
+            AñadirAlItinerarioHotelesButton = new Button();
+            InformacionHotelesButton = new Button();
+            AplicarFiltrosButton = new Button();
+            MasInformacionGrp = new GroupBox();
+            label1 = new Label();
+            lblTarifas = new Label();
+            listView1 = new ListView();
+            CodigoHeader = new ColumnHeader();
+            DescripcionHeader = new ColumnHeader();
+            TarifaHeader = new ColumnHeader();
+            TarifasListView = new ListView();
+            FechaDesdeHeader = new ColumnHeader();
+            PrecioPorPasajeroHeader = new ColumnHeader();
+            FechaHastaHeader = new ColumnHeader();
+            DisponibilidadHeader = new ColumnHeader();
             grpHotel.SuspendLayout();
+            MasInformacionGrp.SuspendLayout();
             SuspendLayout();
             // 
             // grpHotel
             // 
             grpHotel.Controls.Add(listViewHoteles);
-            grpHotel.Location = new Point(17, 40);
+            grpHotel.Location = new Point(11, 70);
             grpHotel.Margin = new Padding(3, 4, 3, 4);
             grpHotel.Name = "grpHotel";
             grpHotel.Padding = new Padding(3, 4, 3, 4);
-            grpHotel.Size = new Size(1039, 245);
+            grpHotel.Size = new Size(1214, 245);
             grpHotel.TabIndex = 5;
             grpHotel.TabStop = false;
             grpHotel.Text = "Hoteles disponibles:";
@@ -79,7 +94,7 @@
             listViewHoteles.Margin = new Padding(3, 4, 3, 4);
             listViewHoteles.MultiSelect = false;
             listViewHoteles.Name = "listViewHoteles";
-            listViewHoteles.Size = new Size(1005, 201);
+            listViewHoteles.Size = new Size(1184, 201);
             listViewHoteles.TabIndex = 0;
             listViewHoteles.UseCompatibleStateImageBehavior = false;
             listViewHoteles.View = View.Details;
@@ -114,7 +129,7 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(31, 336);
+            dateTimePicker2.Location = new Point(221, 22);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(291, 27);
             dateTimePicker2.TabIndex = 9;
@@ -122,11 +137,11 @@
             // labelIngreso
             // 
             labelIngreso.AutoSize = true;
-            labelIngreso.Location = new Point(31, 313);
+            labelIngreso.Location = new Point(25, 22);
             labelIngreso.Name = "labelIngreso";
-            labelIngreso.Size = new Size(141, 20);
+            labelIngreso.Size = new Size(190, 20);
             labelIngreso.TabIndex = 15;
-            labelIngreso.Text = "Fecha ingreso Hotel";
+            labelIngreso.Text = "Filtrar por Fecha de Ingreso";
             // 
             // button1
             // 
@@ -236,21 +251,139 @@
             columnHeader6.Text = "Disponibilidad";
             columnHeader6.Width = 90;
             // 
-            // InformacionHotelButton
+            // AñadirAlItinerarioHotelesButton
             // 
-            InformacionHotelButton.Location = new Point(858, 351);
-            InformacionHotelButton.Name = "InformacionHotelButton";
-            InformacionHotelButton.Size = new Size(192, 29);
-            InformacionHotelButton.TabIndex = 16;
-            InformacionHotelButton.Text = "Ver información Hotel";
-            InformacionHotelButton.UseVisualStyleBackColor = true;
+            AñadirAlItinerarioHotelesButton.Location = new Point(173, 322);
+            AñadirAlItinerarioHotelesButton.Margin = new Padding(3, 4, 3, 4);
+            AñadirAlItinerarioHotelesButton.Name = "AñadirAlItinerarioHotelesButton";
+            AñadirAlItinerarioHotelesButton.Size = new Size(155, 39);
+            AñadirAlItinerarioHotelesButton.TabIndex = 18;
+            AñadirAlItinerarioHotelesButton.Text = "Añadir a itinerario";
+            AñadirAlItinerarioHotelesButton.UseVisualStyleBackColor = true;
+            // 
+            // InformacionHotelesButton
+            // 
+            InformacionHotelesButton.Location = new Point(11, 322);
+            InformacionHotelesButton.Name = "InformacionHotelesButton";
+            InformacionHotelesButton.Size = new Size(155, 40);
+            InformacionHotelesButton.TabIndex = 17;
+            InformacionHotelesButton.Text = "Ver más información";
+            InformacionHotelesButton.UseVisualStyleBackColor = true;
+            // 
+            // AplicarFiltrosButton
+            // 
+            AplicarFiltrosButton.Location = new Point(529, 19);
+            AplicarFiltrosButton.Name = "AplicarFiltrosButton";
+            AplicarFiltrosButton.Size = new Size(122, 32);
+            AplicarFiltrosButton.TabIndex = 19;
+            AplicarFiltrosButton.Text = "Aplicar filtro";
+            AplicarFiltrosButton.UseVisualStyleBackColor = true;
+            // 
+            // MasInformacionGrp
+            // 
+            MasInformacionGrp.Controls.Add(label1);
+            MasInformacionGrp.Controls.Add(lblTarifas);
+            MasInformacionGrp.Controls.Add(listView1);
+            MasInformacionGrp.Controls.Add(TarifasListView);
+            MasInformacionGrp.Location = new Point(12, 387);
+            MasInformacionGrp.Margin = new Padding(3, 4, 3, 4);
+            MasInformacionGrp.Name = "MasInformacionGrp";
+            MasInformacionGrp.Padding = new Padding(3, 4, 3, 4);
+            MasInformacionGrp.Size = new Size(1213, 329);
+            MasInformacionGrp.TabIndex = 20;
+            MasInformacionGrp.TabStop = false;
+            MasInformacionGrp.Text = "Más información:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(13, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(107, 20);
+            label1.TabIndex = 5;
+            label1.Text = "Servicios extra:";
+            // 
+            // lblTarifas
+            // 
+            lblTarifas.AutoSize = true;
+            lblTarifas.Location = new Point(14, 178);
+            lblTarifas.Name = "lblTarifas";
+            lblTarifas.Size = new Size(110, 20);
+            lblTarifas.TabIndex = 4;
+            lblTarifas.Text = "Disponibilidad:";
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { CodigoHeader, DescripcionHeader, TarifaHeader, PrecioPorPasajeroHeader });
+            listView1.Location = new Point(14, 60);
+            listView1.Margin = new Padding(3, 4, 3, 4);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(1183, 100);
+            listView1.TabIndex = 2;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // CodigoHeader
+            // 
+            CodigoHeader.Text = "Código";
+            CodigoHeader.Width = 100;
+            // 
+            // DescripcionHeader
+            // 
+            DescripcionHeader.Text = "Descripción";
+            DescripcionHeader.TextAlign = HorizontalAlignment.Center;
+            DescripcionHeader.Width = 100;
+            // 
+            // TarifaHeader
+            // 
+            TarifaHeader.Text = "Tarifa";
+            TarifaHeader.TextAlign = HorizontalAlignment.Center;
+            TarifaHeader.Width = 100;
+            // 
+            // TarifasListView
+            // 
+            TarifasListView.Location = new Point(14, 201);
+            TarifasListView.Margin = new Padding(3, 4, 3, 4);
+            TarifasListView.Name = "TarifasListView";
+            TarifasListView.Size = new Size(1183, 104);
+            TarifasListView.TabIndex = 1;
+            TarifasListView.UseCompatibleStateImageBehavior = false;
+            TarifasListView.View = View.Details;
+            // 
+          
+            // FechaDesdeHeader
+            // 
+            FechaDesdeHeader.Text = "Fecha Desde";
+            FechaDesdeHeader.TextAlign = HorizontalAlignment.Center;
+            FechaDesdeHeader.Width = 120;
+            // 
+            // PrecioPorPasajeroHeader
+            // 
+            PrecioPorPasajeroHeader.Text = "Precio Por Pasajero";
+            PrecioPorPasajeroHeader.TextAlign = HorizontalAlignment.Center;
+            PrecioPorPasajeroHeader.Width = 150;
+            // 
+            // FechaHastaHeader
+            // 
+            FechaHastaHeader.Text = "Fecha Hasta";
+            FechaHastaHeader.TextAlign = HorizontalAlignment.Center;
+            FechaHastaHeader.Width = 120;
+            // 
+            // DisponibilidadHeader
+            // 
+            DisponibilidadHeader.Text = "Disponibilidad";
+            DisponibilidadHeader.TextAlign = HorizontalAlignment.Center;
+            DisponibilidadHeader.Width = 120;
             // 
             // HotelesForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1082, 561);
-            Controls.Add(InformacionHotelButton);
+            ClientSize = new Size(1252, 732);
+            Controls.Add(MasInformacionGrp);
+            Controls.Add(AplicarFiltrosButton);
+            Controls.Add(AñadirAlItinerarioHotelesButton);
+            Controls.Add(InformacionHotelesButton);
             Controls.Add(labelIngreso);
             Controls.Add(dateTimePicker2);
             Controls.Add(grpHotel);
@@ -258,6 +391,8 @@
             Name = "HotelesForm";
             Text = "HotelesForm";
             grpHotel.ResumeLayout(false);
+            MasInformacionGrp.ResumeLayout(false);
+            MasInformacionGrp.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -282,7 +417,6 @@
         private ListView ServiciosExtraListView;
         private ListView DisponibilidadListView;
         private ListView ParadasListView;
-        private Button InformacionHotelButton;
         private ColumnHeader Nombre;
         private ColumnHeader Tarifa;
         private ColumnHeader Capacidad;
@@ -296,5 +430,26 @@
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;
         private ColumnHeader columnHeader10;
+        private Button AñadirAlItinerarioHotelesButton;
+        private Button InformacionHotelesButton;
+        private Label label1;
+        private Label lblTarifas;
+        private ListView listView1;
+        private ColumnHeader CodigoHeader;
+        private ColumnHeader DescripcionHeader;
+        private ColumnHeader TarifaHeader;
+        private ListView TarifasListView;
+        private ColumnHeader ClaseTarifaHeader;
+        private ColumnHeader ItinerarioTarifaHeader;
+        private ColumnHeader TipoPasajeroTarifaHeader;
+        private ColumnHeader BaseTarifaHeader;
+        private ColumnHeader ImpuestosTarifaHeader;
+        private ColumnHeader ComisionTarifaHeader;
+        private ColumnHeader FechaDesdeHeader;
+        private ColumnHeader PrecioPorPasajeroHeader;
+        private ColumnHeader FechaHastaHeader;
+        private ColumnHeader DisponibilidadHeader;
+        private ColumnHeader AeropuertoParadaHeader;
+        private ColumnHeader TiempoParadaHeader;
     }
 }
