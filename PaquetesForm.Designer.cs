@@ -62,36 +62,36 @@
             // lblFechaSalida
             // 
             lblFechaSalida.AutoSize = true;
-            lblFechaSalida.Location = new Point(9, 11);
+            lblFechaSalida.Location = new Point(10, 15);
             lblFechaSalida.Name = "lblFechaSalida";
-            lblFechaSalida.Size = new Size(126, 15);
+            lblFechaSalida.Size = new Size(160, 20);
             lblFechaSalida.TabIndex = 17;
             lblFechaSalida.Text = "Filtrar por FechaSalida:";
             // 
             // AplicarFiltrosButton
             // 
-            AplicarFiltrosButton.Location = new Point(416, 11);
-            AplicarFiltrosButton.Margin = new Padding(3, 2, 3, 2);
+            AplicarFiltrosButton.Location = new Point(475, 15);
             AplicarFiltrosButton.Name = "AplicarFiltrosButton";
-            AplicarFiltrosButton.Size = new Size(102, 27);
+            AplicarFiltrosButton.Size = new Size(117, 30);
             AplicarFiltrosButton.TabIndex = 16;
             AplicarFiltrosButton.Text = "Aplicar filtro";
             AplicarFiltrosButton.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(141, 11);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Location = new Point(173, 15);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(255, 23);
+            dateTimePicker1.Size = new Size(291, 27);
             dateTimePicker1.TabIndex = 15;
             // 
             // grpPaquete
             // 
             grpPaquete.Controls.Add(lvPaquetes);
-            grpPaquete.Location = new Point(9, 39);
+            grpPaquete.Location = new Point(10, 52);
+            grpPaquete.Margin = new Padding(3, 4, 3, 4);
             grpPaquete.Name = "grpPaquete";
-            grpPaquete.Size = new Size(1132, 190);
+            grpPaquete.Padding = new Padding(3, 4, 3, 4);
+            grpPaquete.Size = new Size(1293, 253);
             grpPaquete.TabIndex = 18;
             grpPaquete.TabStop = false;
             grpPaquete.Text = "Listado de paquetes disponibles. Seleccione:";
@@ -100,76 +100,77 @@
             // 
             lvPaquetes.Columns.AddRange(new ColumnHeader[] { CodigoPaqueteHeader, CodigoCiudadOrigenPaqueteHeader, CodigoCiudadDestinoPaqueteHeader, FechaInicioActHeader, FechaFinActHeader, CapacidadAdultosHeader, CapacidadMenoresHeader, CantidadPaquetesDisponiblesHeader });
             lvPaquetes.FullRowSelect = true;
-            lvPaquetes.Location = new Point(3, 18);
+            lvPaquetes.Location = new Point(11, 28);
+            lvPaquetes.Margin = new Padding(3, 4, 3, 4);
             lvPaquetes.MultiSelect = false;
             lvPaquetes.Name = "lvPaquetes";
-            lvPaquetes.Size = new Size(1123, 158);
+            lvPaquetes.Size = new Size(1267, 209);
             lvPaquetes.TabIndex = 1;
             lvPaquetes.UseCompatibleStateImageBehavior = false;
             lvPaquetes.View = View.Details;
             // 
             // CodigoPaqueteHeader
             // 
-            CodigoPaqueteHeader.Text = "Código paquete";
-            CodigoPaqueteHeader.Width = 100;
+            CodigoPaqueteHeader.Text = "Código";
+            CodigoPaqueteHeader.Width = 70;
             // 
             // CodigoCiudadOrigenPaqueteHeader
             // 
             CodigoCiudadOrigenPaqueteHeader.Text = "Código ciudad origen";
             CodigoCiudadOrigenPaqueteHeader.TextAlign = HorizontalAlignment.Center;
-            CodigoCiudadOrigenPaqueteHeader.Width = 150;
+            CodigoCiudadOrigenPaqueteHeader.Width = 180;
             // 
             // CodigoCiudadDestinoPaqueteHeader
             // 
             CodigoCiudadDestinoPaqueteHeader.Text = "Código ciudad destino";
             CodigoCiudadDestinoPaqueteHeader.TextAlign = HorizontalAlignment.Center;
-            CodigoCiudadDestinoPaqueteHeader.Width = 150;
+            CodigoCiudadDestinoPaqueteHeader.Width = 180;
             // 
             // FechaInicioActHeader
             // 
             FechaInicioActHeader.Text = "Fecha inicio actividades";
             FechaInicioActHeader.TextAlign = HorizontalAlignment.Center;
-            FechaInicioActHeader.Width = 150;
+            FechaInicioActHeader.Width = 180;
             // 
             // FechaFinActHeader
             // 
             FechaFinActHeader.Text = "Fecha fin actividades";
             FechaFinActHeader.TextAlign = HorizontalAlignment.Center;
-            FechaFinActHeader.Width = 150;
+            FechaFinActHeader.Width = 180;
             // 
             // CapacidadAdultosHeader
             // 
             CapacidadAdultosHeader.Text = "Capacidad adultos";
             CapacidadAdultosHeader.TextAlign = HorizontalAlignment.Center;
-            CapacidadAdultosHeader.Width = 110;
+            CapacidadAdultosHeader.Width = 150;
             // 
             // CapacidadMenoresHeader
             // 
             CapacidadMenoresHeader.Text = "Capacidad menores";
             CapacidadMenoresHeader.TextAlign = HorizontalAlignment.Center;
-            CapacidadMenoresHeader.Width = 130;
+            CapacidadMenoresHeader.Width = 150;
             // 
             // CantidadPaquetesDisponiblesHeader
             // 
-            CantidadPaquetesDisponiblesHeader.Text = "Cantidad paquetes disponibles";
+            CantidadPaquetesDisponiblesHeader.Text = "Cantidad disponibles";
             CantidadPaquetesDisponiblesHeader.TextAlign = HorizontalAlignment.Center;
-            CantidadPaquetesDisponiblesHeader.Width = 180;
+            CantidadPaquetesDisponiblesHeader.Width = 170;
             // 
             // btnAñadirItPaquete
             // 
-            btnAñadirItPaquete.Location = new Point(151, 235);
+            btnAñadirItPaquete.Location = new Point(173, 313);
+            btnAñadirItPaquete.Margin = new Padding(3, 4, 3, 4);
             btnAñadirItPaquete.Name = "btnAñadirItPaquete";
-            btnAñadirItPaquete.Size = new Size(136, 29);
+            btnAñadirItPaquete.Size = new Size(155, 39);
             btnAñadirItPaquete.TabIndex = 20;
             btnAñadirItPaquete.Text = "Añadir a itinerario";
             btnAñadirItPaquete.UseVisualStyleBackColor = true;
             // 
             // btnMasInfoPaquete
             // 
-            btnMasInfoPaquete.Location = new Point(9, 234);
-            btnMasInfoPaquete.Margin = new Padding(3, 2, 3, 2);
+            btnMasInfoPaquete.Location = new Point(10, 312);
             btnMasInfoPaquete.Name = "btnMasInfoPaquete";
-            btnMasInfoPaquete.Size = new Size(136, 30);
+            btnMasInfoPaquete.Size = new Size(155, 40);
             btnMasInfoPaquete.TabIndex = 19;
             btnMasInfoPaquete.Text = "Ver más información";
             btnMasInfoPaquete.UseVisualStyleBackColor = true;
@@ -178,18 +179,20 @@
             // txtActividades
             // 
             txtActividades.AcceptsReturn = true;
-            txtActividades.Location = new Point(404, 42);
+            txtActividades.Location = new Point(921, 49);
+            txtActividades.Margin = new Padding(3, 4, 3, 4);
             txtActividades.Multiline = true;
             txtActividades.Name = "txtActividades";
-            txtActividades.Size = new Size(273, 67);
+            txtActividades.Size = new Size(353, 260);
             txtActividades.TabIndex = 21;
             // 
             // lvAdicionales
             // 
             lvAdicionales.Columns.AddRange(new ColumnHeader[] { CodigoAdicionalHeader, DescripcionAdicionalHeader });
-            lvAdicionales.Location = new Point(6, 132);
+            lvAdicionales.Location = new Point(11, 221);
+            lvAdicionales.Margin = new Padding(3, 4, 3, 4);
             lvAdicionales.Name = "lvAdicionales";
-            lvAdicionales.Size = new Size(384, 67);
+            lvAdicionales.Size = new Size(893, 88);
             lvAdicionales.TabIndex = 22;
             lvAdicionales.UseCompatibleStateImageBehavior = false;
             lvAdicionales.View = View.Details;
@@ -197,20 +200,21 @@
             // CodigoAdicionalHeader
             // 
             CodigoAdicionalHeader.Text = "Codigo de adicional";
-            CodigoAdicionalHeader.Width = 105;
+            CodigoAdicionalHeader.Width = 150;
             // 
             // DescripcionAdicionalHeader
             // 
             DescripcionAdicionalHeader.Text = "Descripción del adicional";
             DescripcionAdicionalHeader.TextAlign = HorizontalAlignment.Center;
-            DescripcionAdicionalHeader.Width = 150;
+            DescripcionAdicionalHeader.Width = 180;
             // 
             // lvTarifas
             // 
             lvTarifas.Columns.AddRange(new ColumnHeader[] { TarifaAdultosHeader, TarifaMenoresHeader, TarifaInfantesHeader });
-            lvTarifas.Location = new Point(6, 42);
+            lvTarifas.Location = new Point(11, 56);
+            lvTarifas.Margin = new Padding(3, 4, 3, 4);
             lvTarifas.Name = "lvTarifas";
-            lvTarifas.Size = new Size(332, 67);
+            lvTarifas.Size = new Size(893, 133);
             lvTarifas.TabIndex = 23;
             lvTarifas.UseCompatibleStateImageBehavior = false;
             lvTarifas.View = View.Details;
@@ -218,19 +222,19 @@
             // TarifaAdultosHeader
             // 
             TarifaAdultosHeader.Text = "Tarifa adultos";
-            TarifaAdultosHeader.Width = 100;
+            TarifaAdultosHeader.Width = 150;
             // 
             // TarifaMenoresHeader
             // 
             TarifaMenoresHeader.Text = "Tarifa menores";
             TarifaMenoresHeader.TextAlign = HorizontalAlignment.Center;
-            TarifaMenoresHeader.Width = 100;
+            TarifaMenoresHeader.Width = 150;
             // 
             // TarifaInfantesHeader
             // 
             TarifaInfantesHeader.Text = "Tarifa infantes";
             TarifaInfantesHeader.TextAlign = HorizontalAlignment.Center;
-            TarifaInfantesHeader.Width = 100;
+            TarifaInfantesHeader.Width = 150;
             // 
             // grpMasInformacionPaquete
             // 
@@ -240,9 +244,11 @@
             grpMasInformacionPaquete.Controls.Add(lvTarifas);
             grpMasInformacionPaquete.Controls.Add(txtActividades);
             grpMasInformacionPaquete.Controls.Add(lvAdicionales);
-            grpMasInformacionPaquete.Location = new Point(12, 272);
+            grpMasInformacionPaquete.Location = new Point(10, 363);
+            grpMasInformacionPaquete.Margin = new Padding(3, 4, 3, 4);
             grpMasInformacionPaquete.Name = "grpMasInformacionPaquete";
-            grpMasInformacionPaquete.Size = new Size(1040, 248);
+            grpMasInformacionPaquete.Padding = new Padding(3, 4, 3, 4);
+            grpMasInformacionPaquete.Size = new Size(1293, 331);
             grpMasInformacionPaquete.TabIndex = 24;
             grpMasInformacionPaquete.TabStop = false;
             grpMasInformacionPaquete.Text = "Más información:";
@@ -250,35 +256,35 @@
             // lblTarifas
             // 
             lblTarifas.AutoSize = true;
-            lblTarifas.Location = new Point(6, 24);
+            lblTarifas.Location = new Point(7, 32);
             lblTarifas.Name = "lblTarifas";
-            lblTarifas.Size = new Size(108, 15);
+            lblTarifas.Size = new Size(138, 20);
             lblTarifas.TabIndex = 26;
             lblTarifas.Text = "Tarifas del paquete:";
             // 
             // lblActividades
             // 
             lblActividades.AutoSize = true;
-            lblActividades.Location = new Point(404, 24);
+            lblActividades.Location = new Point(921, 20);
             lblActividades.Name = "lblActividades";
-            lblActividades.Size = new Size(136, 15);
+            lblActividades.Size = new Size(173, 20);
             lblActividades.TabIndex = 25;
             lblActividades.Text = "Actividades del paquete:";
             // 
             // lblAdicionales
             // 
             lblAdicionales.AutoSize = true;
-            lblAdicionales.Location = new Point(6, 114);
+            lblAdicionales.Location = new Point(7, 193);
             lblAdicionales.Name = "lblAdicionales";
-            lblAdicionales.Size = new Size(71, 15);
+            lblAdicionales.Size = new Size(89, 20);
             lblAdicionales.TabIndex = 24;
             lblAdicionales.Text = "Adicionales:";
             // 
             // PaquetesForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1151, 532);
+            ClientSize = new Size(1315, 709);
             Controls.Add(grpMasInformacionPaquete);
             Controls.Add(btnAñadirItPaquete);
             Controls.Add(btnMasInfoPaquete);
@@ -286,6 +292,7 @@
             Controls.Add(lblFechaSalida);
             Controls.Add(AplicarFiltrosButton);
             Controls.Add(dateTimePicker1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PaquetesForm";
             Text = "FormPaquetes";
             Load += PaquetesForm_Load;
