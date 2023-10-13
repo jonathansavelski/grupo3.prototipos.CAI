@@ -15,7 +15,30 @@ namespace grupo3.prototipos.CAI
         {
             modeloVuelos = new VuelosModel();
 
-            MasInformacionGrp.Enabled = false;
+            InformacionAdicionalVuelosGroupBox.Enabled = false;
+            VuelosDisponiblesGroupBox.Enabled = false;
+
+        }
+
+        private void InformacionVueloButton_Click(object sender, EventArgs e)
+        {
+            if (VuelosListView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Selecciona un vuelo de la lista.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Vuelo vueloSeleccionado = (Vuelo)VuelosListView.SelectedItems[0].Tag; //El vuelo seleccionado lo guardé en el tag
+
+            InformacionAdicionalVuelosGroupBox.Enabled = true;
+        }
+
+        private void AplicarFiltrosButton_Click(object sender, EventArgs e)
+        {
+            VuelosDisponiblesGroupBox.Enabled = true;
+            VerMasInformacionVueloButton.Enabled = false;
+            AñadirAlItinerarioVueloButton.Enabled = false;
+
             foreach (var vuelo in modeloVuelos.Vuelos)
             {
                 //Agregamos cada vuelo a una lista
@@ -31,27 +54,18 @@ namespace grupo3.prototipos.CAI
 
                 VuelosListView.Items.Add(item); //Llenamos la grilla
             }
-
         }
 
-        private void InformacionVueloButton_Click(object sender, EventArgs e)
+        //Cuando se selecciona un item del List View
+        private void VuelosListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (VuelosListView.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Selecciona un vuelo de la lista.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Vuelo vueloSeleccionado = (Vuelo)VuelosListView.SelectedItems[0].Tag; //El vuelo seleccionado lo guardé en el tag
-
-            MasInformacionGrp.Enabled = true;
+            VerMasInformacionVueloButton.Enabled = true;
+            AñadirAlItinerarioVueloButton.Enabled = true;
         }
 
-        private void AplicarFiltrosButton_Click(object sender, EventArgs e)
+        private void AñadirAlItinerarioVueloButton_Click(object sender, EventArgs e)
         {
-
+            InformacionAdicionalVuelosGroupBox.Enabled = true;
         }
-
-
     }
 }

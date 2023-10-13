@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grpVuelo = new GroupBox();
+            VuelosDisponiblesGroupBox = new GroupBox();
+            label4 = new Label();
+            AñadirAlItinerarioVueloButton = new Button();
             VuelosListView = new ListView();
             CodigoVueloHeader = new ColumnHeader();
             OrigenVueloHeader = new ColumnHeader();
@@ -37,8 +39,8 @@
             FechaArriboVueloHeader = new ColumnHeader();
             TiempoVueloHeader = new ColumnHeader();
             CodigoAerolineaVueloHeader = new ColumnHeader();
-            InformacionVueloButton = new Button();
-            MasInformacionGrp = new GroupBox();
+            VerMasInformacionVueloButton = new Button();
+            InformacionAdicionalVuelosGroupBox = new GroupBox();
             lblServiciosExtra = new Label();
             lblTarifas = new Label();
             lblParadas = new Label();
@@ -58,37 +60,68 @@
             AeropuertoParadaHeader = new ColumnHeader();
             TiempoParadaHeader = new ColumnHeader();
             dateTimePicker1 = new DateTimePicker();
-            AplicarFiltrosButton = new Button();
+            AplicarFiltrosVuelosButton = new Button();
             lblFechaSalida = new Label();
-            AñadirAlItinerarioVuelosButton = new Button();
-            grpVuelo.SuspendLayout();
-            MasInformacionGrp.SuspendLayout();
+            groupBox1 = new GroupBox();
+            dateTimePicker2 = new DateTimePicker();
+            label3 = new Label();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            VuelosDisponiblesGroupBox.SuspendLayout();
+            InformacionAdicionalVuelosGroupBox.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // grpVuelo
+            // VuelosDisponiblesGroupBox
             // 
-            grpVuelo.Controls.Add(VuelosListView);
-            grpVuelo.Location = new Point(7, 49);
-            grpVuelo.Margin = new Padding(3, 4, 3, 4);
-            grpVuelo.Name = "grpVuelo";
-            grpVuelo.Padding = new Padding(3, 4, 3, 4);
-            grpVuelo.Size = new Size(1213, 245);
-            grpVuelo.TabIndex = 4;
-            grpVuelo.TabStop = false;
-            grpVuelo.Text = "Seleccione un vuelo disponible:";
+            VuelosDisponiblesGroupBox.Controls.Add(label4);
+            VuelosDisponiblesGroupBox.Controls.Add(AñadirAlItinerarioVueloButton);
+            VuelosDisponiblesGroupBox.Controls.Add(VuelosListView);
+            VuelosDisponiblesGroupBox.Controls.Add(VerMasInformacionVueloButton);
+            VuelosDisponiblesGroupBox.Location = new Point(14, 126);
+            VuelosDisponiblesGroupBox.Margin = new Padding(3, 4, 3, 4);
+            VuelosDisponiblesGroupBox.Name = "VuelosDisponiblesGroupBox";
+            VuelosDisponiblesGroupBox.Padding = new Padding(3, 4, 3, 4);
+            VuelosDisponiblesGroupBox.Size = new Size(1206, 208);
+            VuelosDisponiblesGroupBox.TabIndex = 4;
+            VuelosDisponiblesGroupBox.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(11, 18);
+            label4.Name = "label4";
+            label4.Size = new Size(139, 20);
+            label4.TabIndex = 20;
+            label4.Text = "Vuelos disponibles";
+            // 
+            // AñadirAlItinerarioVueloButton
+            // 
+            AñadirAlItinerarioVueloButton.Location = new Point(173, 159);
+            AñadirAlItinerarioVueloButton.Margin = new Padding(3, 4, 3, 4);
+            AñadirAlItinerarioVueloButton.Name = "AñadirAlItinerarioVueloButton";
+            AñadirAlItinerarioVueloButton.Size = new Size(155, 39);
+            AñadirAlItinerarioVueloButton.TabIndex = 15;
+            AñadirAlItinerarioVueloButton.Text = "Añadir a itinerario";
+            AñadirAlItinerarioVueloButton.UseVisualStyleBackColor = true;
+            AñadirAlItinerarioVueloButton.Click += AñadirAlItinerarioVueloButton_Click;
             // 
             // VuelosListView
             // 
             VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, OrigenVueloHeader, DestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader });
             VuelosListView.FullRowSelect = true;
-            VuelosListView.Location = new Point(7, 27);
+            VuelosListView.Location = new Point(14, 46);
             VuelosListView.Margin = new Padding(3, 4, 3, 4);
             VuelosListView.MultiSelect = false;
             VuelosListView.Name = "VuelosListView";
-            VuelosListView.Size = new Size(1190, 209);
+            VuelosListView.Size = new Size(1176, 104);
             VuelosListView.TabIndex = 0;
             VuelosListView.UseCompatibleStateImageBehavior = false;
             VuelosListView.View = View.Details;
+            VuelosListView.SelectedIndexChanged += VuelosListView_SelectedIndexChanged;
             // 
             // CodigoVueloHeader
             // 
@@ -131,32 +164,32 @@
             CodigoAerolineaVueloHeader.TextAlign = HorizontalAlignment.Center;
             CodigoAerolineaVueloHeader.Width = 160;
             // 
-            // InformacionVueloButton
+            // VerMasInformacionVueloButton
             // 
-            InformacionVueloButton.Location = new Point(14, 301);
-            InformacionVueloButton.Name = "InformacionVueloButton";
-            InformacionVueloButton.Size = new Size(155, 40);
-            InformacionVueloButton.TabIndex = 6;
-            InformacionVueloButton.Text = "Ver más información";
-            InformacionVueloButton.UseVisualStyleBackColor = true;
-            InformacionVueloButton.Click += InformacionVueloButton_Click;
+            VerMasInformacionVueloButton.Location = new Point(12, 159);
+            VerMasInformacionVueloButton.Name = "VerMasInformacionVueloButton";
+            VerMasInformacionVueloButton.Size = new Size(155, 40);
+            VerMasInformacionVueloButton.TabIndex = 6;
+            VerMasInformacionVueloButton.Text = "Ver más información";
+            VerMasInformacionVueloButton.UseVisualStyleBackColor = true;
+            VerMasInformacionVueloButton.Click += InformacionVueloButton_Click;
             // 
-            // MasInformacionGrp
+            // InformacionAdicionalVuelosGroupBox
             // 
-            MasInformacionGrp.Controls.Add(lblServiciosExtra);
-            MasInformacionGrp.Controls.Add(lblTarifas);
-            MasInformacionGrp.Controls.Add(lblParadas);
-            MasInformacionGrp.Controls.Add(ServiciosExtraListView);
-            MasInformacionGrp.Controls.Add(TarifasListView);
-            MasInformacionGrp.Controls.Add(ParadasListView);
-            MasInformacionGrp.Location = new Point(7, 348);
-            MasInformacionGrp.Margin = new Padding(3, 4, 3, 4);
-            MasInformacionGrp.Name = "MasInformacionGrp";
-            MasInformacionGrp.Padding = new Padding(3, 4, 3, 4);
-            MasInformacionGrp.Size = new Size(1213, 347);
-            MasInformacionGrp.TabIndex = 7;
-            MasInformacionGrp.TabStop = false;
-            MasInformacionGrp.Text = "Más información:";
+            InformacionAdicionalVuelosGroupBox.Controls.Add(lblServiciosExtra);
+            InformacionAdicionalVuelosGroupBox.Controls.Add(lblTarifas);
+            InformacionAdicionalVuelosGroupBox.Controls.Add(lblParadas);
+            InformacionAdicionalVuelosGroupBox.Controls.Add(ServiciosExtraListView);
+            InformacionAdicionalVuelosGroupBox.Controls.Add(TarifasListView);
+            InformacionAdicionalVuelosGroupBox.Controls.Add(ParadasListView);
+            InformacionAdicionalVuelosGroupBox.Location = new Point(7, 348);
+            InformacionAdicionalVuelosGroupBox.Margin = new Padding(3, 4, 3, 4);
+            InformacionAdicionalVuelosGroupBox.Name = "InformacionAdicionalVuelosGroupBox";
+            InformacionAdicionalVuelosGroupBox.Padding = new Padding(3, 4, 3, 4);
+            InformacionAdicionalVuelosGroupBox.Size = new Size(1213, 347);
+            InformacionAdicionalVuelosGroupBox.TabIndex = 7;
+            InformacionAdicionalVuelosGroupBox.TabStop = false;
+            InformacionAdicionalVuelosGroupBox.Text = "Más información:";
             // 
             // lblServiciosExtra
             // 
@@ -288,65 +321,121 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(176, 12);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(337, 75);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(291, 27);
+            dateTimePicker1.Size = new Size(121, 27);
             dateTimePicker1.TabIndex = 8;
             // 
-            // AplicarFiltrosButton
+            // AplicarFiltrosVuelosButton
             // 
-            AplicarFiltrosButton.Location = new Point(473, 12);
-            AplicarFiltrosButton.Name = "AplicarFiltrosButton";
-            AplicarFiltrosButton.Size = new Size(122, 30);
-            AplicarFiltrosButton.TabIndex = 10;
-            AplicarFiltrosButton.Text = "Aplicar filtro";
-            AplicarFiltrosButton.UseVisualStyleBackColor = true;
-            AplicarFiltrosButton.Click += AplicarFiltrosButton_Click;
+            AplicarFiltrosVuelosButton.Location = new Point(625, 72);
+            AplicarFiltrosVuelosButton.Name = "AplicarFiltrosVuelosButton";
+            AplicarFiltrosVuelosButton.Size = new Size(122, 30);
+            AplicarFiltrosVuelosButton.TabIndex = 10;
+            AplicarFiltrosVuelosButton.Text = "Aplicar filtros";
+            AplicarFiltrosVuelosButton.UseVisualStyleBackColor = true;
+            AplicarFiltrosVuelosButton.Click += AplicarFiltrosButton_Click;
             // 
             // lblFechaSalida
             // 
             lblFechaSalida.AutoSize = true;
-            lblFechaSalida.Location = new Point(7, 12);
+            lblFechaSalida.Location = new Point(334, 46);
             lblFechaSalida.Name = "lblFechaSalida";
-            lblFechaSalida.Size = new Size(160, 20);
+            lblFechaSalida.Size = new Size(124, 20);
             lblFechaSalida.TabIndex = 14;
-            lblFechaSalida.Text = "Filtrar por FechaSalida:";
+            lblFechaSalida.Text = "Rango de Fechas:";
             // 
-            // AñadirAlItinerarioVuelosButton
+            // groupBox1
             // 
-            AñadirAlItinerarioVuelosButton.Location = new Point(176, 301);
-            AñadirAlItinerarioVuelosButton.Margin = new Padding(3, 4, 3, 4);
-            AñadirAlItinerarioVuelosButton.Name = "AñadirAlItinerarioVuelosButton";
-            AñadirAlItinerarioVuelosButton.Size = new Size(155, 39);
-            AñadirAlItinerarioVuelosButton.TabIndex = 15;
-            AñadirAlItinerarioVuelosButton.Text = "Añadir a itinerario";
-            AñadirAlItinerarioVuelosButton.UseVisualStyleBackColor = true;
+            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(AplicarFiltrosVuelosButton);
+            groupBox1.Controls.Add(lblFechaSalida);
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Location = new Point(14, 8);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1206, 115);
+            groupBox1.TabIndex = 16;
+            groupBox1.TabStop = false;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(476, 75);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(121, 27);
+            dateTimePicker2.TabIndex = 19;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(160, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(122, 20);
+            label3.TabIndex = 18;
+            label3.Text = "Lugar de Destino";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(162, 75);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(125, 27);
+            textBox2.TabIndex = 17;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(9, 48);
+            label2.Name = "label2";
+            label2.Size = new Size(116, 20);
+            label2.TabIndex = 16;
+            label2.Text = "Lugar de Origen";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(12, 75);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(9, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(231, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Busqueda de vuelos disponibles";
             // 
             // VuelosForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1232, 715);
-            Controls.Add(AñadirAlItinerarioVuelosButton);
-            Controls.Add(lblFechaSalida);
-            Controls.Add(AplicarFiltrosButton);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(MasInformacionGrp);
-            Controls.Add(InformacionVueloButton);
-            Controls.Add(grpVuelo);
+            ClientSize = new Size(1232, 728);
+            Controls.Add(groupBox1);
+            Controls.Add(InformacionAdicionalVuelosGroupBox);
+            Controls.Add(VuelosDisponiblesGroupBox);
             Margin = new Padding(3, 4, 3, 4);
             Name = "VuelosForm";
             Text = "FormVuelos";
             Load += Form1_Load;
-            grpVuelo.ResumeLayout(false);
-            MasInformacionGrp.ResumeLayout(false);
-            MasInformacionGrp.PerformLayout();
+            VuelosDisponiblesGroupBox.ResumeLayout(false);
+            VuelosDisponiblesGroupBox.PerformLayout();
+            InformacionAdicionalVuelosGroupBox.ResumeLayout(false);
+            InformacionAdicionalVuelosGroupBox.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private GroupBox grpVuelo;
+        private GroupBox VuelosDisponiblesGroupBox;
         private ListView VuelosListView;
         private ColumnHeader CodigoVueloHeader;
         private ColumnHeader OrigenVueloHeader;
@@ -355,8 +444,8 @@
         private ColumnHeader FechaArriboVueloHeader;
         private ColumnHeader TiempoVueloHeader;
         private ColumnHeader CodigoAerolineaVueloHeader;
-        private Button InformacionVueloButton;
-        private GroupBox MasInformacionGrp;
+        private Button VerMasInformacionVueloButton;
+        private GroupBox InformacionAdicionalVuelosGroupBox;
         private Label lblServiciosExtra;
         private Label lblTarifas;
         private Label lblParadas;
@@ -364,7 +453,7 @@
         private ListView TarifasListView;
         private ListView ParadasListView;
         private DateTimePicker dateTimePicker1;
-        private Button AplicarFiltrosButton;
+        private Button AplicarFiltrosVuelosButton;
         private Label lblFechaSalida;
         private ColumnHeader AeropuertoParadaHeader;
         private ColumnHeader TiempoParadaHeader;
@@ -378,6 +467,14 @@
         private ColumnHeader CodigoServicioHeader;
         private ColumnHeader DescripcionServicioHeader;
         private ColumnHeader TarifaServicioHeader;
-        private Button AñadirAlItinerarioVuelosButton;
+        private Button AñadirAlItinerarioVueloButton;
+        private GroupBox groupBox1;
+        private Label label3;
+        private TextBox textBox2;
+        private Label label2;
+        private TextBox textBox1;
+        private Label label1;
+        private DateTimePicker dateTimePicker2;
+        private Label label4;
     }
 }

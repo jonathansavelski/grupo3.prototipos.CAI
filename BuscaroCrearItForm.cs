@@ -17,22 +17,25 @@ namespace grupo3.prototipos.CAI
             InitializeComponent();
         }
 
-        public struct Datos
-        {
-            public int numero;
-        }
+        //public struct Datos
+        //{
+        //    public int numero;
+        //}
 
         private void NuevoItinerarioBtn_Click(object sender, EventArgs e)
         {
-            Datos info;
+            //Datos info;
 
-            Random numeroRandom = new Random();
-            int numeroAleatorio = numeroRandom.Next();
+            //Random numeroRandom = new Random();
+            //int numeroAleatorio = numeroRandom.Next();
 
-            info.numero = numeroAleatorio;
+            //info.numero = numeroAleatorio;
 
-            CrearItinerario obj = new CrearItinerario(info);
-            obj.ShowDialog();
+            //CrearItinerario crearItinerario = new CrearItinerario(info);
+            //crearItinerario.Show();
+
+            CrearItinerario crearItinerario = new CrearItinerario();
+            crearItinerario.Show();
 
         }
 

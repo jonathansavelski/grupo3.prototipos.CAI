@@ -29,109 +29,360 @@
         private void InitializeComponent()
         {
             grpMenu = new GroupBox();
-            button8 = new Button();
-            AgregarPersonaBtn = new Button();
+            RealizarReservaButton = new Button();
+            RealizarPrereservaButton = new Button();
+            ValorDeLaCotizacionLabel = new Label();
+            GuardarItinerarioButton = new Button();
+            CotizarButton = new Button();
+            EliminarHotelButton = new Button();
+            EliminarPaqueteButton = new Button();
+            EliminarVueloButton = new Button();
+            label8 = new Label();
+            PaquetesListView = new ListView();
+            label7 = new Label();
+            HotelesListView = new ListView();
+            label6 = new Label();
+            VuelosListView = new ListView();
+            ConsultaDisponibilidadHotelesBtn = new Button();
+            ConsultaDisponibilidadVuelosBtn = new Button();
+            ConsultaDisponibilidadPaquetesBtn = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            NumeroItinerarioLabel = new Label();
+            label1 = new Label();
+            CantidadAdultosTextBox = new TextBox();
+            lblNumeroItinerario = new Label();
+            groupBox1 = new GroupBox();
+            CantidadMenoresTextBox = new TextBox();
+            CantidadInfantesTextBox = new TextBox();
+            label4 = new Label();
+            CargaPasajerosGroupBox = new GroupBox();
             listView4 = new ListView();
             nombreHeader = new ColumnHeader();
             apellidoHeader = new ColumnHeader();
             TipoPasajero = new ColumnHeader();
-            button5 = new Button();
-            textBox7 = new TextBox();
-            label10 = new Label();
-            textBox6 = new TextBox();
-            button3 = new Button();
-            button4 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            label8 = new Label();
-            listView3 = new ListView();
-            label7 = new Label();
-            listView2 = new ListView();
-            label6 = new Label();
-            listView1 = new ListView();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            lblNumeroItinerario = new Label();
-            ConsultaDisponibilidadHotelesBtn = new Button();
-            ConsultaDisponibilidadVuelosBtn = new Button();
-            txtNumeroItinerario = new TextBox();
-            ConsultaDisponibilidadPaquetesBtn = new Button();
+            AgregarPersonaBtn = new Button();
+            button8 = new Button();
             grpMenu.SuspendLayout();
+            groupBox1.SuspendLayout();
+            CargaPasajerosGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // grpMenu
             // 
-            grpMenu.Controls.Add(button8);
-            grpMenu.Controls.Add(AgregarPersonaBtn);
-            grpMenu.Controls.Add(listView4);
-            grpMenu.Controls.Add(button5);
-            grpMenu.Controls.Add(textBox7);
-            grpMenu.Controls.Add(label10);
-            grpMenu.Controls.Add(textBox6);
-            grpMenu.Controls.Add(button3);
-            grpMenu.Controls.Add(button4);
-            grpMenu.Controls.Add(button2);
-            grpMenu.Controls.Add(button1);
+            grpMenu.Controls.Add(RealizarReservaButton);
+            grpMenu.Controls.Add(RealizarPrereservaButton);
+            grpMenu.Controls.Add(ValorDeLaCotizacionLabel);
+            grpMenu.Controls.Add(GuardarItinerarioButton);
+            grpMenu.Controls.Add(CotizarButton);
+            grpMenu.Controls.Add(EliminarHotelButton);
+            grpMenu.Controls.Add(EliminarPaqueteButton);
+            grpMenu.Controls.Add(EliminarVueloButton);
             grpMenu.Controls.Add(label8);
-            grpMenu.Controls.Add(listView3);
+            grpMenu.Controls.Add(PaquetesListView);
             grpMenu.Controls.Add(label7);
-            grpMenu.Controls.Add(listView2);
+            grpMenu.Controls.Add(HotelesListView);
             grpMenu.Controls.Add(label6);
-            grpMenu.Controls.Add(listView1);
-            grpMenu.Controls.Add(textBox5);
-            grpMenu.Controls.Add(label5);
-            grpMenu.Controls.Add(label4);
-            grpMenu.Controls.Add(textBox4);
-            grpMenu.Controls.Add(label3);
-            grpMenu.Controls.Add(label2);
-            grpMenu.Controls.Add(label1);
-            grpMenu.Controls.Add(textBox3);
-            grpMenu.Controls.Add(textBox2);
-            grpMenu.Controls.Add(textBox1);
-            grpMenu.Controls.Add(lblNumeroItinerario);
+            grpMenu.Controls.Add(VuelosListView);
             grpMenu.Controls.Add(ConsultaDisponibilidadHotelesBtn);
             grpMenu.Controls.Add(ConsultaDisponibilidadVuelosBtn);
-            grpMenu.Controls.Add(txtNumeroItinerario);
             grpMenu.Controls.Add(ConsultaDisponibilidadPaquetesBtn);
-            grpMenu.Location = new Point(33, 2);
+            grpMenu.Location = new Point(12, 144);
+            grpMenu.Margin = new Padding(3, 4, 3, 4);
             grpMenu.Name = "grpMenu";
-            grpMenu.Size = new Size(815, 761);
+            grpMenu.Padding = new Padding(3, 4, 3, 4);
+            grpMenu.Size = new Size(931, 608);
             grpMenu.TabIndex = 0;
             grpMenu.TabStop = false;
             // 
-            // button8
+            // RealizarReservaButton
             // 
-            button8.Location = new Point(655, 599);
-            button8.Name = "button8";
-            button8.Size = new Size(138, 31);
-            button8.TabIndex = 38;
-            button8.Text = "Eliminar";
-            button8.UseVisualStyleBackColor = true;
+            RealizarReservaButton.Location = new Point(356, 542);
+            RealizarReservaButton.Margin = new Padding(3, 4, 3, 4);
+            RealizarReservaButton.Name = "RealizarReservaButton";
+            RealizarReservaButton.Size = new Size(165, 45);
+            RealizarReservaButton.TabIndex = 41;
+            RealizarReservaButton.Text = "Realizar reserva";
+            RealizarReservaButton.UseVisualStyleBackColor = true;
+            RealizarReservaButton.Click += RealizarReservaButton_Click;
             // 
-            // AgregarPersonaBtn
+            // RealizarPrereservaButton
             // 
-            AgregarPersonaBtn.Location = new Point(655, 562);
-            AgregarPersonaBtn.Name = "AgregarPersonaBtn";
-            AgregarPersonaBtn.Size = new Size(138, 31);
-            AgregarPersonaBtn.TabIndex = 37;
-            AgregarPersonaBtn.Text = "Agregar";
-            AgregarPersonaBtn.UseVisualStyleBackColor = true;
-            AgregarPersonaBtn.Click += AgregarPersonaBtn_Click;
+            RealizarPrereservaButton.Location = new Point(185, 542);
+            RealizarPrereservaButton.Margin = new Padding(3, 4, 3, 4);
+            RealizarPrereservaButton.Name = "RealizarPrereservaButton";
+            RealizarPrereservaButton.Size = new Size(165, 45);
+            RealizarPrereservaButton.TabIndex = 40;
+            RealizarPrereservaButton.Text = "Realizar prereserva";
+            RealizarPrereservaButton.UseVisualStyleBackColor = true;
+            RealizarPrereservaButton.Click += RealizarPrereservaButton_Click;
+            // 
+            // ValorDeLaCotizacionLabel
+            // 
+            ValorDeLaCotizacionLabel.AutoSize = true;
+            ValorDeLaCotizacionLabel.Location = new Point(152, 485);
+            ValorDeLaCotizacionLabel.Name = "ValorDeLaCotizacionLabel";
+            ValorDeLaCotizacionLabel.Size = new Size(152, 20);
+            ValorDeLaCotizacionLabel.TabIndex = 39;
+            ValorDeLaCotizacionLabel.Text = "Valor de la cotización";
+            // 
+            // GuardarItinerarioButton
+            // 
+            GuardarItinerarioButton.Location = new Point(14, 542);
+            GuardarItinerarioButton.Margin = new Padding(3, 4, 3, 4);
+            GuardarItinerarioButton.Name = "GuardarItinerarioButton";
+            GuardarItinerarioButton.Size = new Size(165, 45);
+            GuardarItinerarioButton.TabIndex = 35;
+            GuardarItinerarioButton.Text = "Guardar itinerario";
+            GuardarItinerarioButton.UseVisualStyleBackColor = true;
+            GuardarItinerarioButton.Click += GuardarItinerarioButton_Click;
+            // 
+            // CotizarButton
+            // 
+            CotizarButton.Location = new Point(14, 471);
+            CotizarButton.Margin = new Padding(3, 4, 3, 4);
+            CotizarButton.Name = "CotizarButton";
+            CotizarButton.Size = new Size(112, 49);
+            CotizarButton.TabIndex = 30;
+            CotizarButton.Text = "Cotizar";
+            CotizarButton.UseVisualStyleBackColor = true;
+            // 
+            // EliminarHotelButton
+            // 
+            EliminarHotelButton.Location = new Point(754, 254);
+            EliminarHotelButton.Margin = new Padding(3, 4, 3, 4);
+            EliminarHotelButton.Name = "EliminarHotelButton";
+            EliminarHotelButton.Size = new Size(158, 41);
+            EliminarHotelButton.TabIndex = 29;
+            EliminarHotelButton.Text = "Eliminar";
+            EliminarHotelButton.UseVisualStyleBackColor = true;
+            // 
+            // EliminarPaqueteButton
+            // 
+            EliminarPaqueteButton.Location = new Point(754, 410);
+            EliminarPaqueteButton.Margin = new Padding(3, 4, 3, 4);
+            EliminarPaqueteButton.Name = "EliminarPaqueteButton";
+            EliminarPaqueteButton.Size = new Size(158, 41);
+            EliminarPaqueteButton.TabIndex = 27;
+            EliminarPaqueteButton.Text = "Eliminar";
+            EliminarPaqueteButton.UseVisualStyleBackColor = true;
+            // 
+            // EliminarVueloButton
+            // 
+            EliminarVueloButton.Location = new Point(754, 113);
+            EliminarVueloButton.Margin = new Padding(3, 4, 3, 4);
+            EliminarVueloButton.Name = "EliminarVueloButton";
+            EliminarVueloButton.Size = new Size(158, 41);
+            EliminarVueloButton.TabIndex = 25;
+            EliminarVueloButton.Text = "Eliminar";
+            EliminarVueloButton.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(10, 317);
+            label8.Name = "label8";
+            label8.Size = new Size(73, 20);
+            label8.TabIndex = 24;
+            label8.Text = "Paquetes";
+            // 
+            // PaquetesListView
+            // 
+            PaquetesListView.Location = new Point(14, 351);
+            PaquetesListView.Margin = new Padding(3, 4, 3, 4);
+            PaquetesListView.Name = "PaquetesListView";
+            PaquetesListView.Size = new Size(724, 100);
+            PaquetesListView.TabIndex = 23;
+            PaquetesListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(10, 169);
+            label7.Name = "label7";
+            label7.Size = new Size(62, 20);
+            label7.TabIndex = 22;
+            label7.Text = "Hoteles";
+            // 
+            // HotelesListView
+            // 
+            HotelesListView.Location = new Point(14, 197);
+            HotelesListView.Margin = new Padding(3, 4, 3, 4);
+            HotelesListView.Name = "HotelesListView";
+            HotelesListView.Size = new Size(724, 98);
+            HotelesListView.TabIndex = 21;
+            HotelesListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(10, 24);
+            label6.Name = "label6";
+            label6.Size = new Size(56, 20);
+            label6.TabIndex = 20;
+            label6.Text = "Vuelos";
+            // 
+            // VuelosListView
+            // 
+            VuelosListView.Location = new Point(14, 54);
+            VuelosListView.Margin = new Padding(3, 4, 3, 4);
+            VuelosListView.Name = "VuelosListView";
+            VuelosListView.Size = new Size(727, 100);
+            VuelosListView.TabIndex = 19;
+            VuelosListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // ConsultaDisponibilidadHotelesBtn
+            // 
+            ConsultaDisponibilidadHotelesBtn.Location = new Point(754, 197);
+            ConsultaDisponibilidadHotelesBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadHotelesBtn.Name = "ConsultaDisponibilidadHotelesBtn";
+            ConsultaDisponibilidadHotelesBtn.Size = new Size(158, 37);
+            ConsultaDisponibilidadHotelesBtn.TabIndex = 3;
+            ConsultaDisponibilidadHotelesBtn.Text = "Agregar";
+            ConsultaDisponibilidadHotelesBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadHotelesBtn.Click += ConsultaDisponibilidadHotelesBtn_Click;
+            // 
+            // ConsultaDisponibilidadVuelosBtn
+            // 
+            ConsultaDisponibilidadVuelosBtn.Location = new Point(754, 54);
+            ConsultaDisponibilidadVuelosBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadVuelosBtn.Name = "ConsultaDisponibilidadVuelosBtn";
+            ConsultaDisponibilidadVuelosBtn.Size = new Size(158, 39);
+            ConsultaDisponibilidadVuelosBtn.TabIndex = 1;
+            ConsultaDisponibilidadVuelosBtn.Text = "Agregar";
+            ConsultaDisponibilidadVuelosBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadVuelosBtn.Click += ConsultaDisponibilidadVuelosBtn_Click;
+            // 
+            // ConsultaDisponibilidadPaquetesBtn
+            // 
+            ConsultaDisponibilidadPaquetesBtn.Location = new Point(754, 351);
+            ConsultaDisponibilidadPaquetesBtn.Margin = new Padding(3, 4, 3, 4);
+            ConsultaDisponibilidadPaquetesBtn.Name = "ConsultaDisponibilidadPaquetesBtn";
+            ConsultaDisponibilidadPaquetesBtn.Size = new Size(158, 41);
+            ConsultaDisponibilidadPaquetesBtn.TabIndex = 2;
+            ConsultaDisponibilidadPaquetesBtn.Text = "Agregar";
+            ConsultaDisponibilidadPaquetesBtn.UseVisualStyleBackColor = true;
+            ConsultaDisponibilidadPaquetesBtn.Click += ConsultaDisponibilidadPaquetesBtn_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(152, 61);
+            label3.Name = "label3";
+            label3.Size = new Size(64, 20);
+            label3.TabIndex = 14;
+            label3.Text = "Infantes:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(287, 61);
+            label2.Name = "label2";
+            label2.Size = new Size(69, 20);
+            label2.TabIndex = 13;
+            label2.Text = "Menores:";
+            // 
+            // NumeroItinerarioLabel
+            // 
+            NumeroItinerarioLabel.AutoSize = true;
+            NumeroItinerarioLabel.Location = new Point(241, 14);
+            NumeroItinerarioLabel.Name = "NumeroItinerarioLabel";
+            NumeroItinerarioLabel.Size = new Size(127, 20);
+            NumeroItinerarioLabel.TabIndex = 39;
+            NumeroItinerarioLabel.Text = "Número itinerario";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 61);
+            label1.Name = "label1";
+            label1.Size = new Size(63, 20);
+            label1.TabIndex = 12;
+            label1.Text = "Adultos:";
+            // 
+            // CantidadAdultosTextBox
+            // 
+            CantidadAdultosTextBox.Location = new Point(83, 58);
+            CantidadAdultosTextBox.Margin = new Padding(3, 4, 3, 4);
+            CantidadAdultosTextBox.Name = "CantidadAdultosTextBox";
+            CantidadAdultosTextBox.Size = new Size(29, 27);
+            CantidadAdultosTextBox.TabIndex = 9;
+            CantidadAdultosTextBox.KeyPress += CantidadAdultosTextBox_KeyPress;
+            // 
+            // lblNumeroItinerario
+            // 
+            lblNumeroItinerario.AutoSize = true;
+            lblNumeroItinerario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNumeroItinerario.Location = new Point(12, 13);
+            lblNumeroItinerario.Name = "lblNumeroItinerario";
+            lblNumeroItinerario.Size = new Size(227, 20);
+            lblNumeroItinerario.TabIndex = 8;
+            lblNumeroItinerario.Text = "Número de itinerario asignado:";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(CantidadMenoresTextBox);
+            groupBox1.Controls.Add(CantidadInfantesTextBox);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(CantidadAdultosTextBox);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Location = new Point(12, 37);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(931, 100);
+            groupBox1.TabIndex = 40;
+            groupBox1.TabStop = false;
+            // 
+            // CantidadMenoresTextBox
+            // 
+            CantidadMenoresTextBox.Location = new Point(362, 58);
+            CantidadMenoresTextBox.Margin = new Padding(3, 4, 3, 4);
+            CantidadMenoresTextBox.Name = "CantidadMenoresTextBox";
+            CantidadMenoresTextBox.Size = new Size(29, 27);
+            CantidadMenoresTextBox.TabIndex = 16;
+            CantidadMenoresTextBox.KeyPress += CantidadMenoresTextBox_KeyPress;
+            // 
+            // CantidadInfantesTextBox
+            // 
+            CantidadInfantesTextBox.Location = new Point(222, 58);
+            CantidadInfantesTextBox.Margin = new Padding(3, 4, 3, 4);
+            CantidadInfantesTextBox.Name = "CantidadInfantesTextBox";
+            CantidadInfantesTextBox.Size = new Size(29, 27);
+            CantidadInfantesTextBox.TabIndex = 15;
+            CantidadInfantesTextBox.KeyPress += CantidadInfantesTextBox_KeyPress;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(6, 23);
+            label4.Name = "label4";
+            label4.Size = new Size(162, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Cantidad de pasajeros";
+            // 
+            // CargaPasajerosGroupBox
+            // 
+            CargaPasajerosGroupBox.Controls.Add(listView4);
+            CargaPasajerosGroupBox.Controls.Add(AgregarPersonaBtn);
+            CargaPasajerosGroupBox.Controls.Add(button8);
+            CargaPasajerosGroupBox.Location = new Point(12, 759);
+            CargaPasajerosGroupBox.Name = "CargaPasajerosGroupBox";
+            CargaPasajerosGroupBox.Size = new Size(999, 169);
+            CargaPasajerosGroupBox.TabIndex = 43;
+            CargaPasajerosGroupBox.TabStop = false;
             // 
             // listView4
             // 
             listView4.Columns.AddRange(new ColumnHeader[] { nombreHeader, apellidoHeader, TipoPasajero });
-            listView4.Location = new Point(3, 562);
+            listView4.Location = new Point(10, 27);
+            listView4.Margin = new Padding(3, 4, 3, 4);
             listView4.Name = "listView4";
-            listView4.Size = new Size(646, 97);
+            listView4.Size = new Size(461, 128);
             listView4.TabIndex = 36;
             listView4.UseCompatibleStateImageBehavior = false;
             listView4.View = View.Details;
@@ -144,270 +395,58 @@
             // apellidoHeader
             // 
             apellidoHeader.Text = "Apellido";
-            apellidoHeader.Width = 80;
+            apellidoHeader.TextAlign = HorizontalAlignment.Center;
+            apellidoHeader.Width = 100;
             // 
             // TipoPasajero
             // 
             TipoPasajero.Text = "Tipo pasajero ";
-            TipoPasajero.Width = 100;
+            TipoPasajero.TextAlign = HorizontalAlignment.Center;
+            TipoPasajero.Width = 120;
             // 
-            // button5
+            // AgregarPersonaBtn
             // 
-            button5.Location = new Point(0, 675);
-            button5.Name = "button5";
-            button5.Size = new Size(144, 34);
-            button5.TabIndex = 35;
-            button5.Text = "PRERESERVA";
-            button5.UseVisualStyleBackColor = true;
+            AgregarPersonaBtn.Location = new Point(669, 27);
+            AgregarPersonaBtn.Margin = new Padding(3, 4, 3, 4);
+            AgregarPersonaBtn.Name = "AgregarPersonaBtn";
+            AgregarPersonaBtn.Size = new Size(158, 41);
+            AgregarPersonaBtn.TabIndex = 37;
+            AgregarPersonaBtn.Text = "Agregar";
+            AgregarPersonaBtn.UseVisualStyleBackColor = true;
+            AgregarPersonaBtn.Click += AgregarPersonaBtn_Click;
             // 
-            // textBox7
+            // button8
             // 
-            textBox7.Location = new Point(588, 64);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 34;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(528, 64);
-            label10.Name = "label10";
-            label10.Size = new Size(54, 15);
-            label10.TabIndex = 33;
-            label10.Text = "Moneda:";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(108, 516);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 31;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(0, 508);
-            button3.Name = "button3";
-            button3.Size = new Size(98, 37);
-            button3.TabIndex = 30;
-            button3.Text = "Cotizar";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(660, 295);
-            button4.Name = "button4";
-            button4.Size = new Size(138, 31);
-            button4.TabIndex = 29;
-            button4.Text = "Eliminar";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(660, 441);
-            button2.Name = "button2";
-            button2.Size = new Size(138, 31);
-            button2.TabIndex = 27;
-            button2.Text = "Eliminar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(660, 144);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 31);
-            button1.TabIndex = 25;
-            button1.Text = "Eliminar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(3, 377);
-            label8.Name = "label8";
-            label8.Size = new Size(58, 15);
-            label8.TabIndex = 24;
-            label8.Text = "Paquetes:";
-            // 
-            // listView3
-            // 
-            listView3.Location = new Point(3, 395);
-            listView3.Name = "listView3";
-            listView3.Size = new Size(641, 97);
-            listView3.TabIndex = 23;
-            listView3.UseCompatibleStateImageBehavior = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(3, 230);
-            label7.Name = "label7";
-            label7.Size = new Size(50, 15);
-            label7.TabIndex = 22;
-            label7.Text = "Hoteles:";
-            // 
-            // listView2
-            // 
-            listView2.Location = new Point(3, 248);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(641, 97);
-            listView2.TabIndex = 21;
-            listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(3, 89);
-            label6.Name = "label6";
-            label6.Size = new Size(45, 15);
-            label6.TabIndex = 20;
-            label6.Text = "Vuelos:";
-            // 
-            // listView1
-            // 
-            listView1.Location = new Point(3, 107);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(641, 97);
-            listView1.TabIndex = 19;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(418, 64);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 18;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(267, 64);
-            label5.Name = "label5";
-            label5.Size = new Size(145, 15);
-            label5.TabIndex = 17;
-            label5.Text = "Duración del presupuesto:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(3, 64);
-            label4.Name = "label4";
-            label4.Size = new Size(125, 15);
-            label4.TabIndex = 16;
-            label4.Text = "Fecha de presupuesto:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(134, 64);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 15;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(219, 38);
-            label3.Name = "label3";
-            label3.Size = new Size(103, 15);
-            label3.TabIndex = 14;
-            label3.Text = "Cantidad infantes:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(443, 41);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 15);
-            label2.TabIndex = 13;
-            label2.Text = "Cantidad menores:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(2, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 15);
-            label1.TabIndex = 12;
-            label1.Text = "Cantidad adultos:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(547, 35);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(328, 38);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(108, 38);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 9;
-            // 
-            // lblNumeroItinerario
-            // 
-            lblNumeroItinerario.AutoSize = true;
-            lblNumeroItinerario.Location = new Point(6, 13);
-            lblNumeroItinerario.Name = "lblNumeroItinerario";
-            lblNumeroItinerario.Size = new Size(102, 15);
-            lblNumeroItinerario.TabIndex = 8;
-            lblNumeroItinerario.Text = "Itinerario número:";
-            // 
-            // ConsultaDisponibilidadHotelesBtn
-            // 
-            ConsultaDisponibilidadHotelesBtn.Location = new Point(660, 261);
-            ConsultaDisponibilidadHotelesBtn.Name = "ConsultaDisponibilidadHotelesBtn";
-            ConsultaDisponibilidadHotelesBtn.Size = new Size(138, 28);
-            ConsultaDisponibilidadHotelesBtn.TabIndex = 3;
-            ConsultaDisponibilidadHotelesBtn.Text = "Agregar";
-            ConsultaDisponibilidadHotelesBtn.UseVisualStyleBackColor = true;
-            ConsultaDisponibilidadHotelesBtn.Click += ConsultaDisponibilidadHotelesBtn_Click;
-            // 
-            // ConsultaDisponibilidadVuelosBtn
-            // 
-            ConsultaDisponibilidadVuelosBtn.Location = new Point(660, 107);
-            ConsultaDisponibilidadVuelosBtn.Name = "ConsultaDisponibilidadVuelosBtn";
-            ConsultaDisponibilidadVuelosBtn.Size = new Size(138, 29);
-            ConsultaDisponibilidadVuelosBtn.TabIndex = 1;
-            ConsultaDisponibilidadVuelosBtn.Text = "Agregar";
-            ConsultaDisponibilidadVuelosBtn.UseVisualStyleBackColor = true;
-            ConsultaDisponibilidadVuelosBtn.Click += ConsultaDisponibilidadVuelosBtn_Click;
-            // 
-            // txtNumeroItinerario
-            // 
-            txtNumeroItinerario.Location = new Point(114, 10);
-            txtNumeroItinerario.Name = "txtNumeroItinerario";
-            txtNumeroItinerario.Size = new Size(255, 23);
-            txtNumeroItinerario.TabIndex = 7;
-            // 
-            // ConsultaDisponibilidadPaquetesBtn
-            // 
-            ConsultaDisponibilidadPaquetesBtn.Location = new Point(660, 404);
-            ConsultaDisponibilidadPaquetesBtn.Name = "ConsultaDisponibilidadPaquetesBtn";
-            ConsultaDisponibilidadPaquetesBtn.Size = new Size(138, 31);
-            ConsultaDisponibilidadPaquetesBtn.TabIndex = 2;
-            ConsultaDisponibilidadPaquetesBtn.Text = "Agregar";
-            ConsultaDisponibilidadPaquetesBtn.UseVisualStyleBackColor = true;
-            ConsultaDisponibilidadPaquetesBtn.Click += ConsultaDisponibilidadPaquetesBtn_Click;
+            button8.Location = new Point(669, 76);
+            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Name = "button8";
+            button8.Size = new Size(158, 41);
+            button8.TabIndex = 38;
+            button8.Text = "Eliminar";
+            button8.UseVisualStyleBackColor = true;
             // 
             // CrearItinerario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1480, 822);
+            ClientSize = new Size(1023, 953);
+            Controls.Add(CargaPasajerosGroupBox);
+            Controls.Add(groupBox1);
+            Controls.Add(NumeroItinerarioLabel);
             Controls.Add(grpMenu);
+            Controls.Add(lblNumeroItinerario);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CrearItinerario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Crear itinerario";
+            Load += CrearItinerario_Load;
             grpMenu.ResumeLayout(false);
             grpMenu.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            CargaPasajerosGroupBox.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -417,36 +456,35 @@
         private Button ConsultaDisponibilidadPaquetesBtn;
         private Button ConsultaDisponibilidadVuelosBtn;
         private Label lblNumeroItinerario;
-        private TextBox txtNumeroItinerario;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox textBox5;
-        private Label label5;
-        private Label label4;
-        private TextBox textBox4;
-        private ListView listView1;
-        private Button button4;
-        private Button button2;
-        private Button button1;
+        private TextBox CantidadAdultosTextBox;
+        private ListView VuelosListView;
+        private Button EliminarHotelButton;
+        private Button EliminarPaqueteButton;
+        private Button EliminarVueloButton;
         private Label label8;
-        private ListView listView3;
+        private ListView PaquetesListView;
         private Label label7;
-        private ListView listView2;
+        private ListView HotelesListView;
         private Label label6;
-        private Button button5;
-        private TextBox textBox7;
-        private Label label10;
-        private TextBox textBox6;
-        private Button button3;
-        private Button button8;
-        private Button AgregarPersonaBtn;
+        private Button GuardarItinerarioButton;
+        private Button CotizarButton;
+        private Label NumeroItinerarioLabel;
+        private GroupBox groupBox1;
+        private Label label4;
+        private TextBox CantidadMenoresTextBox;
+        private TextBox CantidadInfantesTextBox;
+        private Label ValorDeLaCotizacionLabel;
+        private Button RealizarReservaButton;
+        private Button RealizarPrereservaButton;
+        private GroupBox CargaPasajerosGroupBox;
         private ListView listView4;
         private ColumnHeader nombreHeader;
         private ColumnHeader apellidoHeader;
         private ColumnHeader TipoPasajero;
+        private Button AgregarPersonaBtn;
+        private Button button8;
     }
 }
