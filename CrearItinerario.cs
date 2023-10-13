@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace grupo3.prototipos.CAI
 {
-    public partial class MenuForm : Form
+    public partial class CrearItinerario : Form
     {
-        public MenuForm()
+        public CrearItinerario(BuscaroCrearItForm.Datos info)
         {
             InitializeComponent();
+            txtNumeroItinerario.Text = Convert.ToString(info.numero);
         }
 
         private void CargaDatosBtn_Click(object sender, EventArgs e)
@@ -41,16 +42,10 @@ namespace grupo3.prototipos.CAI
             hotelesForm.Show();
         }
 
-        private void ConsultaDisponibilidadCrucerosBtn_Click(object sender, EventArgs e)
+        private void AgregarPersonaBtn_Click(object sender, EventArgs e)
         {
-            CrucerosForm crucerosForm = new CrucerosForm();
-            crucerosForm.Show();
-        }
-
-        private void ItinerarioBtn_Click(object sender, EventArgs e)
-        {
-            ArmadoItinerarioForm armadoItinerarioForm = new ArmadoItinerarioForm();
-            armadoItinerarioForm.Show();
+            AgregarPersona agregarpersonaForm = new AgregarPersona();
+            agregarpersonaForm.Show();
         }
     }
 }
