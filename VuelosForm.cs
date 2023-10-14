@@ -85,12 +85,17 @@ namespace grupo3.prototipos.CAI
         private void ServiciosExtraListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             AñadirServicioExtraButton.Enabled = true;
-            
+
         }
 
         private void AñadirServicioExtraButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"El servicio extra se ha añadido correctamente al itinerario.", "Servicio extra añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

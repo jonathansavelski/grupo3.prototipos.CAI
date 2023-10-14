@@ -255,6 +255,7 @@
             label5.Size = new Size(161, 20);
             label5.TabIndex = 21;
             label5.Text = "Información adicional";
+            label5.Click += label5_Click;
             // 
             // lblServiciosExtra
             // 

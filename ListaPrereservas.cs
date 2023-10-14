@@ -19,12 +19,20 @@ namespace grupo3.prototipos.CAI
 
         private void ListaPrereservas_Load(object sender, EventArgs e)
         {
-            grpDetallesPrereserva.Enabled = false;
+
         }
 
         private void VerDetallesPreReservaBtn_Click(object sender, EventArgs e)
         {
-            grpDetallesPrereserva.Enabled = true;
+
+        }
+
+        private void txtBuscarItinerario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
