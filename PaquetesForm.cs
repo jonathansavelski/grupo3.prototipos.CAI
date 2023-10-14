@@ -19,12 +19,22 @@ namespace grupo3.prototipos.CAI
 
         private void PaquetesForm_Load(object sender, EventArgs e)
         {
+            grpPaquete.Enabled = false;
+            grpMasInformacionPaquete.Enabled = false;
             btnMasInfoPaquete.Enabled = false;
         }
 
         private void btnMasInfoPaquete_Click(object sender, EventArgs e)
         {
-            btnMasInfoPaquete.Enabled = true;
+            if (lvPaquetes.SelectedItems.Count == 1)
+            {
+                grpMasInformacionPaquete.Enabled = true;
+            }
+        }
+
+        private void AplicarFiltrosPaqueteButton_Click(object sender, EventArgs e)
+        {
+            grpPaquete.Enabled = true;
         }
     }
 }
