@@ -174,7 +174,7 @@
             // 
             // VerDetallesPreReservaBtn
             // 
-            VerDetallesPreReservaBtn.Location = new Point(14, 146);
+            VerDetallesPreReservaBtn.Location = new Point(14, 149);
             VerDetallesPreReservaBtn.Margin = new Padding(3, 4, 3, 4);
             VerDetallesPreReservaBtn.Name = "VerDetallesPreReservaBtn";
             VerDetallesPreReservaBtn.Size = new Size(147, 44);
@@ -192,7 +192,7 @@
             groupBox1.Controls.Add(lblBuscarNumeroItinerario);
             groupBox1.Location = new Point(12, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(481, 205);
+            groupBox1.Size = new Size(481, 249);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             // 
@@ -204,7 +204,7 @@
             groupBox2.Controls.Add(label9);
             groupBox2.Location = new Point(514, 4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(466, 63);
+            groupBox2.Size = new Size(989, 63);
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             // 
@@ -247,7 +247,7 @@
             // 
             // RealizarReservaButton
             // 
-            RealizarReservaButton.Location = new Point(759, 709);
+            RealizarReservaButton.Location = new Point(11, 760);
             RealizarReservaButton.Margin = new Padding(3, 4, 3, 4);
             RealizarReservaButton.Name = "RealizarReservaButton";
             RealizarReservaButton.Size = new Size(165, 45);
@@ -257,7 +257,7 @@
             // 
             // RealizarPrereservaButton
             // 
-            RealizarPrereservaButton.Location = new Point(930, 709);
+            RealizarPrereservaButton.Location = new Point(182, 760);
             RealizarPrereservaButton.Margin = new Padding(3, 4, 3, 4);
             RealizarPrereservaButton.Name = "RealizarPrereservaButton";
             RealizarPrereservaButton.Size = new Size(165, 45);
@@ -279,7 +279,7 @@
             grpMenu.Controls.Add(label12);
             grpMenu.Controls.Add(label13);
             grpMenu.Controls.Add(label14);
-            grpMenu.Location = new Point(12, 212);
+            grpMenu.Location = new Point(12, 262);
             grpMenu.Margin = new Padding(3, 4, 3, 4);
             grpMenu.Name = "grpMenu";
             grpMenu.Padding = new Padding(3, 4, 3, 4);
@@ -677,7 +677,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(1167, 709);
+            button1.Location = new Point(1167, 759);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(165, 45);
@@ -687,7 +687,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(1338, 709);
+            button2.Location = new Point(1338, 759);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(165, 45);
@@ -701,9 +701,9 @@
             CargaPasajerosGroupBox.Controls.Add(listView4);
             CargaPasajerosGroupBox.Controls.Add(AgregarPersonaBtn);
             CargaPasajerosGroupBox.Controls.Add(button8);
-            CargaPasajerosGroupBox.Location = new Point(12, 703);
+            CargaPasajerosGroupBox.Location = new Point(514, 73);
             CargaPasajerosGroupBox.Name = "CargaPasajerosGroupBox";
-            CargaPasajerosGroupBox.Size = new Size(671, 197);
+            CargaPasajerosGroupBox.Size = new Size(989, 180);
             CargaPasajerosGroupBox.TabIndex = 47;
             CargaPasajerosGroupBox.TabStop = false;
             // 
@@ -725,7 +725,7 @@
             listView4.Location = new Point(14, 60);
             listView4.Margin = new Padding(3, 4, 3, 4);
             listView4.Name = "listView4";
-            listView4.Size = new Size(461, 128);
+            listView4.Size = new Size(461, 100);
             listView4.TabIndex = 36;
             listView4.UseCompatibleStateImageBehavior = false;
             listView4.View = View.Details;
@@ -759,7 +759,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(489, 147);
+            button8.Location = new Point(489, 119);
             button8.Margin = new Padding(3, 4, 3, 4);
             button8.Name = "button8";
             button8.Size = new Size(158, 41);
@@ -771,7 +771,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1517, 910);
+            ClientSize = new Size(1517, 814);
             Controls.Add(CargaPasajerosGroupBox);
             Controls.Add(button2);
             Controls.Add(button1);
