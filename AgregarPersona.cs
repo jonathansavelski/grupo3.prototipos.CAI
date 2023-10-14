@@ -33,6 +33,11 @@ namespace grupo3.prototipos.CAI
             {
                 MessageBox.Show("El apellido del pasajero es obligatorio");
             }
+
+            if (string.IsNullOrEmpty(DNIPersonaTextBox.Text))
+            {
+                MessageBox.Show("El dni del pasajero es obligatorio");
+            }
         }
     }
 }

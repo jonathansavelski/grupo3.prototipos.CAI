@@ -112,6 +112,7 @@
             TipoPasajero = new ColumnHeader();
             AgregarPersonaBtn = new Button();
             EliminarPasajeroButton = new Button();
+            DNIHeader = new ColumnHeader();
             grpMenu.SuspendLayout();
             groupBox1.SuspendLayout();
             CargaPasajerosGroupBox.SuspendLayout();
@@ -773,7 +774,7 @@
             // 
             // listView4
             // 
-            listView4.Columns.AddRange(new ColumnHeader[] { nombreHeader, apellidoHeader, TipoPasajero });
+            listView4.Columns.AddRange(new ColumnHeader[] { nombreHeader, apellidoHeader, DNIHeader, TipoPasajero });
             listView4.GridLines = true;
             listView4.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             listView4.Location = new Point(14, 60);
@@ -797,6 +798,7 @@
             // 
             // TipoPasajero
             // 
+            TipoPasajero.DisplayIndex = 2;
             TipoPasajero.Text = "Tipo pasajero ";
             TipoPasajero.TextAlign = HorizontalAlignment.Center;
             TipoPasajero.Width = 120;
@@ -821,6 +823,12 @@
             EliminarPasajeroButton.TabIndex = 38;
             EliminarPasajeroButton.Text = "Eliminar";
             EliminarPasajeroButton.UseVisualStyleBackColor = true;
+            // 
+            // DNIHeader
+            // 
+            DNIHeader.DisplayIndex = 3;
+            DNIHeader.Text = "DNI";
+            DNIHeader.Width = 100;
             // 
             // CrearItinerario
             // 
@@ -935,5 +943,6 @@
         private ColumnHeader DescripcionAdicionalHeader;
         private ColumnHeader TarifaAdicionalHeader;
         private Label label11;
+        private ColumnHeader DNIHeader;
     }
 }

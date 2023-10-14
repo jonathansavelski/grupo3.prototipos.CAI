@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label3 = new Label();
+            DNIPersonaTextBox = new TextBox();
             TipoDePasajeroGroupBox = new GroupBox();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
@@ -45,6 +47,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(DNIPersonaTextBox);
             groupBox1.Controls.Add(TipoDePasajeroGroupBox);
             groupBox1.Controls.Add(CancelarAgregarPersonaButton);
             groupBox1.Controls.Add(AgregarPersonaButton);
@@ -56,9 +60,26 @@
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(350, 243);
+            groupBox1.Size = new Size(350, 390);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(23, 163);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 20);
+            label3.TabIndex = 48;
+            label3.Text = "DNI:";
+            // 
+            // DNIPersonaTextBox
+            // 
+            DNIPersonaTextBox.Location = new Point(25, 191);
+            DNIPersonaTextBox.Margin = new Padding(3, 4, 3, 4);
+            DNIPersonaTextBox.Name = "DNIPersonaTextBox";
+            DNIPersonaTextBox.Size = new Size(114, 27);
+            DNIPersonaTextBox.TabIndex = 47;
             // 
             // TipoDePasajeroGroupBox
             // 
@@ -67,7 +88,7 @@
             TipoDePasajeroGroupBox.Controls.Add(radioButton3);
             TipoDePasajeroGroupBox.Controls.Add(radioButton1);
             TipoDePasajeroGroupBox.ForeColor = SystemColors.ControlText;
-            TipoDePasajeroGroupBox.Location = new Point(25, 86);
+            TipoDePasajeroGroupBox.Location = new Point(25, 229);
             TipoDePasajeroGroupBox.Name = "TipoDePasajeroGroupBox";
             TipoDePasajeroGroupBox.Size = new Size(296, 67);
             TipoDePasajeroGroupBox.TabIndex = 46;
@@ -110,7 +131,7 @@
             // 
             // CancelarAgregarPersonaButton
             // 
-            CancelarAgregarPersonaButton.Location = new Point(205, 174);
+            CancelarAgregarPersonaButton.Location = new Point(158, 310);
             CancelarAgregarPersonaButton.Margin = new Padding(3, 4, 3, 4);
             CancelarAgregarPersonaButton.Name = "CancelarAgregarPersonaButton";
             CancelarAgregarPersonaButton.Size = new Size(116, 45);
@@ -121,7 +142,7 @@
             // 
             // AgregarPersonaButton
             // 
-            AgregarPersonaButton.Location = new Point(25, 174);
+            AgregarPersonaButton.Location = new Point(25, 310);
             AgregarPersonaButton.Margin = new Padding(3, 4, 3, 4);
             AgregarPersonaButton.Name = "AgregarPersonaButton";
             AgregarPersonaButton.Size = new Size(116, 45);
@@ -132,7 +153,7 @@
             // 
             // ApellidoPersonaTextBox
             // 
-            ApellidoPersonaTextBox.Location = new Point(207, 52);
+            ApellidoPersonaTextBox.Location = new Point(25, 122);
             ApellidoPersonaTextBox.Margin = new Padding(3, 4, 3, 4);
             ApellidoPersonaTextBox.Name = "ApellidoPersonaTextBox";
             ApellidoPersonaTextBox.Size = new Size(114, 27);
@@ -141,7 +162,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(205, 24);
+            label2.Location = new Point(25, 94);
             label2.Name = "label2";
             label2.Size = new Size(69, 20);
             label2.TabIndex = 2;
@@ -168,7 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(389, 278);
+            ClientSize = new Size(457, 416);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "AgregarPersona";
@@ -192,5 +213,7 @@
         private Button CancelarAgregarPersonaButton;
         private Button AgregarPersonaButton;
         private GroupBox TipoDePasajeroGroupBox;
+        private Label label3;
+        private TextBox DNIPersonaTextBox;
     }
 }
