@@ -35,6 +35,7 @@ namespace grupo3.prototipos.CAI
         private void AplicarFiltrosPaqueteButton_Click(object sender, EventArgs e)
         {
             grpPaquete.Enabled = true;
+            AñadirAlItinerarioPaqueteButton.Enabled = false;
         }
     }
 }

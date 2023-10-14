@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace grupo3.prototipos.CAI
 {
-    public partial class ListaPrereservas : Form
+    public partial class BusquedaItinerarioForm : Form
     {
-        public ListaPrereservas()
+        public BusquedaItinerarioForm()
         {
             InitializeComponent();
         }

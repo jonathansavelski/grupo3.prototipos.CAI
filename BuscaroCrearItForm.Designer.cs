@@ -28,59 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            NuevoItinerarioBtn = new Button();
-            BuscarItinerarioBtn = new Button();
-            groupBox1 = new GroupBox();
-            groupBox1.SuspendLayout();
+            CrearItinerarioButton = new Button();
+            BuscarItinerarioButton = new Button();
             SuspendLayout();
             // 
-            // NuevoItinerarioBtn
+            // CrearItinerarioButton
             // 
-            NuevoItinerarioBtn.Location = new Point(125, 45);
-            NuevoItinerarioBtn.Name = "NuevoItinerarioBtn";
-            NuevoItinerarioBtn.Size = new Size(127, 50);
-            NuevoItinerarioBtn.TabIndex = 0;
-            NuevoItinerarioBtn.Text = "Crear itinerario";
-            NuevoItinerarioBtn.UseVisualStyleBackColor = true;
-            NuevoItinerarioBtn.Click += NuevoItinerarioBtn_Click;
+            CrearItinerarioButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            CrearItinerarioButton.Location = new Point(164, 80);
+            CrearItinerarioButton.Margin = new Padding(3, 4, 3, 4);
+            CrearItinerarioButton.Name = "CrearItinerarioButton";
+            CrearItinerarioButton.Size = new Size(292, 103);
+            CrearItinerarioButton.TabIndex = 0;
+            CrearItinerarioButton.Text = "Crear itinerario";
+            CrearItinerarioButton.UseVisualStyleBackColor = true;
+            CrearItinerarioButton.Click += NuevoItinerarioBtn_Click;
             // 
-            // BuscarItinerarioBtn
+            // BuscarItinerarioButton
             // 
-            BuscarItinerarioBtn.Location = new Point(125, 120);
-            BuscarItinerarioBtn.Name = "BuscarItinerarioBtn";
-            BuscarItinerarioBtn.Size = new Size(127, 50);
-            BuscarItinerarioBtn.TabIndex = 1;
-            BuscarItinerarioBtn.Text = "Buscar itinerario";
-            BuscarItinerarioBtn.UseVisualStyleBackColor = true;
-            BuscarItinerarioBtn.Click += BuscarItinerarioBtn_Click;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(NuevoItinerarioBtn);
-            groupBox1.Controls.Add(BuscarItinerarioBtn);
-            groupBox1.Location = new Point(180, 96);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(381, 214);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Seleccione una opción:";
+            BuscarItinerarioButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            BuscarItinerarioButton.Location = new Point(164, 217);
+            BuscarItinerarioButton.Margin = new Padding(3, 4, 3, 4);
+            BuscarItinerarioButton.Name = "BuscarItinerarioButton";
+            BuscarItinerarioButton.Size = new Size(292, 103);
+            BuscarItinerarioButton.TabIndex = 1;
+            BuscarItinerarioButton.Text = "Buscar itinerario";
+            BuscarItinerarioButton.UseVisualStyleBackColor = true;
+            BuscarItinerarioButton.Click += BuscarItinerarioBtn_Click;
             // 
             // BuscaroCrearItForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(groupBox1);
+            ClientSize = new Size(614, 427);
+            Controls.Add(BuscarItinerarioButton);
+            Controls.Add(CrearItinerarioButton);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "BuscaroCrearItForm";
             Text = "Pantalla principal";
-            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button NuevoItinerarioBtn;
-        private Button BuscarItinerarioBtn;
-        private GroupBox groupBox1;
+        private Button CrearItinerarioButton;
+        private Button BuscarItinerarioButton;
     }
 }

@@ -21,14 +21,14 @@ namespace grupo3.prototipos.CAI
         {
             grpHotel.Enabled = false;
             MasInformacionHotelesGrp.Enabled = false;
-            grpBotonesHoteles.Enabled = false;
+
         }
 
         private void InformacionHotelesButton_Click(object sender, EventArgs e)
         {
             if (listViewHoteles.SelectedItems.Count == 1)
             {
-                grpBotonesHoteles.Enabled = true;
+
             }
         }
 

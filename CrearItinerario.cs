@@ -64,6 +64,10 @@ namespace grupo3.prototipos.CAI
             GuardarItinerarioButton.Enabled = false;
             RealizarPrereservaButton.Enabled = false;
             RealizarReservaButton.Enabled = false;
+            CargaPasajerosGroupBox.Enabled = false;
+            ServiciosExtraVuelosListView.Enabled = false;
+            ServiciosExtraHotelesListView.Enabled = false;
+            AdicionalesPaqueteListView.Enabled = false;
         }
 
         //Creación de número de itinerario

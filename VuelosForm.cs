@@ -34,7 +34,7 @@ namespace grupo3.prototipos.CAI
 
             ListViewItem servicioExtra = new ListViewItem("03817");
             servicioExtra.SubItems.Add("Cena premium");
-            servicioExtra.SubItems.Add("$4.000");
+            servicioExtra.SubItems.Add("4000");
 
             ServiciosExtraListView.Items.Add(servicioExtra);
         }

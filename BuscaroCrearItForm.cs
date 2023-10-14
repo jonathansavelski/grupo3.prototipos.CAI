@@ -17,23 +17,8 @@ namespace grupo3.prototipos.CAI
             InitializeComponent();
         }
 
-        //public struct Datos
-        //{
-        //    public int numero;
-        //}
-
         private void NuevoItinerarioBtn_Click(object sender, EventArgs e)
         {
-            //Datos info;
-
-            //Random numeroRandom = new Random();
-            //int numeroAleatorio = numeroRandom.Next();
-
-            //info.numero = numeroAleatorio;
-
-            //CrearItinerario crearItinerario = new CrearItinerario(info);
-            //crearItinerario.Show();
-
             CrearItinerario crearItinerario = new CrearItinerario();
             crearItinerario.Show();
 
@@ -41,7 +26,7 @@ namespace grupo3.prototipos.CAI
 
         private void BuscarItinerarioBtn_Click(object sender, EventArgs e)
         {
-            ListaPrereservas buscarListaItinerarios = new ListaPrereservas();
+            BusquedaItinerarioForm buscarListaItinerarios = new BusquedaItinerarioForm();
             buscarListaItinerarios.Show();
         }
     }
