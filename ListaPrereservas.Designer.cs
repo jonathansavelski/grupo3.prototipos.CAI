@@ -850,7 +850,6 @@
         private ColumnHeader CodigoServicioHeader;
         private ColumnHeader DescripcionServicioHeader;
         private ColumnHeader TarifaServicioHeader;
-        private ListView VuelosListView;
         private ColumnHeader CodigoVueloHeader;
         private ColumnHeader OrigenVueloHeader;
         private ColumnHeader DestinoVueloHeader;
@@ -878,5 +877,6 @@
         private ColumnHeader TipoPasajero;
         private Button AgregarPersonaBtn;
         private Button button8;
+        public ListView VuelosListView;
     }
 }

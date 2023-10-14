@@ -16,5 +16,23 @@ namespace grupo3.prototipos.CAI
         {
             InitializeComponent();
         }
+
+        private void CancelarAgregarPersonaButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void AgregarPersonaButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(NombrePersonaTextBox.Text))
+            {
+                MessageBox.Show("El nombre del pasajero es obligatorio");
+            }
+
+            if (string.IsNullOrEmpty(ApellidoPersonaTextBox.Text))
+            {
+                MessageBox.Show("El apellido del pasajero es obligatorio");
+            }
+        }
     }
 }

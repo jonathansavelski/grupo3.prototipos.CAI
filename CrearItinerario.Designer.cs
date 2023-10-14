@@ -111,7 +111,7 @@
             apellidoHeader = new ColumnHeader();
             TipoPasajero = new ColumnHeader();
             AgregarPersonaBtn = new Button();
-            button8 = new Button();
+            EliminarPasajeroButton = new Button();
             grpMenu.SuspendLayout();
             groupBox1.SuspendLayout();
             CargaPasajerosGroupBox.SuspendLayout();
@@ -754,7 +754,7 @@
             CargaPasajerosGroupBox.Controls.Add(label11);
             CargaPasajerosGroupBox.Controls.Add(listView4);
             CargaPasajerosGroupBox.Controls.Add(AgregarPersonaBtn);
-            CargaPasajerosGroupBox.Controls.Add(button8);
+            CargaPasajerosGroupBox.Controls.Add(EliminarPasajeroButton);
             CargaPasajerosGroupBox.Location = new Point(12, 690);
             CargaPasajerosGroupBox.Name = "CargaPasajerosGroupBox";
             CargaPasajerosGroupBox.Size = new Size(671, 211);
@@ -812,15 +812,15 @@
             AgregarPersonaBtn.UseVisualStyleBackColor = true;
             AgregarPersonaBtn.Click += AgregarPersonaBtn_Click;
             // 
-            // button8
+            // EliminarPasajeroButton
             // 
-            button8.Location = new Point(489, 147);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(158, 41);
-            button8.TabIndex = 38;
-            button8.Text = "Eliminar";
-            button8.UseVisualStyleBackColor = true;
+            EliminarPasajeroButton.Location = new Point(489, 147);
+            EliminarPasajeroButton.Margin = new Padding(3, 4, 3, 4);
+            EliminarPasajeroButton.Name = "EliminarPasajeroButton";
+            EliminarPasajeroButton.Size = new Size(158, 41);
+            EliminarPasajeroButton.TabIndex = 38;
+            EliminarPasajeroButton.Text = "Eliminar";
+            EliminarPasajeroButton.UseVisualStyleBackColor = true;
             // 
             // CrearItinerario
             // 
@@ -882,7 +882,7 @@
         private ColumnHeader apellidoHeader;
         private ColumnHeader TipoPasajero;
         private Button AgregarPersonaBtn;
-        private Button button8;
+        private Button EliminarPasajeroButton;
         private ListView VuelosListView;
         private ColumnHeader CodigoVueloHeader;
         private ColumnHeader OrigenVueloHeader;

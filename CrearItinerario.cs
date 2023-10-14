@@ -68,6 +68,7 @@ namespace grupo3.prototipos.CAI
             ServiciosExtraVuelosListView.Enabled = false;
             ServiciosExtraHotelesListView.Enabled = false;
             AdicionalesPaqueteListView.Enabled = false;
+            EliminarPasajeroButton.Enabled = false;
         }
 
         //Creación de número de itinerario
@@ -81,8 +82,7 @@ namespace grupo3.prototipos.CAI
         //Permitir solo la entrada de números en los textbox de cantidad de pasajeros
         private void CantidadAdultosTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -90,8 +90,7 @@ namespace grupo3.prototipos.CAI
 
         private void CantidadInfantesTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -99,8 +98,7 @@ namespace grupo3.prototipos.CAI
 
         private void CantidadMenoresTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
