@@ -39,23 +39,22 @@
             FechaArriboVueloHeader = new ColumnHeader();
             TiempoVueloHeader = new ColumnHeader();
             CodigoAerolineaVueloHeader = new ColumnHeader();
+            ClaseTarifaVueloHeader = new ColumnHeader();
+            ItinerarioVueloHeader = new ColumnHeader();
+            TipoPasajeroHeader = new ColumnHeader();
+            BaseVueloHeader = new ColumnHeader();
+            ImpuestoVueloHeader = new ColumnHeader();
+            ComisionVueloHeader = new ColumnHeader();
+            DisponibilidadVueloHeader = new ColumnHeader();
             VerMasInformacionVueloButton = new Button();
             InformacionAdicionalVuelosGroupBox = new GroupBox();
+            label5 = new Label();
             lblServiciosExtra = new Label();
-            lblTarifas = new Label();
             lblParadas = new Label();
             ServiciosExtraListView = new ListView();
             CodigoServicioHeader = new ColumnHeader();
             DescripcionServicioHeader = new ColumnHeader();
             TarifaServicioHeader = new ColumnHeader();
-            TarifasListView = new ListView();
-            ClaseTarifaHeader = new ColumnHeader();
-            ItinerarioTarifaHeader = new ColumnHeader();
-            TipoPasajeroTarifaHeader = new ColumnHeader();
-            BaseTarifaHeader = new ColumnHeader();
-            ImpuestosTarifaHeader = new ColumnHeader();
-            ComisionTarifaHeader = new ColumnHeader();
-            DisponibilidadTarifaHeader = new ColumnHeader();
             ParadasListView = new ListView();
             AeropuertoParadaHeader = new ColumnHeader();
             TiempoParadaHeader = new ColumnHeader();
@@ -84,7 +83,7 @@
             VuelosDisponiblesGroupBox.Margin = new Padding(3, 4, 3, 4);
             VuelosDisponiblesGroupBox.Name = "VuelosDisponiblesGroupBox";
             VuelosDisponiblesGroupBox.Padding = new Padding(3, 4, 3, 4);
-            VuelosDisponiblesGroupBox.Size = new Size(1206, 208);
+            VuelosDisponiblesGroupBox.Size = new Size(1206, 275);
             VuelosDisponiblesGroupBox.TabIndex = 4;
             VuelosDisponiblesGroupBox.TabStop = false;
             // 
@@ -100,7 +99,7 @@
             // 
             // AñadirAlItinerarioVueloButton
             // 
-            AñadirAlItinerarioVueloButton.Location = new Point(173, 159);
+            AñadirAlItinerarioVueloButton.Location = new Point(173, 225);
             AñadirAlItinerarioVueloButton.Margin = new Padding(3, 4, 3, 4);
             AñadirAlItinerarioVueloButton.Name = "AñadirAlItinerarioVueloButton";
             AñadirAlItinerarioVueloButton.Size = new Size(155, 39);
@@ -111,13 +110,16 @@
             // 
             // VuelosListView
             // 
-            VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, OrigenVueloHeader, DestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader });
+            VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, OrigenVueloHeader, DestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader, ClaseTarifaVueloHeader, ItinerarioVueloHeader, TipoPasajeroHeader, BaseVueloHeader, ImpuestoVueloHeader, ComisionVueloHeader, DisponibilidadVueloHeader });
             VuelosListView.FullRowSelect = true;
+            VuelosListView.GridLines = true;
+            VuelosListView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            VuelosListView.LabelWrap = false;
             VuelosListView.Location = new Point(14, 46);
             VuelosListView.Margin = new Padding(3, 4, 3, 4);
             VuelosListView.MultiSelect = false;
             VuelosListView.Name = "VuelosListView";
-            VuelosListView.Size = new Size(1176, 104);
+            VuelosListView.Size = new Size(1176, 171);
             VuelosListView.TabIndex = 0;
             VuelosListView.UseCompatibleStateImageBehavior = false;
             VuelosListView.View = View.Details;
@@ -132,13 +134,13 @@
             // 
             OrigenVueloHeader.Text = "Origen";
             OrigenVueloHeader.TextAlign = HorizontalAlignment.Center;
-            OrigenVueloHeader.Width = 100;
+            OrigenVueloHeader.Width = 120;
             // 
             // DestinoVueloHeader
             // 
             DestinoVueloHeader.Text = "Destino";
             DestinoVueloHeader.TextAlign = HorizontalAlignment.Center;
-            DestinoVueloHeader.Width = 100;
+            DestinoVueloHeader.Width = 120;
             // 
             // FechaSalidaVueloHeader
             // 
@@ -164,9 +166,51 @@
             CodigoAerolineaVueloHeader.TextAlign = HorizontalAlignment.Center;
             CodigoAerolineaVueloHeader.Width = 160;
             // 
+            // ClaseTarifaVueloHeader
+            // 
+            ClaseTarifaVueloHeader.Text = "Clase Tarifa";
+            ClaseTarifaVueloHeader.TextAlign = HorizontalAlignment.Center;
+            ClaseTarifaVueloHeader.Width = 100;
+            // 
+            // ItinerarioVueloHeader
+            // 
+            ItinerarioVueloHeader.Text = "Itinerario";
+            ItinerarioVueloHeader.TextAlign = HorizontalAlignment.Center;
+            ItinerarioVueloHeader.Width = 100;
+            // 
+            // TipoPasajeroHeader
+            // 
+            TipoPasajeroHeader.Text = "Tipo Pasajero";
+            TipoPasajeroHeader.TextAlign = HorizontalAlignment.Center;
+            TipoPasajeroHeader.Width = 120;
+            // 
+            // BaseVueloHeader
+            // 
+            BaseVueloHeader.Text = "Base";
+            BaseVueloHeader.TextAlign = HorizontalAlignment.Center;
+            BaseVueloHeader.Width = 100;
+            // 
+            // ImpuestoVueloHeader
+            // 
+            ImpuestoVueloHeader.Text = "Impuesto";
+            ImpuestoVueloHeader.TextAlign = HorizontalAlignment.Center;
+            ImpuestoVueloHeader.Width = 100;
+            // 
+            // ComisionVueloHeader
+            // 
+            ComisionVueloHeader.Text = "Comision";
+            ComisionVueloHeader.TextAlign = HorizontalAlignment.Center;
+            ComisionVueloHeader.Width = 100;
+            // 
+            // DisponibilidadVueloHeader
+            // 
+            DisponibilidadVueloHeader.Text = "Disponibilidad";
+            DisponibilidadVueloHeader.TextAlign = HorizontalAlignment.Center;
+            DisponibilidadVueloHeader.Width = 120;
+            // 
             // VerMasInformacionVueloButton
             // 
-            VerMasInformacionVueloButton.Location = new Point(12, 159);
+            VerMasInformacionVueloButton.Location = new Point(12, 225);
             VerMasInformacionVueloButton.Name = "VerMasInformacionVueloButton";
             VerMasInformacionVueloButton.Size = new Size(155, 40);
             VerMasInformacionVueloButton.TabIndex = 6;
@@ -176,55 +220,56 @@
             // 
             // InformacionAdicionalVuelosGroupBox
             // 
+            InformacionAdicionalVuelosGroupBox.Controls.Add(label5);
             InformacionAdicionalVuelosGroupBox.Controls.Add(lblServiciosExtra);
-            InformacionAdicionalVuelosGroupBox.Controls.Add(lblTarifas);
             InformacionAdicionalVuelosGroupBox.Controls.Add(lblParadas);
             InformacionAdicionalVuelosGroupBox.Controls.Add(ServiciosExtraListView);
-            InformacionAdicionalVuelosGroupBox.Controls.Add(TarifasListView);
             InformacionAdicionalVuelosGroupBox.Controls.Add(ParadasListView);
-            InformacionAdicionalVuelosGroupBox.Location = new Point(7, 348);
+            InformacionAdicionalVuelosGroupBox.Location = new Point(14, 403);
             InformacionAdicionalVuelosGroupBox.Margin = new Padding(3, 4, 3, 4);
             InformacionAdicionalVuelosGroupBox.Name = "InformacionAdicionalVuelosGroupBox";
             InformacionAdicionalVuelosGroupBox.Padding = new Padding(3, 4, 3, 4);
-            InformacionAdicionalVuelosGroupBox.Size = new Size(1213, 347);
+            InformacionAdicionalVuelosGroupBox.Size = new Size(1206, 194);
             InformacionAdicionalVuelosGroupBox.TabIndex = 7;
             InformacionAdicionalVuelosGroupBox.TabStop = false;
-            InformacionAdicionalVuelosGroupBox.Text = "Más información:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(11, 16);
+            label5.Name = "label5";
+            label5.Size = new Size(161, 20);
+            label5.TabIndex = 21;
+            label5.Text = "Información adicional";
             // 
             // lblServiciosExtra
             // 
             lblServiciosExtra.AutoSize = true;
-            lblServiciosExtra.Location = new Point(605, 36);
+            lblServiciosExtra.Location = new Point(375, 51);
             lblServiciosExtra.Name = "lblServiciosExtra";
-            lblServiciosExtra.Size = new Size(107, 20);
+            lblServiciosExtra.Size = new Size(104, 20);
             lblServiciosExtra.TabIndex = 5;
-            lblServiciosExtra.Text = "Servicios extra:";
-            // 
-            // lblTarifas
-            // 
-            lblTarifas.AutoSize = true;
-            lblTarifas.Location = new Point(14, 177);
-            lblTarifas.Name = "lblTarifas";
-            lblTarifas.Size = new Size(54, 20);
-            lblTarifas.TabIndex = 4;
-            lblTarifas.Text = "Tarifas:";
+            lblServiciosExtra.Text = "Servicios extra";
             // 
             // lblParadas
             // 
             lblParadas.AutoSize = true;
-            lblParadas.Location = new Point(14, 36);
+            lblParadas.Location = new Point(11, 51);
             lblParadas.Name = "lblParadas";
-            lblParadas.Size = new Size(63, 20);
+            lblParadas.Size = new Size(60, 20);
             lblParadas.TabIndex = 3;
-            lblParadas.Text = "Paradas:";
+            lblParadas.Text = "Paradas";
             // 
             // ServiciosExtraListView
             // 
             ServiciosExtraListView.Columns.AddRange(new ColumnHeader[] { CodigoServicioHeader, DescripcionServicioHeader, TarifaServicioHeader });
-            ServiciosExtraListView.Location = new Point(609, 60);
+            ServiciosExtraListView.FullRowSelect = true;
+            ServiciosExtraListView.GridLines = true;
+            ServiciosExtraListView.Location = new Point(375, 81);
             ServiciosExtraListView.Margin = new Padding(3, 4, 3, 4);
             ServiciosExtraListView.Name = "ServiciosExtraListView";
-            ServiciosExtraListView.Size = new Size(588, 100);
+            ServiciosExtraListView.Size = new Size(456, 100);
             ServiciosExtraListView.TabIndex = 2;
             ServiciosExtraListView.UseCompatibleStateImageBehavior = false;
             ServiciosExtraListView.View = View.Details;
@@ -246,65 +291,15 @@
             TarifaServicioHeader.TextAlign = HorizontalAlignment.Center;
             TarifaServicioHeader.Width = 150;
             // 
-            // TarifasListView
-            // 
-            TarifasListView.Columns.AddRange(new ColumnHeader[] { ClaseTarifaHeader, ItinerarioTarifaHeader, TipoPasajeroTarifaHeader, BaseTarifaHeader, ImpuestosTarifaHeader, ComisionTarifaHeader, DisponibilidadTarifaHeader });
-            TarifasListView.Location = new Point(14, 201);
-            TarifasListView.Margin = new Padding(3, 4, 3, 4);
-            TarifasListView.Name = "TarifasListView";
-            TarifasListView.Size = new Size(1183, 104);
-            TarifasListView.TabIndex = 1;
-            TarifasListView.UseCompatibleStateImageBehavior = false;
-            TarifasListView.View = View.Details;
-            // 
-            // ClaseTarifaHeader
-            // 
-            ClaseTarifaHeader.Text = "Clase Tarifa";
-            ClaseTarifaHeader.Width = 120;
-            // 
-            // ItinerarioTarifaHeader
-            // 
-            ItinerarioTarifaHeader.Text = "Itinerario";
-            ItinerarioTarifaHeader.TextAlign = HorizontalAlignment.Center;
-            ItinerarioTarifaHeader.Width = 100;
-            // 
-            // TipoPasajeroTarifaHeader
-            // 
-            TipoPasajeroTarifaHeader.Text = "Tipo pasajero";
-            TipoPasajeroTarifaHeader.TextAlign = HorizontalAlignment.Center;
-            TipoPasajeroTarifaHeader.Width = 125;
-            // 
-            // BaseTarifaHeader
-            // 
-            BaseTarifaHeader.Text = "Base";
-            BaseTarifaHeader.TextAlign = HorizontalAlignment.Center;
-            BaseTarifaHeader.Width = 80;
-            // 
-            // ImpuestosTarifaHeader
-            // 
-            ImpuestosTarifaHeader.Text = "Impuesto";
-            ImpuestosTarifaHeader.TextAlign = HorizontalAlignment.Center;
-            ImpuestosTarifaHeader.Width = 100;
-            // 
-            // ComisionTarifaHeader
-            // 
-            ComisionTarifaHeader.Text = "Comisión";
-            ComisionTarifaHeader.TextAlign = HorizontalAlignment.Center;
-            ComisionTarifaHeader.Width = 100;
-            // 
-            // DisponibilidadTarifaHeader
-            // 
-            DisponibilidadTarifaHeader.Text = "Disponibilidad";
-            DisponibilidadTarifaHeader.TextAlign = HorizontalAlignment.Center;
-            DisponibilidadTarifaHeader.Width = 120;
-            // 
             // ParadasListView
             // 
             ParadasListView.Columns.AddRange(new ColumnHeader[] { AeropuertoParadaHeader, TiempoParadaHeader });
-            ParadasListView.Location = new Point(14, 60);
+            ParadasListView.GridLines = true;
+            ParadasListView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            ParadasListView.Location = new Point(14, 81);
             ParadasListView.Margin = new Padding(3, 4, 3, 4);
             ParadasListView.Name = "ParadasListView";
-            ParadasListView.Size = new Size(568, 100);
+            ParadasListView.Size = new Size(337, 100);
             ParadasListView.TabIndex = 0;
             ParadasListView.UseCompatibleStateImageBehavior = false;
             ParadasListView.View = View.Details;
@@ -317,6 +312,7 @@
             // TiempoParadaHeader
             // 
             TiempoParadaHeader.Text = "Tiempo de parada";
+            TiempoParadaHeader.TextAlign = HorizontalAlignment.Center;
             TiempoParadaHeader.Width = 150;
             // 
             // dateTimePicker1
@@ -417,7 +413,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1232, 728);
+            ClientSize = new Size(1232, 613);
             Controls.Add(groupBox1);
             Controls.Add(InformacionAdicionalVuelosGroupBox);
             Controls.Add(VuelosDisponiblesGroupBox);
@@ -447,23 +443,14 @@
         private Button VerMasInformacionVueloButton;
         private GroupBox InformacionAdicionalVuelosGroupBox;
         private Label lblServiciosExtra;
-        private Label lblTarifas;
         private Label lblParadas;
         private ListView ServiciosExtraListView;
-        private ListView TarifasListView;
         private ListView ParadasListView;
         private DateTimePicker dateTimePicker1;
         private Button AplicarFiltrosVuelosButton;
         private Label lblFechaSalida;
         private ColumnHeader AeropuertoParadaHeader;
         private ColumnHeader TiempoParadaHeader;
-        private ColumnHeader ClaseTarifaHeader;
-        private ColumnHeader ItinerarioTarifaHeader;
-        private ColumnHeader TipoPasajeroTarifaHeader;
-        private ColumnHeader BaseTarifaHeader;
-        private ColumnHeader ImpuestosTarifaHeader;
-        private ColumnHeader ComisionTarifaHeader;
-        private ColumnHeader DisponibilidadTarifaHeader;
         private ColumnHeader CodigoServicioHeader;
         private ColumnHeader DescripcionServicioHeader;
         private ColumnHeader TarifaServicioHeader;
@@ -476,5 +463,13 @@
         private Label label1;
         private DateTimePicker dateTimePicker2;
         private Label label4;
+        private ColumnHeader ClaseTarifaVueloHeader;
+        private ColumnHeader ItinerarioVueloHeader;
+        private ColumnHeader TipoPasajeroHeader;
+        private ColumnHeader BaseVueloHeader;
+        private ColumnHeader ImpuestoVueloHeader;
+        private ColumnHeader ComisionVueloHeader;
+        private ColumnHeader DisponibilidadVueloHeader;
+        private Label label5;
     }
 }
