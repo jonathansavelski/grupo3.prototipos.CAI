@@ -16,6 +16,7 @@ namespace grupo3.prototipos.CAI
         public string TiempoDeVueloVuelo { get; set; }
         public string AerolineaVuelo { get; set; }
         public char ClaseVuelo { get; set; }
+        public string ItinerarioVuelo { get; set; }
         public char TipoDePasajeroVuelo { get; set; }
         public float BaseVuelo { get; set; }
         public float ImpuestosVuelo { get; set; }
