@@ -36,5 +36,15 @@ namespace grupo3.prototipos.CAI
         {
             grpHotel.Enabled = true;
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

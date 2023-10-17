@@ -36,7 +36,7 @@ namespace grupo3.prototipos.CAI
             servicioExtra.SubItems.Add("Cena premium");
             servicioExtra.SubItems.Add("4000");
 
-            ServiciosExtraListView.Items.Add(servicioExtra);
+            //ServiciosExtraListView.Items.Add(servicioExtra);
         }
 
         private void AplicarFiltrosButton_Click(object sender, EventArgs e)
@@ -74,7 +74,6 @@ namespace grupo3.prototipos.CAI
         {
             VerMasInformacionVueloButton.Enabled = true;
             AñadirAlItinerarioVueloButton.Enabled = true;
-            AñadirServicioExtraButton.Enabled = false;
         }
 
         private void AñadirAlItinerarioVueloButton_Click(object sender, EventArgs e)
@@ -84,7 +83,6 @@ namespace grupo3.prototipos.CAI
 
         private void ServiciosExtraListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AñadirServicioExtraButton.Enabled = true;
 
         }
 

@@ -30,12 +30,6 @@ namespace grupo3.prototipos.CAI
             vuelosForm.Show();
         }
 
-        private void ConsultaDisponibilidadPaquetesBtn_Click(object sender, EventArgs e)
-        {
-            PaquetesForm paquetesForm = new PaquetesForm();
-            paquetesForm.Show();
-        }
-
         private void ConsultaDisponibilidadHotelesBtn_Click(object sender, EventArgs e)
         {
             HotelesForm hotelesForm = new HotelesForm();
@@ -44,7 +38,7 @@ namespace grupo3.prototipos.CAI
 
         private void AgregarPersonaBtn_Click(object sender, EventArgs e)
         {
-            AgregarPersona agregarpersonaForm = new AgregarPersona();
+            AgregarPasajero agregarpersonaForm = new AgregarPasajero();
             agregarpersonaForm.Show();
         }
 
@@ -56,18 +50,12 @@ namespace grupo3.prototipos.CAI
             ValorDeLaCotizacionLabel.Text = "";
             VuelosListView.Enabled = false;
             HotelesListView.Enabled = false;
-            PaquetesListView.Enabled = false;
             EliminarVueloButton.Enabled = false;
             EliminarHotelButton.Enabled = false;
-            EliminarPaqueteButton.Enabled = false;
             CotizarButton.Enabled = false;
-            GuardarItinerarioButton.Enabled = false;
-            RealizarPrereservaButton.Enabled = false;
-            RealizarReservaButton.Enabled = false;
             //CargaPasajerosGroupBox.Enabled = false;
             ServiciosExtraVuelosListView.Enabled = false;
             ServiciosExtraHotelesListView.Enabled = false;
-            AdicionalesPaqueteListView.Enabled = false;
             EliminarPasajeroButton.Enabled = false;
         }
 
@@ -79,47 +67,23 @@ namespace grupo3.prototipos.CAI
             return numeroDeItinerario;
         }
 
-        //Permitir solo la entrada de números en los textbox de cantidad de pasajeros
-        private void CantidadAdultosTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void AgregarServicioExtraVueloButton_Click(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            ServiciosExtraVuelosForm serviciosExtraVuelosForm = new ServiciosExtraVuelosForm();
+            serviciosExtraVuelosForm.Show();
         }
 
-        private void CantidadInfantesTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void AgregarServicioExtraHotelButton_Click(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            ServiciosExtraHotelesForm serviciosExtraHotelesForm = new ServiciosExtraHotelesForm();
+            serviciosExtraHotelesForm.Show();
         }
 
-        private void CantidadMenoresTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void MenuPrincipalButton_Click(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void RealizarReservaButton_Click(object sender, EventArgs e)
-        {
-            //aquí irán las validaciones de que todo esté completo
-            MessageBox.Show($"Se ha realizado la reserva correctamente para el itinerario N° {NumeroItinerarioLabel.Text}.", "Reserva Confirmada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void RealizarPrereservaButton_Click(object sender, EventArgs e)
-        {
-            //aquí irán las validaciones de que todo esté completo
-            MessageBox.Show($"Se ha realizado la prereserva correctamentepara el itinerario N° {NumeroItinerarioLabel.Text}.", "Reserva Confirmada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void GuardarItinerarioButton_Click(object sender, EventArgs e)
-        {
-            //aquí irán las validaciones de que todo esté completo
-            MessageBox.Show($"Se ha guardado correctamentepara el itinerario N° {NumeroItinerarioLabel.Text}.", "Itinerario Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
         }
     }
 }

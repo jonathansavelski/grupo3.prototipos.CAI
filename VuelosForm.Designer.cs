@@ -48,14 +48,8 @@
             DisponibilidadVueloHeader = new ColumnHeader();
             VerMasInformacionVueloButton = new Button();
             InformacionAdicionalVuelosGroupBox = new GroupBox();
-            AñadirServicioExtraButton = new Button();
             label5 = new Label();
-            lblServiciosExtra = new Label();
             lblParadas = new Label();
-            ServiciosExtraListView = new ListView();
-            CodigoServicioHeader = new ColumnHeader();
-            DescripcionServicioHeader = new ColumnHeader();
-            TarifaServicioHeader = new ColumnHeader();
             ParadasVueloListView = new ListView();
             AeropuertoParadaHeader = new ColumnHeader();
             TiempoParadaHeader = new ColumnHeader();
@@ -69,9 +63,21 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
+            groupBox2 = new GroupBox();
+            numericUpDown3 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown1 = new NumericUpDown();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             VuelosDisponiblesGroupBox.SuspendLayout();
             InformacionAdicionalVuelosGroupBox.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // VuelosDisponiblesGroupBox
@@ -221,11 +227,8 @@
             // 
             // InformacionAdicionalVuelosGroupBox
             // 
-            InformacionAdicionalVuelosGroupBox.Controls.Add(AñadirServicioExtraButton);
             InformacionAdicionalVuelosGroupBox.Controls.Add(label5);
-            InformacionAdicionalVuelosGroupBox.Controls.Add(lblServiciosExtra);
             InformacionAdicionalVuelosGroupBox.Controls.Add(lblParadas);
-            InformacionAdicionalVuelosGroupBox.Controls.Add(ServiciosExtraListView);
             InformacionAdicionalVuelosGroupBox.Controls.Add(ParadasVueloListView);
             InformacionAdicionalVuelosGroupBox.Location = new Point(14, 403);
             InformacionAdicionalVuelosGroupBox.Margin = new Padding(3, 4, 3, 4);
@@ -234,17 +237,6 @@
             InformacionAdicionalVuelosGroupBox.Size = new Size(1206, 254);
             InformacionAdicionalVuelosGroupBox.TabIndex = 7;
             InformacionAdicionalVuelosGroupBox.TabStop = false;
-            // 
-            // AñadirServicioExtraButton
-            // 
-            AñadirServicioExtraButton.Location = new Point(375, 193);
-            AñadirServicioExtraButton.Margin = new Padding(3, 4, 3, 4);
-            AñadirServicioExtraButton.Name = "AñadirServicioExtraButton";
-            AñadirServicioExtraButton.Size = new Size(155, 39);
-            AñadirServicioExtraButton.TabIndex = 21;
-            AñadirServicioExtraButton.Text = "Agregar servicio";
-            AñadirServicioExtraButton.UseVisualStyleBackColor = true;
-            AñadirServicioExtraButton.Click += AñadirServicioExtraButton_Click;
             // 
             // label5
             // 
@@ -257,15 +249,6 @@
             label5.Text = "Información adicional";
             label5.Click += label5_Click;
             // 
-            // lblServiciosExtra
-            // 
-            lblServiciosExtra.AutoSize = true;
-            lblServiciosExtra.Location = new Point(375, 51);
-            lblServiciosExtra.Name = "lblServiciosExtra";
-            lblServiciosExtra.Size = new Size(104, 20);
-            lblServiciosExtra.TabIndex = 5;
-            lblServiciosExtra.Text = "Servicios extra";
-            // 
             // lblParadas
             // 
             lblParadas.AutoSize = true;
@@ -274,37 +257,6 @@
             lblParadas.Size = new Size(60, 20);
             lblParadas.TabIndex = 3;
             lblParadas.Text = "Paradas";
-            // 
-            // ServiciosExtraListView
-            // 
-            ServiciosExtraListView.Columns.AddRange(new ColumnHeader[] { CodigoServicioHeader, DescripcionServicioHeader, TarifaServicioHeader });
-            ServiciosExtraListView.FullRowSelect = true;
-            ServiciosExtraListView.GridLines = true;
-            ServiciosExtraListView.Location = new Point(375, 81);
-            ServiciosExtraListView.Margin = new Padding(3, 4, 3, 4);
-            ServiciosExtraListView.Name = "ServiciosExtraListView";
-            ServiciosExtraListView.Size = new Size(567, 100);
-            ServiciosExtraListView.TabIndex = 2;
-            ServiciosExtraListView.UseCompatibleStateImageBehavior = false;
-            ServiciosExtraListView.View = View.Details;
-            ServiciosExtraListView.SelectedIndexChanged += ServiciosExtraListView_SelectedIndexChanged;
-            // 
-            // CodigoServicioHeader
-            // 
-            CodigoServicioHeader.Text = "Código de servicio";
-            CodigoServicioHeader.Width = 150;
-            // 
-            // DescripcionServicioHeader
-            // 
-            DescripcionServicioHeader.Text = "Descripción servicio";
-            DescripcionServicioHeader.TextAlign = HorizontalAlignment.Center;
-            DescripcionServicioHeader.Width = 250;
-            // 
-            // TarifaServicioHeader
-            // 
-            TarifaServicioHeader.Text = "Tarifa servicio";
-            TarifaServicioHeader.TextAlign = HorizontalAlignment.Center;
-            TarifaServicioHeader.Width = 150;
             // 
             // ParadasVueloListView
             // 
@@ -371,7 +323,7 @@
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Location = new Point(14, 8);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1206, 115);
+            groupBox1.Size = new Size(765, 115);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             // 
@@ -425,11 +377,85 @@
             label1.TabIndex = 0;
             label1.Text = "Busqueda de vuelos disponibles";
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(numericUpDown3);
+            groupBox2.Controls.Add(numericUpDown2);
+            groupBox2.Controls.Add(numericUpDown1);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Location = new Point(792, 8);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(428, 115);
+            groupBox2.TabIndex = 41;
+            groupBox2.TabStop = false;
+            // 
+            // numericUpDown3
+            // 
+            numericUpDown3.Location = new Point(362, 59);
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(44, 27);
+            numericUpDown3.TabIndex = 20;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(222, 59);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(44, 27);
+            numericUpDown2.TabIndex = 19;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(83, 59);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(44, 27);
+            numericUpDown1.TabIndex = 18;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(6, 17);
+            label6.Name = "label6";
+            label6.Size = new Size(162, 20);
+            label6.TabIndex = 13;
+            label6.Text = "Cantidad de pasajeros";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(14, 61);
+            label7.Name = "label7";
+            label7.Size = new Size(63, 20);
+            label7.TabIndex = 12;
+            label7.Text = "Adultos:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(152, 61);
+            label8.Name = "label8";
+            label8.Size = new Size(64, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Infantes:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(287, 61);
+            label9.Name = "label9";
+            label9.Size = new Size(69, 20);
+            label9.TabIndex = 13;
+            label9.Text = "Menores:";
+            // 
             // VuelosForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1232, 670);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(InformacionAdicionalVuelosGroupBox);
             Controls.Add(VuelosDisponiblesGroupBox);
@@ -443,6 +469,11 @@
             InformacionAdicionalVuelosGroupBox.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
@@ -458,18 +489,13 @@
         private ColumnHeader CodigoAerolineaVueloHeader;
         private Button VerMasInformacionVueloButton;
         private GroupBox InformacionAdicionalVuelosGroupBox;
-        private Label lblServiciosExtra;
         private Label lblParadas;
-        private ListView ServiciosExtraListView;
         private ListView ParadasVueloListView;
         private DateTimePicker dateTimePicker1;
         private Button BuscarVuelosButton;
         private Label lblFechaSalida;
         private ColumnHeader AeropuertoParadaHeader;
         private ColumnHeader TiempoParadaHeader;
-        private ColumnHeader CodigoServicioHeader;
-        private ColumnHeader DescripcionServicioHeader;
-        private ColumnHeader TarifaServicioHeader;
         private Button AñadirAlItinerarioVueloButton;
         private GroupBox groupBox1;
         private Label label3;
@@ -487,6 +513,13 @@
         private ColumnHeader ComisionVueloHeader;
         private ColumnHeader DisponibilidadVueloHeader;
         private Label label5;
-        private Button AñadirServicioExtraButton;
+        private GroupBox groupBox2;
+        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }
