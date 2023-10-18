@@ -17,12 +17,32 @@ namespace grupo3.prototipos.CAI
             InitializeComponent();
         }
 
-        private void VuelosListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void HotelesForm_Load(object sender, EventArgs e)
+        {
+            grpHotel.Enabled = false;
+            MasInformacionHotelesGrp.Enabled = false;
+
+        }
+
+        private void InformacionHotelesButton_Click(object sender, EventArgs e)
+        {
+            if (listViewHoteles.SelectedItems.Count == 1)
+            {
+
+            }
+        }
+
+        private void AplicarFiltrosHotelButton_Click(object sender, EventArgs e)
+        {
+            grpHotel.Enabled = true;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void lblTarifas_Click(object sender, EventArgs e)
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
 
         }
