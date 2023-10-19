@@ -57,27 +57,17 @@
             BuscarVuelosButton = new Button();
             lblFechaSalida = new Label();
             groupBox1 = new GroupBox();
+            label10 = new Label();
+            comboBox1 = new ComboBox();
             dateTimePicker2 = new DateTimePicker();
             label3 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            groupBox2 = new GroupBox();
-            numericUpDown3 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
             VuelosDisponiblesGroupBox.SuspendLayout();
             InformacionAdicionalVuelosGroupBox.SuspendLayout();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // VuelosDisponiblesGroupBox
@@ -293,9 +283,9 @@
             // 
             // BuscarVuelosButton
             // 
-            BuscarVuelosButton.Location = new Point(625, 72);
+            BuscarVuelosButton.Location = new Point(795, 63);
             BuscarVuelosButton.Name = "BuscarVuelosButton";
-            BuscarVuelosButton.Size = new Size(122, 30);
+            BuscarVuelosButton.Size = new Size(155, 39);
             BuscarVuelosButton.TabIndex = 10;
             BuscarVuelosButton.Text = "Buscar vuelos";
             BuscarVuelosButton.UseVisualStyleBackColor = true;
@@ -306,12 +296,14 @@
             lblFechaSalida.AutoSize = true;
             lblFechaSalida.Location = new Point(334, 46);
             lblFechaSalida.Name = "lblFechaSalida";
-            lblFechaSalida.Size = new Size(124, 20);
+            lblFechaSalida.Size = new Size(121, 20);
             lblFechaSalida.TabIndex = 14;
-            lblFechaSalida.Text = "Rango de Fechas:";
+            lblFechaSalida.Text = "Rango de Fechas";
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(dateTimePicker2);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
@@ -323,9 +315,27 @@
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Location = new Point(14, 8);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(765, 115);
+            groupBox1.Size = new Size(1206, 115);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(629, 46);
+            label10.Name = "label10";
+            label10.Size = new Size(119, 20);
+            label10.TabIndex = 43;
+            label10.Text = "Tipo de Pasajero";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Adulto", "Menor", "Infante" });
+            comboBox1.Location = new Point(629, 74);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 42;
             // 
             // dateTimePicker2
             // 
@@ -362,6 +372,9 @@
             // 
             // textBox1
             // 
+            textBox1.AutoCompleteCustomSource.AddRange(new string[] { "Brasil" });
+            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            textBox1.AutoCompleteSource = AutoCompleteSource.AllUrl;
             textBox1.Location = new Point(12, 75);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
@@ -377,85 +390,11 @@
             label1.TabIndex = 0;
             label1.Text = "Busqueda de vuelos disponibles";
             // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(numericUpDown3);
-            groupBox2.Controls.Add(numericUpDown2);
-            groupBox2.Controls.Add(numericUpDown1);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(label9);
-            groupBox2.Location = new Point(792, 8);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(428, 115);
-            groupBox2.TabIndex = 41;
-            groupBox2.TabStop = false;
-            // 
-            // numericUpDown3
-            // 
-            numericUpDown3.Location = new Point(362, 59);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(44, 27);
-            numericUpDown3.TabIndex = 20;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Location = new Point(222, 59);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(44, 27);
-            numericUpDown2.TabIndex = 19;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(83, 59);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(44, 27);
-            numericUpDown1.TabIndex = 18;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(6, 17);
-            label6.Name = "label6";
-            label6.Size = new Size(162, 20);
-            label6.TabIndex = 13;
-            label6.Text = "Cantidad de pasajeros";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(14, 61);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 20);
-            label7.TabIndex = 12;
-            label7.Text = "Adultos:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(152, 61);
-            label8.Name = "label8";
-            label8.Size = new Size(64, 20);
-            label8.TabIndex = 14;
-            label8.Text = "Infantes:";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(287, 61);
-            label9.Name = "label9";
-            label9.Size = new Size(69, 20);
-            label9.TabIndex = 13;
-            label9.Text = "Menores:";
-            // 
             // VuelosForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1232, 670);
-            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(InformacionAdicionalVuelosGroupBox);
             Controls.Add(VuelosDisponiblesGroupBox);
@@ -469,11 +408,6 @@
             InformacionAdicionalVuelosGroupBox.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
@@ -513,13 +447,7 @@
         private ColumnHeader ComisionVueloHeader;
         private ColumnHeader DisponibilidadVueloHeader;
         private Label label5;
-        private GroupBox groupBox2;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown1;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
+        private Label label10;
+        private ComboBox comboBox1;
     }
 }

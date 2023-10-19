@@ -79,14 +79,9 @@
             NumeroItinerarioLabel = new Label();
             lblNumeroItinerario = new Label();
             CargaPasajerosGroupBox = new GroupBox();
+            CargarPasajeroHotelButton = new Button();
             label11 = new Label();
-            listView4 = new ListView();
-            nombreHeader = new ColumnHeader();
-            apellidoHeader = new ColumnHeader();
-            DNIHeader = new ColumnHeader();
-            TipoPasajero = new ColumnHeader();
-            AgregarPersonaBtn = new Button();
-            EliminarPasajeroButton = new Button();
+            CargarPasajeroVueloButton = new Button();
             grpMenu.SuspendLayout();
             CargaPasajerosGroupBox.SuspendLayout();
             SuspendLayout();
@@ -515,15 +510,25 @@
             // 
             // CargaPasajerosGroupBox
             // 
+            CargaPasajerosGroupBox.Controls.Add(CargarPasajeroHotelButton);
             CargaPasajerosGroupBox.Controls.Add(label11);
-            CargaPasajerosGroupBox.Controls.Add(listView4);
-            CargaPasajerosGroupBox.Controls.Add(AgregarPersonaBtn);
-            CargaPasajerosGroupBox.Controls.Add(EliminarPasajeroButton);
+            CargaPasajerosGroupBox.Controls.Add(CargarPasajeroVueloButton);
             CargaPasajerosGroupBox.Location = new Point(12, 551);
             CargaPasajerosGroupBox.Name = "CargaPasajerosGroupBox";
-            CargaPasajerosGroupBox.Size = new Size(671, 211);
+            CargaPasajerosGroupBox.Size = new Size(671, 141);
             CargaPasajerosGroupBox.TabIndex = 43;
             CargaPasajerosGroupBox.TabStop = false;
+            // 
+            // CargarPasajeroHotelButton
+            // 
+            CargarPasajeroHotelButton.Location = new Point(233, 81);
+            CargarPasajeroHotelButton.Margin = new Padding(3, 4, 3, 4);
+            CargarPasajeroHotelButton.Name = "CargarPasajeroHotelButton";
+            CargarPasajeroHotelButton.Size = new Size(229, 41);
+            CargarPasajeroHotelButton.TabIndex = 45;
+            CargarPasajeroHotelButton.Text = "Cargar pasajeros para hoteles";
+            CargarPasajeroHotelButton.UseVisualStyleBackColor = true;
+            CargarPasajeroHotelButton.Click += CargarPasajeroHotelButton_Click;
             // 
             // label11
             // 
@@ -535,63 +540,16 @@
             label11.TabIndex = 44;
             label11.Text = "Carga datos pasajeros";
             // 
-            // listView4
+            // CargarPasajeroVueloButton
             // 
-            listView4.Columns.AddRange(new ColumnHeader[] { nombreHeader, apellidoHeader, DNIHeader, TipoPasajero });
-            listView4.GridLines = true;
-            listView4.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            listView4.Location = new Point(14, 60);
-            listView4.Margin = new Padding(3, 4, 3, 4);
-            listView4.Name = "listView4";
-            listView4.Size = new Size(461, 128);
-            listView4.TabIndex = 36;
-            listView4.UseCompatibleStateImageBehavior = false;
-            listView4.View = View.Details;
-            // 
-            // nombreHeader
-            // 
-            nombreHeader.Text = "Nombre";
-            nombreHeader.Width = 100;
-            // 
-            // apellidoHeader
-            // 
-            apellidoHeader.Text = "Apellido";
-            apellidoHeader.TextAlign = HorizontalAlignment.Center;
-            apellidoHeader.Width = 100;
-            // 
-            // DNIHeader
-            // 
-            DNIHeader.DisplayIndex = 3;
-            DNIHeader.Text = "DNI";
-            DNIHeader.Width = 100;
-            // 
-            // TipoPasajero
-            // 
-            TipoPasajero.DisplayIndex = 2;
-            TipoPasajero.Text = "Tipo pasajero ";
-            TipoPasajero.TextAlign = HorizontalAlignment.Center;
-            TipoPasajero.Width = 120;
-            // 
-            // AgregarPersonaBtn
-            // 
-            AgregarPersonaBtn.Location = new Point(489, 60);
-            AgregarPersonaBtn.Margin = new Padding(3, 4, 3, 4);
-            AgregarPersonaBtn.Name = "AgregarPersonaBtn";
-            AgregarPersonaBtn.Size = new Size(158, 41);
-            AgregarPersonaBtn.TabIndex = 37;
-            AgregarPersonaBtn.Text = "Agregar";
-            AgregarPersonaBtn.UseVisualStyleBackColor = true;
-            AgregarPersonaBtn.Click += AgregarPersonaBtn_Click;
-            // 
-            // EliminarPasajeroButton
-            // 
-            EliminarPasajeroButton.Location = new Point(489, 147);
-            EliminarPasajeroButton.Margin = new Padding(3, 4, 3, 4);
-            EliminarPasajeroButton.Name = "EliminarPasajeroButton";
-            EliminarPasajeroButton.Size = new Size(158, 41);
-            EliminarPasajeroButton.TabIndex = 38;
-            EliminarPasajeroButton.Text = "Eliminar";
-            EliminarPasajeroButton.UseVisualStyleBackColor = true;
+            CargarPasajeroVueloButton.Location = new Point(14, 81);
+            CargarPasajeroVueloButton.Margin = new Padding(3, 4, 3, 4);
+            CargarPasajeroVueloButton.Name = "CargarPasajeroVueloButton";
+            CargarPasajeroVueloButton.Size = new Size(213, 41);
+            CargarPasajeroVueloButton.TabIndex = 37;
+            CargarPasajeroVueloButton.Text = "Cargar pasajeros para vuelos";
+            CargarPasajeroVueloButton.UseVisualStyleBackColor = true;
+            CargarPasajeroVueloButton.Click += CargarPasajeroVueloButton_Click;
             // 
             // CrearItinerario
             // 
@@ -635,7 +593,7 @@
         private ColumnHeader nombreHeader;
         private ColumnHeader apellidoHeader;
         private ColumnHeader TipoPasajero;
-        private Button AgregarPersonaBtn;
+        private Button CargarPasajeroVueloButton;
         private Button EliminarPasajeroButton;
         private ListView VuelosListView;
         private ColumnHeader CodigoVueloHeader;
@@ -677,5 +635,6 @@
         private Button AgregarServicioExtraHotelButton;
         private Button EliminarServicioExtraVueloButton;
         private Button AgregarServicioExtraVueloButton;
+        private Button CargarPasajeroHotelButton;
     }
 }

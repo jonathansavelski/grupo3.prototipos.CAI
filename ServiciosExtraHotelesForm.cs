@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace grupo3.prototipos.CAI
 {
-    public partial class CargaDatosViajeroForm : Form
+    public partial class ServiciosExtraHotelesForm : Form
     {
-        public CargaDatosViajeroForm()
+        public ServiciosExtraHotelesForm()
         {
             InitializeComponent();
         }

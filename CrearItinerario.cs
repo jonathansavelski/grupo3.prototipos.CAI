@@ -17,13 +17,6 @@ namespace grupo3.prototipos.CAI
         {
             InitializeComponent();
         }
-
-        private void CargaDatosBtn_Click(object sender, EventArgs e)
-        {
-            CargaDatosViajeroForm cargaDatosViajero = new CargaDatosViajeroForm();
-            cargaDatosViajero.Show();
-        }
-
         private void ConsultaDisponibilidadVuelosBtn_Click(object sender, EventArgs e)
         {
             VuelosForm vuelosForm = new VuelosForm();
@@ -36,11 +29,7 @@ namespace grupo3.prototipos.CAI
             hotelesForm.Show();
         }
 
-        private void AgregarPersonaBtn_Click(object sender, EventArgs e)
-        {
-            AgregarPasajero agregarpersonaForm = new AgregarPasajero();
-            agregarpersonaForm.Show();
-        }
+
 
         //Carga del form
         public void CrearItinerario_Load(object sender, EventArgs e)
@@ -56,7 +45,6 @@ namespace grupo3.prototipos.CAI
             //CargaPasajerosGroupBox.Enabled = false;
             ServiciosExtraVuelosListView.Enabled = false;
             ServiciosExtraHotelesListView.Enabled = false;
-            EliminarPasajeroButton.Enabled = false;
         }
 
         //Creación de número de itinerario
@@ -84,6 +72,18 @@ namespace grupo3.prototipos.CAI
             Close();
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             menuPrincipal.Show();
+        }
+
+        private void CargarPasajeroVueloButton_Click(object sender, EventArgs e)
+        {
+            AsignacionPasajerosVuelosForm asignacionPasajerosVuelosForm = new AsignacionPasajerosVuelosForm();
+            asignacionPasajerosVuelosForm.Show();
+        }
+
+        private void CargarPasajeroHotelButton_Click(object sender, EventArgs e)
+        {
+            AsignacionPasajerosHotelesForm asignacionPasajerosHotelesForm = new AsignacionPasajerosHotelesForm();
+            asignacionPasajerosHotelesForm.Show();
         }
     }
 }
