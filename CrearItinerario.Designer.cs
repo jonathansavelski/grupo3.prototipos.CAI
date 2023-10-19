@@ -54,8 +54,8 @@
             TarifaServicioHeader = new ColumnHeader();
             VuelosListView = new ListView();
             CodigoVueloHeader = new ColumnHeader();
-            OrigenVueloHeader = new ColumnHeader();
-            DestinoVueloHeader = new ColumnHeader();
+            CodigoOrigenVueloHeader = new ColumnHeader();
+            CodigoDestinoVueloHeader = new ColumnHeader();
             FechaSalidaVueloHeader = new ColumnHeader();
             FechaArriboVueloHeader = new ColumnHeader();
             TiempoVueloHeader = new ColumnHeader();
@@ -300,7 +300,7 @@
             // 
             // VuelosListView
             // 
-            VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, OrigenVueloHeader, DestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader, ClaseTarifaVueloHeader, ItinerarioVueloHeader, TipoPasajeroHeader, BaseVueloHeader, ImpuestoVueloHeader, ComisionVueloHeader, DisponibilidadVueloHeader });
+            VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, CodigoOrigenVueloHeader, CodigoDestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader, ClaseTarifaVueloHeader, ItinerarioVueloHeader, TipoPasajeroHeader, BaseVueloHeader, ImpuestoVueloHeader, ComisionVueloHeader, DisponibilidadVueloHeader });
             VuelosListView.FullRowSelect = true;
             VuelosListView.GridLines = true;
             VuelosListView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
@@ -319,17 +319,17 @@
             CodigoVueloHeader.Text = "Código de vuelo";
             CodigoVueloHeader.Width = 140;
             // 
-            // OrigenVueloHeader
+            // CodigoOrigenVueloHeader
             // 
-            OrigenVueloHeader.Text = "Origen";
-            OrigenVueloHeader.TextAlign = HorizontalAlignment.Center;
-            OrigenVueloHeader.Width = 120;
+            CodigoOrigenVueloHeader.Text = "Origen";
+            CodigoOrigenVueloHeader.TextAlign = HorizontalAlignment.Center;
+            CodigoOrigenVueloHeader.Width = 120;
             // 
-            // DestinoVueloHeader
+            // CodigoDestinoVueloHeader
             // 
-            DestinoVueloHeader.Text = "Destino";
-            DestinoVueloHeader.TextAlign = HorizontalAlignment.Center;
-            DestinoVueloHeader.Width = 120;
+            CodigoDestinoVueloHeader.Text = "Destino";
+            CodigoDestinoVueloHeader.TextAlign = HorizontalAlignment.Center;
+            CodigoDestinoVueloHeader.Width = 120;
             // 
             // FechaSalidaVueloHeader
             // 
@@ -597,8 +597,8 @@
         private Button EliminarPasajeroButton;
         private ListView VuelosListView;
         private ColumnHeader CodigoVueloHeader;
-        private ColumnHeader OrigenVueloHeader;
-        private ColumnHeader DestinoVueloHeader;
+        private ColumnHeader CodigoOrigenVueloHeader;
+        private ColumnHeader CodigoDestinoVueloHeader;
         private ColumnHeader FechaSalidaVueloHeader;
         private ColumnHeader FechaArriboVueloHeader;
         private ColumnHeader TiempoVueloHeader;

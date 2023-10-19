@@ -50,8 +50,8 @@ namespace grupo3.prototipos.CAI
                 //Agregamos cada vuelo a una lista
                 var item = new ListViewItem();
                 item.Text = vuelo.CodigoVuelo; // = item.Subitems[0].Text Implicitamente agrega el subitem 0 // item.Text es lo que va en la primer columna. En nuestro caso, es el codigo de vuelo.
-                item.SubItems.Add(vuelo.OrigenVuelo); //implicitamente estoy agregando el subitem 1, no el 0.
-                item.SubItems.Add(vuelo.DestinoVuelo);
+                item.SubItems.Add(vuelo.CodigoOrigenVuelo); //implicitamente estoy agregando el subitem 1, no el 0.
+                item.SubItems.Add(vuelo.CodigoDestinoVuelo);
                 item.SubItems.Add(vuelo.FechaSalidaVuelo.ToString());
                 item.SubItems.Add(vuelo.FechaArriboVuelo.ToString());
                 item.SubItems.Add(vuelo.TiempoDeVueloVuelo);
