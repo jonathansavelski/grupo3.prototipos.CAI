@@ -46,7 +46,7 @@
             label6 = new Label();
             NumeroItinerarioLabel = new Label();
             lblNumeroItinerario = new Label();
-            AgregarPersonaBtn = new Button();
+            AgregarPasajeroButton = new Button();
             label1 = new Label();
             listView1 = new ListView();
             columnHeader6 = new ColumnHeader();
@@ -185,15 +185,16 @@
             lblNumeroItinerario.TabIndex = 51;
             lblNumeroItinerario.Text = "Número de itinerario:";
             // 
-            // AgregarPersonaBtn
+            // AgregarPasajeroButton
             // 
-            AgregarPersonaBtn.Location = new Point(12, 246);
-            AgregarPersonaBtn.Margin = new Padding(3, 4, 3, 4);
-            AgregarPersonaBtn.Name = "AgregarPersonaBtn";
-            AgregarPersonaBtn.Size = new Size(158, 41);
-            AgregarPersonaBtn.TabIndex = 53;
-            AgregarPersonaBtn.Text = "Agregar pasajero";
-            AgregarPersonaBtn.UseVisualStyleBackColor = true;
+            AgregarPasajeroButton.Location = new Point(12, 246);
+            AgregarPasajeroButton.Margin = new Padding(3, 4, 3, 4);
+            AgregarPasajeroButton.Name = "AgregarPasajeroButton";
+            AgregarPasajeroButton.Size = new Size(158, 41);
+            AgregarPasajeroButton.TabIndex = 53;
+            AgregarPasajeroButton.Text = "Agregar pasajero";
+            AgregarPasajeroButton.UseVisualStyleBackColor = true;
+            AgregarPasajeroButton.Click += AgregarPasajeroButton_Click;
             // 
             // label1
             // 
@@ -265,7 +266,7 @@
             Controls.Add(label1);
             Controls.Add(listView1);
             Controls.Add(EliminarPasajeroButton);
-            Controls.Add(AgregarPersonaBtn);
+            Controls.Add(AgregarPasajeroButton);
             Controls.Add(NumeroItinerarioLabel);
             Controls.Add(lblNumeroItinerario);
             Controls.Add(VuelosListView);
@@ -296,7 +297,7 @@
         private Label label6;
         private Label NumeroItinerarioLabel;
         private Label lblNumeroItinerario;
-        private Button AgregarPersonaBtn;
+        private Button AgregarPasajeroButton;
         private Label label1;
         private ListView listView1;
         private ColumnHeader columnHeader6;

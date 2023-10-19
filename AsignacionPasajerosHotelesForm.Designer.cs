@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AgregarPersonaBtn = new Button();
+            AgregarPasajeroButton = new Button();
             EliminarPasajeroButton = new Button();
             NumeroItinerarioLabel = new Label();
             lblNumeroItinerario = new Label();
@@ -50,15 +50,16 @@
             label1 = new Label();
             SuspendLayout();
             // 
-            // AgregarPersonaBtn
+            // AgregarPasajeroButton
             // 
-            AgregarPersonaBtn.Location = new Point(16, 239);
-            AgregarPersonaBtn.Margin = new Padding(3, 4, 3, 4);
-            AgregarPersonaBtn.Name = "AgregarPersonaBtn";
-            AgregarPersonaBtn.Size = new Size(158, 41);
-            AgregarPersonaBtn.TabIndex = 37;
-            AgregarPersonaBtn.Text = "Agregar pasajero";
-            AgregarPersonaBtn.UseVisualStyleBackColor = true;
+            AgregarPasajeroButton.Location = new Point(16, 239);
+            AgregarPasajeroButton.Margin = new Padding(3, 4, 3, 4);
+            AgregarPasajeroButton.Name = "AgregarPasajeroButton";
+            AgregarPasajeroButton.Size = new Size(158, 41);
+            AgregarPasajeroButton.TabIndex = 37;
+            AgregarPasajeroButton.Text = "Agregar pasajero";
+            AgregarPasajeroButton.UseVisualStyleBackColor = true;
+            AgregarPasajeroButton.Click += AgregarPasajeroButton_Click;
             // 
             // EliminarPasajeroButton
             // 
@@ -206,27 +207,27 @@
             label1.TabIndex = 52;
             label1.Text = "Pasajeros";
             // 
-            // AsignacionPasajerosForm
+            // AsignacionPasajerosHotelesForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1500, 560);
             Controls.Add(label1);
             Controls.Add(listView1);
-            Controls.Add(AgregarPersonaBtn);
+            Controls.Add(AgregarPasajeroButton);
             Controls.Add(HotelesListView);
             Controls.Add(EliminarPasajeroButton);
             Controls.Add(label7);
             Controls.Add(NumeroItinerarioLabel);
             Controls.Add(lblNumeroItinerario);
-            Name = "AsignacionPasajerosForm";
+            Name = "AsignacionPasajerosHotelesForm";
             Text = "Realizar Prereserva";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button AgregarPersonaBtn;
+        private Button AgregarPasajeroButton;
         private Button EliminarPasajeroButton;
         private Label NumeroItinerarioLabel;
         private Label lblNumeroItinerario;

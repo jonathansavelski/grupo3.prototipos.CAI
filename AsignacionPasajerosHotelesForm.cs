@@ -16,5 +16,11 @@ namespace grupo3.prototipos.CAI
         {
             InitializeComponent();
         }
+
+        private void AgregarPasajeroButton_Click(object sender, EventArgs e)
+        {
+            AgregarPasajero agregarPasajero = new AgregarPasajero();
+            agregarPasajero.Show();
+        }
     }
 }
