@@ -17,6 +17,7 @@ namespace grupo3.prototipos.CAI
         public DateTime FechaArriboVuelo { get; set; }
         public string TiempoDeVueloVuelo { get; set; }
         public string AerolineaVuelo { get; set; }
+        /*
         public char ClaseVuelo { get; set; }
         public string ItinerarioVuelo { get; set; }
         public char TipoDePasajeroVuelo { get; set; }
@@ -25,5 +26,7 @@ namespace grupo3.prototipos.CAI
         public float ImpuestosVuelo { get; set; }
         public float ComisionVuelo { get; set; }
         public int DisponibilidadVuelo { get; set; }
+        */
+        public List<TarifaVuelo> TarifaVuelo { get; set; }
     }
 }

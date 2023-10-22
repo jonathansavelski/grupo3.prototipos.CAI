@@ -1,9 +1,3 @@
-using System.Globalization;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace grupo3.prototipos.CAI
 {
     public partial class VuelosForm : Form
@@ -82,10 +76,10 @@ namespace grupo3.prototipos.CAI
         {
             //Declaro la lista de vuelos disponibles
             VuelosDisponibles = archivoVuelos.VuelosDisponibles;
-
             char TipoPasajeroChar;
 
-            if(tipoPasajero.Equals("Adulto")) {
+            if (tipoPasajero.Equals("Adulto"))
+            {
                 TipoPasajeroChar = 'A';
             }
             else if (tipoPasajero.Equals("Menor"))
@@ -98,7 +92,9 @@ namespace grupo3.prototipos.CAI
             }
 
             //Filtro
-            List<Vuelo> VuelosEncontrados = VuelosDisponibles.FindAll(vuelo => (vuelo.CiudadOrigenVuelo == ciudadOrigen && vuelo.CiudadDestinoVuelo == ciudadDestino && vuelo.TipoDePasajeroVuelo.ToString() == TipoPasajeroChar.ToString() && (vuelo.FechaSalidaVuelo > fechaDesde && vuelo.FechaSalidaVuelo < fechaHasta)));
+            List<Vuelo> VuelosEncontrados = VuelosDisponibles.FindAll(vuelo => (vuelo.CiudadOrigenVuelo == ciudadOrigen
+                && vuelo.CiudadDestinoVuelo == ciudadDestino
+                && (vuelo.FechaSalidaVuelo > fechaDesde && vuelo.FechaSalidaVuelo < fechaHasta))); //&& vuelo.TarifaVuelo[].TipoDePasajeroVuelo.ToString() == TipoPasajeroChar.ToString()
 
             if (VuelosEncontrados.Count == 0)
             {
@@ -108,26 +104,34 @@ namespace grupo3.prototipos.CAI
             {
                 foreach (var vuelo in VuelosEncontrados)
                 {
-                    //Agrego cada vuelo a una lista
-                    var item = new ListViewItem();
-                    item.Text = vuelo.CodigoVuelo;
-                    item.SubItems.Add(vuelo.CodigoOrigenVuelo); //implicitamente estoy agregando el subitem 1, no el 0.
-                    item.SubItems.Add(vuelo.CodigoDestinoVuelo);
-                    item.SubItems.Add(vuelo.FechaSalidaVuelo.ToString());
-                    item.SubItems.Add(vuelo.FechaArriboVuelo.ToString());
-                    item.SubItems.Add(vuelo.TiempoDeVueloVuelo);
-                    item.SubItems.Add(vuelo.AerolineaVuelo);
-                    item.SubItems.Add(vuelo.ClaseVuelo.ToString());
-                    item.SubItems.Add(vuelo.ItinerarioVuelo);
-                    item.SubItems.Add(vuelo.TipoDePasajeroVuelo.ToString());
-                    item.SubItems.Add(vuelo.BaseVuelo.ToString());
-                    item.SubItems.Add(vuelo.ImpuestosVuelo.ToString());
-                    item.SubItems.Add(vuelo.ComisionVuelo.ToString());
-                    item.SubItems.Add(vuelo.DisponibilidadVuelo.ToString());
-                    item.Tag = vuelo; // Tag = etiqueta. La propiedad Tag es de tipo object. En esta propiedad puedo guardar lo que quiera. Esto sirve para que podamos meter un dato en cada fila (que no se ve) y me sirve para identificarla en el resto del sistema. 
+                    for (int i = 0; i < vuelo.TarifaVuelo.Count; i++)
+                    {
+                        if (vuelo.TarifaVuelo[i].TipoDePasajeroVuelo.ToString() == TipoPasajeroChar.ToString())
+                        {
+                            //Agrego cada vuelo a una lista
+                            var item = new ListViewItem();
+                            item.Text = vuelo.CodigoVuelo;
+                            item.SubItems.Add(vuelo.CodigoOrigenVuelo); //implicitamente estoy agregando el subitem 1, no el 0.
+                            item.SubItems.Add(vuelo.CodigoDestinoVuelo);
+                            item.SubItems.Add(vuelo.FechaSalidaVuelo.ToString());
+                            item.SubItems.Add(vuelo.FechaArriboVuelo.ToString());
+                            item.SubItems.Add(vuelo.TiempoDeVueloVuelo);
+                            item.SubItems.Add(vuelo.AerolineaVuelo);
 
-                    VuelosListView.Items.Add(item);
-                }       
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].ClaseVuelo.ToString());
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].ItinerarioVuelo);
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].TipoDePasajeroVuelo.ToString());
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].CodigoMonedaVuelo);
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].BaseVuelo.ToString("0.00") + " " + vuelo.TarifaVuelo[i].CodigoMonedaVuelo);
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].ImpuestosVuelo.ToString("0.00") + " " + vuelo.TarifaVuelo[i].CodigoMonedaVuelo);
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].ComisionVuelo.ToString("0.0000") + "%");
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].DisponibilidadVuelo.ToString());
+                            item.Tag = vuelo; // Tag = etiqueta. La propiedad Tag es de tipo object. En esta propiedad puedo guardar lo que quiera. Esto sirve para que podamos meter un dato en cada fila (que no se ve) y me sirve para identificarla en el resto del sistema. 
+
+                            VuelosListView.Items.Add(item);
+                        }
+                    }
+                }
             }
         }
 
@@ -179,7 +183,7 @@ namespace grupo3.prototipos.CAI
             return error;
         }
 
-
+        /*
         public void CargaVuelos()
         {
             string path = "C:\\Users\\Jonathan\\Desktop\\UBA\\Ciclo Profesional\\2023\\Construcción de Aplicaciones Informáticas\\Listado de Vuelos.txt";
@@ -243,7 +247,7 @@ namespace grupo3.prototipos.CAI
             }
 
         }
-
+        */
 
 
         //Cuando se selecciona un item del List View

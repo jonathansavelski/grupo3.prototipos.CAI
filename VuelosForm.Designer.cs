@@ -143,7 +143,7 @@
             // 
             FechaSalidaVueloHeader.Text = "Fecha de salida";
             FechaSalidaVueloHeader.TextAlign = HorizontalAlignment.Center;
-            FechaSalidaVueloHeader.Width = 150;
+            FechaSalidaVueloHeader.Width = 160;
             // 
             // FechaArriboVueloHeader
             // 
@@ -185,19 +185,19 @@
             // 
             BaseVueloHeader.Text = "Base";
             BaseVueloHeader.TextAlign = HorizontalAlignment.Center;
-            BaseVueloHeader.Width = 100;
+            BaseVueloHeader.Width = 120;
             // 
             // ImpuestoVueloHeader
             // 
             ImpuestoVueloHeader.Text = "Impuesto";
             ImpuestoVueloHeader.TextAlign = HorizontalAlignment.Center;
-            ImpuestoVueloHeader.Width = 100;
+            ImpuestoVueloHeader.Width = 120;
             // 
             // ComisionVueloHeader
             // 
             ComisionVueloHeader.Text = "Comision";
             ComisionVueloHeader.TextAlign = HorizontalAlignment.Center;
-            ComisionVueloHeader.Width = 100;
+            ComisionVueloHeader.Width = 120;
             // 
             // DisponibilidadVueloHeader
             // 
