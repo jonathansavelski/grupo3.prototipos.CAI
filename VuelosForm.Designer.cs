@@ -53,17 +53,17 @@
             ParadasVueloListView = new ListView();
             AeropuertoParadaHeader = new ColumnHeader();
             TiempoParadaHeader = new ColumnHeader();
-            dateTimePicker1 = new DateTimePicker();
+            RangoDesdeVueloDateTimePicker = new DateTimePicker();
             BuscarVuelosButton = new Button();
             lblFechaSalida = new Label();
             groupBox1 = new GroupBox();
             label10 = new Label();
-            comboBox1 = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
+            TipoPasajeroVueloComboBox = new ComboBox();
+            RangoHastaVueloDateTimePicker = new DateTimePicker();
             label3 = new Label();
-            textBox2 = new TextBox();
+            CiudadDestinoVueloTextBox = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            CiudadOrigenVueloTextBox = new TextBox();
             label1 = new Label();
             VuelosDisponiblesGroupBox.SuspendLayout();
             InformacionAdicionalVuelosGroupBox.SuspendLayout();
@@ -273,13 +273,13 @@
             TiempoParadaHeader.TextAlign = HorizontalAlignment.Center;
             TiempoParadaHeader.Width = 150;
             // 
-            // dateTimePicker1
+            // RangoDesdeVueloDateTimePicker
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(337, 75);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(121, 27);
-            dateTimePicker1.TabIndex = 8;
+            RangoDesdeVueloDateTimePicker.Format = DateTimePickerFormat.Short;
+            RangoDesdeVueloDateTimePicker.Location = new Point(337, 75);
+            RangoDesdeVueloDateTimePicker.Name = "RangoDesdeVueloDateTimePicker";
+            RangoDesdeVueloDateTimePicker.Size = new Size(121, 27);
+            RangoDesdeVueloDateTimePicker.TabIndex = 8;
             // 
             // BuscarVuelosButton
             // 
@@ -303,16 +303,16 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(TipoPasajeroVueloComboBox);
+            groupBox1.Controls.Add(RangoHastaVueloDateTimePicker);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(CiudadDestinoVueloTextBox);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(CiudadOrigenVueloTextBox);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(BuscarVuelosButton);
             groupBox1.Controls.Add(lblFechaSalida);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(RangoDesdeVueloDateTimePicker);
             groupBox1.Location = new Point(14, 8);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1206, 115);
@@ -328,57 +328,57 @@
             label10.TabIndex = 43;
             label10.Text = "Tipo de Pasajero";
             // 
-            // comboBox1
+            // TipoPasajeroVueloComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Adulto", "Menor", "Infante" });
-            comboBox1.Location = new Point(629, 74);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 42;
+            TipoPasajeroVueloComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            TipoPasajeroVueloComboBox.FormattingEnabled = true;
+            TipoPasajeroVueloComboBox.Items.AddRange(new object[] { "Adulto", "Menor", "Infante" });
+            TipoPasajeroVueloComboBox.Location = new Point(629, 74);
+            TipoPasajeroVueloComboBox.Name = "TipoPasajeroVueloComboBox";
+            TipoPasajeroVueloComboBox.Size = new Size(151, 28);
+            TipoPasajeroVueloComboBox.TabIndex = 42;
             // 
-            // dateTimePicker2
+            // RangoHastaVueloDateTimePicker
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(476, 75);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(121, 27);
-            dateTimePicker2.TabIndex = 19;
+            RangoHastaVueloDateTimePicker.Format = DateTimePickerFormat.Short;
+            RangoHastaVueloDateTimePicker.Location = new Point(476, 75);
+            RangoHastaVueloDateTimePicker.Name = "RangoHastaVueloDateTimePicker";
+            RangoHastaVueloDateTimePicker.Size = new Size(121, 27);
+            RangoHastaVueloDateTimePicker.TabIndex = 19;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(160, 48);
             label3.Name = "label3";
-            label3.Size = new Size(122, 20);
+            label3.Size = new Size(132, 20);
             label3.TabIndex = 18;
-            label3.Text = "Lugar de Destino";
+            label3.Text = "Ciudad de Destino";
             // 
-            // textBox2
+            // CiudadDestinoVueloTextBox
             // 
-            textBox2.Location = new Point(162, 75);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 17;
+            CiudadDestinoVueloTextBox.Location = new Point(162, 75);
+            CiudadDestinoVueloTextBox.Name = "CiudadDestinoVueloTextBox";
+            CiudadDestinoVueloTextBox.Size = new Size(125, 27);
+            CiudadDestinoVueloTextBox.TabIndex = 17;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(9, 48);
             label2.Name = "label2";
-            label2.Size = new Size(116, 20);
+            label2.Size = new Size(126, 20);
             label2.TabIndex = 16;
-            label2.Text = "Lugar de Origen";
+            label2.Text = "Ciudad de Origen";
             // 
-            // textBox1
+            // CiudadOrigenVueloTextBox
             // 
-            textBox1.AutoCompleteCustomSource.AddRange(new string[] { "Brasil" });
-            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
-            textBox1.AutoCompleteSource = AutoCompleteSource.AllUrl;
-            textBox1.Location = new Point(12, 75);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 15;
+            CiudadOrigenVueloTextBox.AutoCompleteCustomSource.AddRange(new string[] { "Brasil" });
+            CiudadOrigenVueloTextBox.AutoCompleteSource = AutoCompleteSource.FileSystemDirectories;
+            CiudadOrigenVueloTextBox.Location = new Point(12, 75);
+            CiudadOrigenVueloTextBox.Name = "CiudadOrigenVueloTextBox";
+            CiudadOrigenVueloTextBox.Size = new Size(125, 27);
+            CiudadOrigenVueloTextBox.TabIndex = 15;
             // 
             // label1
             // 
@@ -425,7 +425,7 @@
         private GroupBox InformacionAdicionalVuelosGroupBox;
         private Label lblParadas;
         private ListView ParadasVueloListView;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker RangoDesdeVueloDateTimePicker;
         private Button BuscarVuelosButton;
         private Label lblFechaSalida;
         private ColumnHeader AeropuertoParadaHeader;
@@ -433,11 +433,11 @@
         private Button AñadirAlItinerarioVueloButton;
         private GroupBox groupBox1;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox CiudadDestinoVueloTextBox;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox CiudadOrigenVueloTextBox;
         private Label label1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker RangoHastaVueloDateTimePicker;
         private Label label4;
         private ColumnHeader ClaseTarifaVueloHeader;
         private ColumnHeader ItinerarioVueloHeader;
@@ -448,6 +448,6 @@
         private ColumnHeader DisponibilidadVueloHeader;
         private Label label5;
         private Label label10;
-        private ComboBox comboBox1;
+        private ComboBox TipoPasajeroVueloComboBox;
     }
 }
