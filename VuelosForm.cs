@@ -8,7 +8,7 @@ namespace grupo3.prototipos.CAI
 {
     public partial class VuelosForm : Form
     {
-        VuelosModel modeloVuelos;
+        //VuelosModel modeloVuelos;
         ArchivoVuelos archivoVuelos;
 
         public VuelosForm()
@@ -20,7 +20,7 @@ namespace grupo3.prototipos.CAI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            modeloVuelos = new VuelosModel();
+            //modeloVuelos = new VuelosModel();
             archivoVuelos = new ArchivoVuelos();
 
             InformacionAdicionalVuelosGroupBox.Enabled = false;
