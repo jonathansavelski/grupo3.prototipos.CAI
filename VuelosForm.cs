@@ -1,9 +1,15 @@
+using System.Collections.Generic;
+using System.Diagnostics;
+using grupo3.prototipos.CAI.Archivos;
+using grupo3.prototipos.CAI.Entidades;
+
 namespace grupo3.prototipos.CAI
 {
     public partial class VuelosForm : Form
     {
         //VuelosModel modeloVuelos;
         ArchivoVuelos archivoVuelos;
+
 
         public VuelosForm()
         {
@@ -19,25 +25,6 @@ namespace grupo3.prototipos.CAI
 
             InformacionAdicionalVuelosGroupBox.Enabled = false;
             VuelosDisponiblesGroupBox.Enabled = false;
-        }
-
-        private void InformacionVueloButton_Click(object sender, EventArgs e)
-        {
-            Vuelo vueloSeleccionado = (Vuelo)VuelosListView.SelectedItems[0].Tag; //El vuelo seleccionado lo guardé en el tag
-
-            InformacionAdicionalVuelosGroupBox.Enabled = true;
-
-            //Datos de ejemplo
-            ListViewItem parada = new ListViewItem("Santiago de Chile");
-            parada.SubItems.Add("2:30hs");
-
-            ParadasVueloListView.Items.Add(parada);
-
-            ListViewItem servicioExtra = new ListViewItem("03817");
-            servicioExtra.SubItems.Add("Cena premium");
-            servicioExtra.SubItems.Add("4000");
-
-            //ServiciosExtraListView.Items.Add(servicioExtra);
         }
 
         private void AplicarFiltrosButton_Click(object sender, EventArgs e)
@@ -70,6 +57,40 @@ namespace grupo3.prototipos.CAI
                 BuscarVuelos(ciudadOrigenVuelo, ciudadDestinoVuelo, fechaDesde, fechaHasta, tipoPasajero);
             }
 
+        }
+
+        private void InformacionVueloButton_Click(object sender, EventArgs e)
+        {
+            Vuelo vueloSeleccionado = (Vuelo)VuelosListView.SelectedItems[0].Tag; //El vuelo seleccionado lo guardé en el tag
+
+            InformacionAdicionalVuelosGroupBox.Enabled = true;
+
+            /*
+            List <Vuelo> DatosVueloSeleccionado = VuelosDisponibles.FindAll(vuelo => (vuelo.CodigoVuelo == vueloSeleccionado.CodigoVuelo));
+
+            foreach (var vuelo in DatosVueloSeleccionado)
+            {
+                for (int i = 0; i < vuelo.ParadasVuelo.Count; i++)
+                {
+                    var paradas = new ListViewItem();
+                    paradas.Text = vuelo.ParadasVuelo[i].NombreAeropuertoParadaVuelo;
+                    paradas.SubItems.Add(vuelo.ParadasVuelo[i].TiempoDeParadaVuelo);
+                    ParadasVueloListView.Items.Add(paradas);
+                }
+            }
+            */
+            //Datos de ejemplo
+            /*
+            ListViewItem parada = new ListViewItem("Santiago de Chile");
+            parada.SubItems.Add("2:30hs");
+
+            ParadasVueloListView.Items.Add(parada);
+
+            ListViewItem servicioExtra = new ListViewItem("03817");
+            servicioExtra.SubItems.Add("Cena premium");
+            servicioExtra.SubItems.Add("4000");
+            */
+            //ServiciosExtraListView.Items.Add(servicioExtra);
         }
 
         public void BuscarVuelos(string ciudadOrigen, string ciudadDestino, DateTime fechaDesde, DateTime fechaHasta, string tipoPasajero)
@@ -139,15 +160,11 @@ namespace grupo3.prototipos.CAI
         //Validaciones
         public string ValidarVacio(string valor, string campo)
         {
-            string error;
+            string error = "";
 
             if (string.IsNullOrEmpty(valor))
             {
                 error = "El campo " + campo + " no puede estar vacío." + "\n";
-            }
-            else
-            {
-                error = "";
             }
             return error;
         }
@@ -155,30 +172,22 @@ namespace grupo3.prototipos.CAI
 
         public string ValidarFechaDesde(DateTime fecha)
         {
-            string error;
+            string error = "";
 
             if (fecha < DateTime.Now.Date)
             {
                 error = "La fecha no debe ser anterior a hoy." + "\n";
-            }
-            else
-            {
-                error = "";
             }
             return error;
         }
 
         public string ValidarFechaHasta(DateTime fechaDesde, DateTime fechaHasta)
         {
-            string error;
+            string error = "";
 
             if (fechaHasta < fechaDesde)
             {
                 error = "El rango de fechas es incorrecto." + "\n";
-            }
-            else
-            {
-                error = "";
             }
             return error;
         }

@@ -6,17 +6,25 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using grupo3.prototipos.CAI.Archivos;
+using grupo3.prototipos.CAI.Entidades;
 
 namespace grupo3.prototipos.CAI
 {
     public partial class CrearItinerario : Form
     {
+        private ArchivoItinerarios archivoItinerarios;
+
         public CrearItinerario()
         {
             InitializeComponent();
+
+            archivoItinerarios = new ArchivoItinerarios();
         }
+
         private void ConsultaDisponibilidadVuelosBtn_Click(object sender, EventArgs e)
         {
             VuelosForm vuelosForm = new VuelosForm();
@@ -34,7 +42,9 @@ namespace grupo3.prototipos.CAI
         //Carga del form
         public void CrearItinerario_Load(object sender, EventArgs e)
         {
-            NumeroItinerarioLabel.Text = Convert.ToString(CrearNumeroDeItinerario());
+            Itinerario nuevoItinerario = archivoItinerarios.GenerarItinerarioUnico();
+
+            NumeroItinerarioLabel.Text = Convert.ToString(nuevoItinerario.NumeroItinerario);
             //Estado inicial
             ValorDeLaCotizacionLabel.Text = "";
             VuelosListView.Enabled = false;
@@ -45,6 +55,10 @@ namespace grupo3.prototipos.CAI
             //CargaPasajerosGroupBox.Enabled = false;
             ServiciosExtraVuelosListView.Enabled = false;
             ServiciosExtraHotelesListView.Enabled = false;
+
+            //int numeroDeItinerario = CrearNumeroDeItinerario();
+
+            
         }
 
         //Creación de número de itinerario
@@ -52,6 +66,9 @@ namespace grupo3.prototipos.CAI
         {
             Random numeroRandom = new Random();
             int numeroDeItinerario = numeroRandom.Next();
+
+            
+
             return numeroDeItinerario;
         }
 
