@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             grpMenu = new GroupBox();
-            EliminarServicioExtraHotelButton = new Button();
-            AgregarServicioExtraHotelButton = new Button();
-            EliminarServicioExtraVueloButton = new Button();
-            AgregarServicioExtraVueloButton = new Button();
-            label9 = new Label();
             HotelesListView = new ListView();
             CodigoHotelHeader = new ColumnHeader();
             columnHeader1 = new ColumnHeader();
@@ -42,16 +37,6 @@
             CalificacionHeader = new ColumnHeader();
             NombreHabitacionHeader = new ColumnHeader();
             TarifaPorDiaHeader = new ColumnHeader();
-            ServiciosExtraHotelesListView = new ListView();
-            CodigoHeader = new ColumnHeader();
-            DescripcionHeader = new ColumnHeader();
-            TarifaHeader = new ColumnHeader();
-            PrecioPorPasajeroHeader = new ColumnHeader();
-            label5 = new Label();
-            ServiciosExtraVuelosListView = new ListView();
-            CodigoServicioHeader = new ColumnHeader();
-            DescripcionServicioHeader = new ColumnHeader();
-            TarifaServicioHeader = new ColumnHeader();
             VuelosListView = new ListView();
             CodigoVueloHeader = new ColumnHeader();
             CodigoOrigenVueloHeader = new ColumnHeader();
@@ -61,11 +46,8 @@
             TiempoVueloHeader = new ColumnHeader();
             CodigoAerolineaVueloHeader = new ColumnHeader();
             ClaseTarifaVueloHeader = new ColumnHeader();
-            ItinerarioVueloHeader = new ColumnHeader();
             TipoPasajeroHeader = new ColumnHeader();
-            BaseVueloHeader = new ColumnHeader();
-            ImpuestoVueloHeader = new ColumnHeader();
-            ComisionVueloHeader = new ColumnHeader();
+            PrecioVueloHeader = new ColumnHeader();
             DisponibilidadVueloHeader = new ColumnHeader();
             ValorDeLaCotizacionLabel = new Label();
             CotizarButton = new Button();
@@ -82,21 +64,14 @@
             CargarPasajeroHotelButton = new Button();
             label11 = new Label();
             CargarPasajeroVueloButton = new Button();
+            CopiarNumeroItinerario = new Button();
             grpMenu.SuspendLayout();
             CargaPasajerosGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // grpMenu
             // 
-            grpMenu.Controls.Add(EliminarServicioExtraHotelButton);
-            grpMenu.Controls.Add(AgregarServicioExtraHotelButton);
-            grpMenu.Controls.Add(EliminarServicioExtraVueloButton);
-            grpMenu.Controls.Add(AgregarServicioExtraVueloButton);
-            grpMenu.Controls.Add(label9);
             grpMenu.Controls.Add(HotelesListView);
-            grpMenu.Controls.Add(ServiciosExtraHotelesListView);
-            grpMenu.Controls.Add(label5);
-            grpMenu.Controls.Add(ServiciosExtraVuelosListView);
             grpMenu.Controls.Add(VuelosListView);
             grpMenu.Controls.Add(ValorDeLaCotizacionLabel);
             grpMenu.Controls.Add(CotizarButton);
@@ -114,58 +89,6 @@
             grpMenu.TabIndex = 0;
             grpMenu.TabStop = false;
             // 
-            // EliminarServicioExtraHotelButton
-            // 
-            EliminarServicioExtraHotelButton.Location = new Point(1177, 384);
-            EliminarServicioExtraHotelButton.Margin = new Padding(3, 4, 3, 4);
-            EliminarServicioExtraHotelButton.Name = "EliminarServicioExtraHotelButton";
-            EliminarServicioExtraHotelButton.Size = new Size(158, 37);
-            EliminarServicioExtraHotelButton.TabIndex = 51;
-            EliminarServicioExtraHotelButton.Text = "Eliminar";
-            EliminarServicioExtraHotelButton.UseVisualStyleBackColor = true;
-            // 
-            // AgregarServicioExtraHotelButton
-            // 
-            AgregarServicioExtraHotelButton.Location = new Point(1013, 384);
-            AgregarServicioExtraHotelButton.Margin = new Padding(3, 4, 3, 4);
-            AgregarServicioExtraHotelButton.Name = "AgregarServicioExtraHotelButton";
-            AgregarServicioExtraHotelButton.Size = new Size(158, 37);
-            AgregarServicioExtraHotelButton.TabIndex = 50;
-            AgregarServicioExtraHotelButton.Text = "Agregar";
-            AgregarServicioExtraHotelButton.UseVisualStyleBackColor = true;
-            AgregarServicioExtraHotelButton.Click += AgregarServicioExtraHotelButton_Click;
-            // 
-            // EliminarServicioExtraVueloButton
-            // 
-            EliminarServicioExtraVueloButton.Location = new Point(1173, 168);
-            EliminarServicioExtraVueloButton.Margin = new Padding(3, 4, 3, 4);
-            EliminarServicioExtraVueloButton.Name = "EliminarServicioExtraVueloButton";
-            EliminarServicioExtraVueloButton.Size = new Size(158, 39);
-            EliminarServicioExtraVueloButton.TabIndex = 49;
-            EliminarServicioExtraVueloButton.Text = "Eliminar";
-            EliminarServicioExtraVueloButton.UseVisualStyleBackColor = true;
-            // 
-            // AgregarServicioExtraVueloButton
-            // 
-            AgregarServicioExtraVueloButton.Location = new Point(1009, 168);
-            AgregarServicioExtraVueloButton.Margin = new Padding(3, 4, 3, 4);
-            AgregarServicioExtraVueloButton.Name = "AgregarServicioExtraVueloButton";
-            AgregarServicioExtraVueloButton.Size = new Size(158, 39);
-            AgregarServicioExtraVueloButton.TabIndex = 48;
-            AgregarServicioExtraVueloButton.Text = "Agregar";
-            AgregarServicioExtraVueloButton.UseVisualStyleBackColor = true;
-            AgregarServicioExtraVueloButton.Click += AgregarServicioExtraVueloButton_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(1010, 243);
-            label9.Name = "label9";
-            label9.Size = new Size(168, 20);
-            label9.TabIndex = 47;
-            label9.Text = "Servicios extra Hoteles";
-            // 
             // HotelesListView
             // 
             HotelesListView.Columns.AddRange(new ColumnHeader[] { CodigoHotelHeader, columnHeader1, CódigoCiudadHeader, DirecciónHeader, CalificacionHeader, NombreHabitacionHeader, TarifaPorDiaHeader });
@@ -176,7 +99,7 @@
             HotelesListView.Margin = new Padding(3, 4, 3, 4);
             HotelesListView.MultiSelect = false;
             HotelesListView.Name = "HotelesListView";
-            HotelesListView.Size = new Size(977, 104);
+            HotelesListView.Size = new Size(1463, 104);
             HotelesListView.TabIndex = 46;
             HotelesListView.UseCompatibleStateImageBehavior = false;
             HotelesListView.View = View.Details;
@@ -221,86 +144,9 @@
             TarifaPorDiaHeader.TextAlign = HorizontalAlignment.Center;
             TarifaPorDiaHeader.Width = 150;
             // 
-            // ServiciosExtraHotelesListView
-            // 
-            ServiciosExtraHotelesListView.Columns.AddRange(new ColumnHeader[] { CodigoHeader, DescripcionHeader, TarifaHeader, PrecioPorPasajeroHeader });
-            ServiciosExtraHotelesListView.FullRowSelect = true;
-            ServiciosExtraHotelesListView.GridLines = true;
-            ServiciosExtraHotelesListView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            ServiciosExtraHotelesListView.Location = new Point(1013, 272);
-            ServiciosExtraHotelesListView.Margin = new Padding(3, 4, 3, 4);
-            ServiciosExtraHotelesListView.Name = "ServiciosExtraHotelesListView";
-            ServiciosExtraHotelesListView.Size = new Size(464, 104);
-            ServiciosExtraHotelesListView.TabIndex = 45;
-            ServiciosExtraHotelesListView.UseCompatibleStateImageBehavior = false;
-            ServiciosExtraHotelesListView.View = View.Details;
-            // 
-            // CodigoHeader
-            // 
-            CodigoHeader.Text = "Código";
-            CodigoHeader.Width = 100;
-            // 
-            // DescripcionHeader
-            // 
-            DescripcionHeader.Text = "Descripción";
-            DescripcionHeader.TextAlign = HorizontalAlignment.Center;
-            DescripcionHeader.Width = 100;
-            // 
-            // TarifaHeader
-            // 
-            TarifaHeader.Text = "Tarifa";
-            TarifaHeader.TextAlign = HorizontalAlignment.Center;
-            TarifaHeader.Width = 100;
-            // 
-            // PrecioPorPasajeroHeader
-            // 
-            PrecioPorPasajeroHeader.Text = "Precio Por Pasajero";
-            PrecioPorPasajeroHeader.TextAlign = HorizontalAlignment.Center;
-            PrecioPorPasajeroHeader.Width = 150;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(1009, 24);
-            label5.Name = "label5";
-            label5.Size = new Size(162, 20);
-            label5.TabIndex = 44;
-            label5.Text = "Servicios extra Vuelos";
-            // 
-            // ServiciosExtraVuelosListView
-            // 
-            ServiciosExtraVuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoServicioHeader, DescripcionServicioHeader, TarifaServicioHeader });
-            ServiciosExtraVuelosListView.FullRowSelect = true;
-            ServiciosExtraVuelosListView.GridLines = true;
-            ServiciosExtraVuelosListView.Location = new Point(1009, 54);
-            ServiciosExtraVuelosListView.Margin = new Padding(3, 4, 3, 4);
-            ServiciosExtraVuelosListView.Name = "ServiciosExtraVuelosListView";
-            ServiciosExtraVuelosListView.Size = new Size(464, 106);
-            ServiciosExtraVuelosListView.TabIndex = 43;
-            ServiciosExtraVuelosListView.UseCompatibleStateImageBehavior = false;
-            ServiciosExtraVuelosListView.View = View.Details;
-            // 
-            // CodigoServicioHeader
-            // 
-            CodigoServicioHeader.Text = "Código de servicio";
-            CodigoServicioHeader.Width = 150;
-            // 
-            // DescripcionServicioHeader
-            // 
-            DescripcionServicioHeader.Text = "Descripción servicio";
-            DescripcionServicioHeader.TextAlign = HorizontalAlignment.Center;
-            DescripcionServicioHeader.Width = 150;
-            // 
-            // TarifaServicioHeader
-            // 
-            TarifaServicioHeader.Text = "Tarifa servicio";
-            TarifaServicioHeader.TextAlign = HorizontalAlignment.Center;
-            TarifaServicioHeader.Width = 150;
-            // 
             // VuelosListView
             // 
-            VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, CodigoOrigenVueloHeader, CodigoDestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader, ClaseTarifaVueloHeader, ItinerarioVueloHeader, TipoPasajeroHeader, BaseVueloHeader, ImpuestoVueloHeader, ComisionVueloHeader, DisponibilidadVueloHeader });
+            VuelosListView.Columns.AddRange(new ColumnHeader[] { CodigoVueloHeader, CodigoOrigenVueloHeader, CodigoDestinoVueloHeader, FechaSalidaVueloHeader, FechaArriboVueloHeader, TiempoVueloHeader, CodigoAerolineaVueloHeader, ClaseTarifaVueloHeader, TipoPasajeroHeader, PrecioVueloHeader, DisponibilidadVueloHeader });
             VuelosListView.FullRowSelect = true;
             VuelosListView.GridLines = true;
             VuelosListView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
@@ -309,10 +155,11 @@
             VuelosListView.Margin = new Padding(3, 4, 3, 4);
             VuelosListView.MultiSelect = false;
             VuelosListView.Name = "VuelosListView";
-            VuelosListView.Size = new Size(977, 106);
+            VuelosListView.Size = new Size(1463, 106);
             VuelosListView.TabIndex = 42;
             VuelosListView.UseCompatibleStateImageBehavior = false;
             VuelosListView.View = View.Details;
+            VuelosListView.SelectedIndexChanged += VuelosListView_SelectedIndexChanged;
             // 
             // CodigoVueloHeader
             // 
@@ -361,35 +208,17 @@
             ClaseTarifaVueloHeader.TextAlign = HorizontalAlignment.Center;
             ClaseTarifaVueloHeader.Width = 100;
             // 
-            // ItinerarioVueloHeader
-            // 
-            ItinerarioVueloHeader.Text = "Itinerario";
-            ItinerarioVueloHeader.TextAlign = HorizontalAlignment.Center;
-            ItinerarioVueloHeader.Width = 100;
-            // 
             // TipoPasajeroHeader
             // 
             TipoPasajeroHeader.Text = "Tipo Pasajero";
             TipoPasajeroHeader.TextAlign = HorizontalAlignment.Center;
             TipoPasajeroHeader.Width = 120;
             // 
-            // BaseVueloHeader
+            // PrecioVueloHeader
             // 
-            BaseVueloHeader.Text = "Base";
-            BaseVueloHeader.TextAlign = HorizontalAlignment.Center;
-            BaseVueloHeader.Width = 100;
-            // 
-            // ImpuestoVueloHeader
-            // 
-            ImpuestoVueloHeader.Text = "Impuesto";
-            ImpuestoVueloHeader.TextAlign = HorizontalAlignment.Center;
-            ImpuestoVueloHeader.Width = 100;
-            // 
-            // ComisionVueloHeader
-            // 
-            ComisionVueloHeader.Text = "Comision";
-            ComisionVueloHeader.TextAlign = HorizontalAlignment.Center;
-            ComisionVueloHeader.Width = 100;
+            PrecioVueloHeader.Text = "Precio";
+            PrecioVueloHeader.TextAlign = HorizontalAlignment.Center;
+            PrecioVueloHeader.Width = 100;
             // 
             // DisponibilidadVueloHeader
             // 
@@ -435,6 +264,7 @@
             EliminarVueloButton.TabIndex = 25;
             EliminarVueloButton.Text = "Eliminar";
             EliminarVueloButton.UseVisualStyleBackColor = true;
+            EliminarVueloButton.Click += EliminarVueloButton_Click;
             // 
             // label7
             // 
@@ -480,7 +310,7 @@
             // 
             // MenuPrincipalButton
             // 
-            MenuPrincipalButton.Location = new Point(1324, 698);
+            MenuPrincipalButton.Location = new Point(1324, 651);
             MenuPrincipalButton.Margin = new Padding(3, 4, 3, 4);
             MenuPrincipalButton.Name = "MenuPrincipalButton";
             MenuPrincipalButton.Size = new Size(165, 41);
@@ -551,11 +381,22 @@
             CargarPasajeroVueloButton.UseVisualStyleBackColor = true;
             CargarPasajeroVueloButton.Click += CargarPasajeroVueloButton_Click;
             // 
+            // CopiarNumeroItinerario
+            // 
+            CopiarNumeroItinerario.Location = new Point(323, 9);
+            CopiarNumeroItinerario.Name = "CopiarNumeroItinerario";
+            CopiarNumeroItinerario.Size = new Size(94, 29);
+            CopiarNumeroItinerario.TabIndex = 44;
+            CopiarNumeroItinerario.Text = "Copiar";
+            CopiarNumeroItinerario.UseVisualStyleBackColor = true;
+            CopiarNumeroItinerario.Click += CopiarNumeroItinerario_Click;
+            // 
             // CrearItinerario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1518, 772);
+            ClientSize = new Size(1518, 709);
+            Controls.Add(CopiarNumeroItinerario);
             Controls.Add(CargaPasajerosGroupBox);
             Controls.Add(NumeroItinerarioLabel);
             Controls.Add(grpMenu);
@@ -595,7 +436,6 @@
         private ColumnHeader TipoPasajero;
         private Button CargarPasajeroVueloButton;
         private Button EliminarPasajeroButton;
-        private ListView VuelosListView;
         private ColumnHeader CodigoVueloHeader;
         private ColumnHeader CodigoOrigenVueloHeader;
         private ColumnHeader CodigoDestinoVueloHeader;
@@ -604,23 +444,9 @@
         private ColumnHeader TiempoVueloHeader;
         private ColumnHeader CodigoAerolineaVueloHeader;
         private ColumnHeader ClaseTarifaVueloHeader;
-        private ColumnHeader ItinerarioVueloHeader;
         private ColumnHeader TipoPasajeroHeader;
-        private ColumnHeader BaseVueloHeader;
-        private ColumnHeader ImpuestoVueloHeader;
-        private ColumnHeader ComisionVueloHeader;
+        private ColumnHeader PrecioVueloHeader;
         private ColumnHeader DisponibilidadVueloHeader;
-        private Label label5;
-        private ListView ServiciosExtraVuelosListView;
-        private ColumnHeader CodigoServicioHeader;
-        private ColumnHeader DescripcionServicioHeader;
-        private ColumnHeader TarifaServicioHeader;
-        private ListView ServiciosExtraHotelesListView;
-        private ColumnHeader CodigoHeader;
-        private ColumnHeader DescripcionHeader;
-        private ColumnHeader TarifaHeader;
-        private ColumnHeader PrecioPorPasajeroHeader;
-        private Label label9;
         private ListView HotelesListView;
         private ColumnHeader CodigoHotelHeader;
         private ColumnHeader columnHeader1;
@@ -631,10 +457,8 @@
         private ColumnHeader TarifaPorDiaHeader;
         private Label label11;
         private ColumnHeader DNIHeader;
-        private Button EliminarServicioExtraHotelButton;
-        private Button AgregarServicioExtraHotelButton;
-        private Button EliminarServicioExtraVueloButton;
-        private Button AgregarServicioExtraVueloButton;
         private Button CargarPasajeroHotelButton;
+        public ListView VuelosListView;
+        private Button CopiarNumeroItinerario;
     }
 }

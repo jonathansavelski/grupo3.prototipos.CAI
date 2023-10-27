@@ -17,12 +17,16 @@ namespace grupo3.prototipos.CAI
     public partial class CrearItinerario : Form
     {
         private ArchivoItinerarios archivoItinerarios;
+        public VueloEnt VueloSeleccionado { get; set; }
+        public static CrearItinerario Instancia { get; private set; }
 
         public CrearItinerario()
         {
             InitializeComponent();
 
             archivoItinerarios = new ArchivoItinerarios();
+
+            Instancia = this; // Creo la instancia
         }
 
         private void ConsultaDisponibilidadVuelosBtn_Click(object sender, EventArgs e)
@@ -53,12 +57,8 @@ namespace grupo3.prototipos.CAI
             EliminarHotelButton.Enabled = false;
             CotizarButton.Enabled = false;
             //CargaPasajerosGroupBox.Enabled = false;
-            ServiciosExtraVuelosListView.Enabled = false;
-            ServiciosExtraHotelesListView.Enabled = false;
 
             //int numeroDeItinerario = CrearNumeroDeItinerario();
-
-            
         }
 
         //Creación de número de itinerario
@@ -67,21 +67,30 @@ namespace grupo3.prototipos.CAI
             Random numeroRandom = new Random();
             int numeroDeItinerario = numeroRandom.Next();
 
-            
-
             return numeroDeItinerario;
         }
 
-        private void AgregarServicioExtraVueloButton_Click(object sender, EventArgs e)
+        //Carga vuelo seleccionado
+        public void CargarVueloSeleccionado(VueloEnt vuelo)
         {
-            ServiciosExtraVuelosForm serviciosExtraVuelosForm = new ServiciosExtraVuelosForm();
-            serviciosExtraVuelosForm.Show();
-        }
+            //Agrego items al ListView
+            //vuelo = VueloSeleccionado;
 
-        private void AgregarServicioExtraHotelButton_Click(object sender, EventArgs e)
-        {
-            ServiciosExtraHotelesForm serviciosExtraHotelesForm = new ServiciosExtraHotelesForm();
-            serviciosExtraHotelesForm.Show();
+            var item = new ListViewItem();
+
+            item.Text = vuelo.CodigoVuelo;
+            item.SubItems.Add(vuelo.CodigoOrigenVuelo);
+            item.SubItems.Add(vuelo.CodigoDestinoVuelo);
+            item.SubItems.Add(vuelo.FechaSalidaVuelo.ToString());
+            item.SubItems.Add(vuelo.FechaArriboVuelo.ToString());
+            item.SubItems.Add(vuelo.TiempoDeVueloVuelo);
+            item.SubItems.Add(vuelo.AerolineaVuelo);
+            item.SubItems.Add(vuelo.TarifaVuelo[0].ClaseVuelo.ToString());
+            item.SubItems.Add(vuelo.TarifaVuelo[0].TipoDePasajeroVuelo.ToString());
+            item.SubItems.Add(vuelo.TarifaVuelo[0].PrecioVuelo.ToString());
+            item.SubItems.Add(vuelo.TarifaVuelo[0].DisponibilidadVuelo.ToString());
+
+            VuelosListView.Items.Add(item);
         }
 
         private void MenuPrincipalButton_Click(object sender, EventArgs e)
@@ -101,6 +110,25 @@ namespace grupo3.prototipos.CAI
         {
             AsignacionPasajerosHotelesForm asignacionPasajerosHotelesForm = new AsignacionPasajerosHotelesForm();
             asignacionPasajerosHotelesForm.Show();
+        }
+
+        private void VuelosListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EliminarVueloButton.Enabled = true;
+        }
+
+        private void CopiarNumeroItinerario_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(NumeroItinerarioLabel.Text);
+            MessageBox.Show("Número de itinerario copiado", "Copiado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void EliminarVueloButton_Click(object sender, EventArgs e)
+        {
+            VuelosListView.Items.Remove(VuelosListView.SelectedItems[0]);
+            MessageBox.Show("Se ha eliminado el itinerario", "Copiado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            EliminarVueloButton.Enabled = false;
         }
     }
 }

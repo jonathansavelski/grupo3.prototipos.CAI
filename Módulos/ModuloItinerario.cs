@@ -6,14 +6,14 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace grupo3.prototipos.CAI
+namespace grupo3.prototipos.CAI.Módulos
 {
     public class ModuloItinerario
     {
         public List<Itinerario> Itinerarios;
         public Itinerario ItinerarioActual;
 
-        ModuloItinerario() 
+        ModuloItinerario()
         {
             ItinerarioActual = new Itinerario();
         }

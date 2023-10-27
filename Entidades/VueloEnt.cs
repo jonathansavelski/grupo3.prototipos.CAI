@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace grupo3.prototipos.CAI.Entidades
 {
-    public class Vuelo
+    public class VueloEnt
     {
         public string CodigoVuelo { get; set; }
         public string CodigoOrigenVuelo { get; set; }
@@ -17,10 +17,7 @@ namespace grupo3.prototipos.CAI.Entidades
         public DateTime FechaArriboVuelo { get; set; }
         public string TiempoDeVueloVuelo { get; set; }
         public string AerolineaVuelo { get; set; }
-
         public List<TarifaVuelo> TarifaVuelo { get; set; }
-
-        //public List <ParadasVuelo> ParadasVuelo { get; set; }
     }
 }
 

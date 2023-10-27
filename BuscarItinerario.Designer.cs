@@ -38,16 +38,18 @@
             VerDetallesPreReservaBtn = new Button();
             groupBox1 = new GroupBox();
             RealizarPrereservaButton = new Button();
+            PagoHeader = new ColumnHeader();
+            RealziarReservaButton = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { fechaCreacionItinerarioHeader, CotizacionHeader, EstadoItinerarioHeader });
+            listView1.Columns.AddRange(new ColumnHeader[] { fechaCreacionItinerarioHeader, CotizacionHeader, EstadoItinerarioHeader, PagoHeader });
             listView1.Location = new Point(15, 68);
             listView1.Margin = new Padding(3, 4, 3, 4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(412, 70);
+            listView1.Size = new Size(513, 70);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -111,6 +113,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(RealziarReservaButton);
             groupBox1.Controls.Add(RealizarPrereservaButton);
             groupBox1.Controls.Add(listView1);
             groupBox1.Controls.Add(BuscarItinerarioBtn);
@@ -119,13 +122,13 @@
             groupBox1.Controls.Add(lblBuscarNumeroItinerario);
             groupBox1.Location = new Point(12, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(481, 205);
+            groupBox1.Size = new Size(616, 205);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             // 
             // RealizarPrereservaButton
             // 
-            RealizarPrereservaButton.Location = new Point(262, 149);
+            RealizarPrereservaButton.Location = new Point(179, 149);
             RealizarPrereservaButton.Margin = new Padding(3, 4, 3, 4);
             RealizarPrereservaButton.Name = "RealizarPrereservaButton";
             RealizarPrereservaButton.Size = new Size(165, 44);
@@ -134,11 +137,27 @@
             RealizarPrereservaButton.UseVisualStyleBackColor = true;
             RealizarPrereservaButton.Click += RealizarPrereservaButton_Click;
             // 
+            // PagoHeader
+            // 
+            PagoHeader.Text = "¿Está Pago?";
+            PagoHeader.TextAlign = HorizontalAlignment.Center;
+            PagoHeader.Width = 100;
+            // 
+            // RealziarReservaButton
+            // 
+            RealziarReservaButton.Location = new Point(365, 149);
+            RealziarReservaButton.Margin = new Padding(3, 4, 3, 4);
+            RealziarReservaButton.Name = "RealziarReservaButton";
+            RealziarReservaButton.Size = new Size(165, 44);
+            RealziarReservaButton.TabIndex = 44;
+            RealziarReservaButton.Text = "Realizar reserva";
+            RealziarReservaButton.UseVisualStyleBackColor = true;
+            // 
             // BusquedaItinerarioForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 226);
+            ClientSize = new Size(648, 226);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "BusquedaItinerarioForm";
@@ -161,5 +180,7 @@
         private GroupBox groupBox1;
         private ColumnHeader EstadoItinerarioHeader;
         private Button RealizarPrereservaButton;
+        private ColumnHeader PagoHeader;
+        private Button RealziarReservaButton;
     }
 }

@@ -9,12 +9,8 @@ namespace grupo3.prototipos.CAI.Entidades
     public class TarifaVuelo
     {
         public char ClaseVuelo { get; set; }
-        public string ItinerarioVuelo { get; set; }
         public char TipoDePasajeroVuelo { get; set; }
-        public string CodigoMonedaVuelo { get; set; }
-        public float BaseVuelo { get; set; }
-        public float ImpuestosVuelo { get; set; }
-        public float ComisionVuelo { get; set; }
+        public float PrecioVuelo { get; set; }
         public int DisponibilidadVuelo { get; set; }
     }
 }
