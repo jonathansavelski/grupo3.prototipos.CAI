@@ -10,8 +10,10 @@ namespace grupo3.prototipos.CAI.Archivos
 {
     public class ArchivoItinerarios
     {
-        public List<Itinerario> itinerarios;
-        public string jsonFilePath = "C:\\Users\\Jonathan\\Desktop\\UBA\\Ciclo Profesional\\2023\\Construcción de Aplicaciones Informáticas\\itinerarios.json";
+        private static List<Itinerario> itinerarios;
+        private static List<VueloEnt> vuelosSeleccionados;
+
+        private static string jsonFilePath = "C:\\Users\\Jonathan\\Desktop\\UBA\\Ciclo Profesional\\2023\\Construcción de Aplicaciones Informáticas\\itinerarios.json";
 
         public ArchivoItinerarios()
         {
@@ -36,7 +38,6 @@ namespace grupo3.prototipos.CAI.Archivos
             };
 
             itinerarios.Add(nuevoItinerario);
-            GuardarItinerariosEnJSON();
 
             return nuevoItinerario;
         }
@@ -50,7 +51,7 @@ namespace grupo3.prototipos.CAI.Archivos
             }
         }
 
-        private void GuardarItinerariosEnJSON()
+        public static void GuardarItinerariosEnJSON()
         {
             string json = JsonSerializer.Serialize(itinerarios);
             File.WriteAllText(jsonFilePath, json);

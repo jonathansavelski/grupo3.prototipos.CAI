@@ -1,3 +1,5 @@
+using grupo3.prototipos.CAI.Archivos;
+
 namespace grupo3.prototipos.CAI
 {
     internal static class Program
@@ -9,10 +11,17 @@ namespace grupo3.prototipos.CAI
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new MenuPrincipal());
+            try
+            {
+                // To customize application configuration such as set high DPI settings or default font,
+                // see https://aka.ms/applicationconfiguration.
+                ApplicationConfiguration.Initialize();
+                Application.Run(new MenuPrincipal());
+            }
+            finally
+            {
+                ArchivoItinerarios.GuardarItinerariosEnJSON();
+            }
         }
     }
 }

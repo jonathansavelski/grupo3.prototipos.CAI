@@ -244,6 +244,7 @@
             CotizarButton.TabIndex = 30;
             CotizarButton.Text = "Cotizar";
             CotizarButton.UseVisualStyleBackColor = true;
+            CotizarButton.Click += CotizarButton_Click;
             // 
             // EliminarHotelButton
             // 
@@ -324,9 +325,9 @@
             NumeroItinerarioLabel.AutoSize = true;
             NumeroItinerarioLabel.Location = new Point(241, 14);
             NumeroItinerarioLabel.Name = "NumeroItinerarioLabel";
-            NumeroItinerarioLabel.Size = new Size(127, 20);
+            NumeroItinerarioLabel.Size = new Size(63, 20);
             NumeroItinerarioLabel.TabIndex = 39;
-            NumeroItinerarioLabel.Text = "Número itinerario";
+            NumeroItinerarioLabel.Text = "Número";
             // 
             // lblNumeroItinerario
             // 
@@ -383,7 +384,7 @@
             // 
             // CopiarNumeroItinerario
             // 
-            CopiarNumeroItinerario.Location = new Point(323, 9);
+            CopiarNumeroItinerario.Location = new Point(320, 9);
             CopiarNumeroItinerario.Name = "CopiarNumeroItinerario";
             CopiarNumeroItinerario.Size = new Size(94, 29);
             CopiarNumeroItinerario.TabIndex = 44;

@@ -122,7 +122,7 @@
             groupBox1.Controls.Add(lblBuscarNumeroItinerario);
             groupBox1.Location = new Point(12, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(616, 205);
+            groupBox1.Size = new Size(557, 205);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             // 
@@ -157,7 +157,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(648, 226);
+            ClientSize = new Size(592, 226);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "BusquedaItinerarioForm";

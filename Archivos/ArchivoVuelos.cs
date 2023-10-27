@@ -31,7 +31,7 @@ namespace grupo3.prototipos.CAI.Archivos
             return VuelosDisponibles.ToList();
         }
 
-        
+
         public void BuscarVuelos(string ciudadOrigen, string ciudadDestino, DateTime fechaDesde, DateTime fechaHasta, string tipoPasajero, ListView vuelosListView)
         {
             char TipoPasajeroChar;
@@ -53,7 +53,7 @@ namespace grupo3.prototipos.CAI.Archivos
             List<VueloEnt> VuelosEncontrados = VuelosDisponibles.FindAll(vuelo => (vuelo.CiudadOrigenVuelo == ciudadOrigen
                 && vuelo.CiudadDestinoVuelo == ciudadDestino
                 && (vuelo.FechaSalidaVuelo > fechaDesde && vuelo.FechaSalidaVuelo < fechaHasta))); //&& vuelo.TarifaVuelo[].TipoDePasajeroVuelo.ToString() == TipoPasajeroChar.ToString()
-            
+
             if (VuelosEncontrados.Count == 0)
             {
                 MessageBox.Show("No se encontraron vuelos con los filtros aplicados", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -78,7 +78,7 @@ namespace grupo3.prototipos.CAI.Archivos
 
                             item.SubItems.Add(vuelo.TarifaVuelo[i].ClaseVuelo.ToString());
                             item.SubItems.Add(vuelo.TarifaVuelo[i].TipoDePasajeroVuelo.ToString());
-                            item.SubItems.Add(vuelo.TarifaVuelo[i].PrecioVuelo.ToString("0.00"));
+                            item.SubItems.Add(vuelo.TarifaVuelo[i].PrecioVuelo.ToString());
                             item.SubItems.Add(vuelo.TarifaVuelo[i].DisponibilidadVuelo.ToString());
                             item.Tag = vuelo; // Tag = etiqueta. La propiedad Tag es de tipo object. En esta propiedad puedo guardar lo que quiera. Esto sirve para que podamos meter un dato en cada fila (que no se ve) y me sirve para identificarla en el resto del sistema. 
 

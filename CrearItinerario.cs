@@ -49,7 +49,7 @@ namespace grupo3.prototipos.CAI
             Itinerario nuevoItinerario = archivoItinerarios.GenerarItinerarioUnico();
 
             NumeroItinerarioLabel.Text = Convert.ToString(nuevoItinerario.NumeroItinerario);
-            //Estado inicial
+
             ValorDeLaCotizacionLabel.Text = "";
             VuelosListView.Enabled = false;
             HotelesListView.Enabled = false;
@@ -59,15 +59,6 @@ namespace grupo3.prototipos.CAI
             //CargaPasajerosGroupBox.Enabled = false;
 
             //int numeroDeItinerario = CrearNumeroDeItinerario();
-        }
-
-        //Creación de número de itinerario
-        public int CrearNumeroDeItinerario()
-        {
-            Random numeroRandom = new Random();
-            int numeroDeItinerario = numeroRandom.Next();
-
-            return numeroDeItinerario;
         }
 
         //Carga vuelo seleccionado
@@ -87,10 +78,11 @@ namespace grupo3.prototipos.CAI
             item.SubItems.Add(vuelo.AerolineaVuelo);
             item.SubItems.Add(vuelo.TarifaVuelo[0].ClaseVuelo.ToString());
             item.SubItems.Add(vuelo.TarifaVuelo[0].TipoDePasajeroVuelo.ToString());
-            item.SubItems.Add(vuelo.TarifaVuelo[0].PrecioVuelo.ToString());
+            item.SubItems.Add(vuelo.TarifaVuelo[0].PrecioVuelo.ToString("N2")); //separa miles y dos decimales
             item.SubItems.Add(vuelo.TarifaVuelo[0].DisponibilidadVuelo.ToString());
 
             VuelosListView.Items.Add(item);
+            CotizarButton.Enabled = true;
         }
 
         private void MenuPrincipalButton_Click(object sender, EventArgs e)
@@ -126,9 +118,35 @@ namespace grupo3.prototipos.CAI
         private void EliminarVueloButton_Click(object sender, EventArgs e)
         {
             VuelosListView.Items.Remove(VuelosListView.SelectedItems[0]);
-            MessageBox.Show("Se ha eliminado el itinerario", "Copiado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se ha eliminado el vuelo seleccionado.", "Copiado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             EliminarVueloButton.Enabled = false;
+            EsconderCotizarButton();
+        }
+
+        private void EsconderCotizarButton()
+        {
+            if (VuelosListView.Items.Count == 0 && HotelesListView.Items.Count == 0)
+            {
+                CotizarButton.Enabled = false;
+            }
+        }
+
+        private void CotizarButton_Click(object sender, EventArgs e)
+        {
+            double suma = 0;
+
+            // Itera a través de los elementos del ListView y suma los precios
+            foreach (ListViewItem item in VuelosListView.Items)
+            {
+                // Convierte el valor del subítem a double y suma
+                if (double.TryParse(item.SubItems[9].Text, out double valor))
+                {
+                    suma += valor;
+                }
+            }
+
+            ValorDeLaCotizacionLabel.Text = "El valor de la cotización es de $" + suma.ToString("N2");
         }
     }
 }
