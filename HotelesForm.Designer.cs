@@ -436,8 +436,8 @@
             grpFiltrosHotel.Controls.Add(lblDestinoHotel);
             grpFiltrosHotel.Controls.Add(txtDestinoHotel);
             grpFiltrosHotel.Controls.Add(lblOrigenHotel);
-            grpFiltrosHotel.Controls.Add(txtOrigenHotel);
             grpFiltrosHotel.Controls.Add(BuscarHotelButton);
+            grpFiltrosHotel.Controls.Add(txtOrigenHotel);
             grpFiltrosHotel.Controls.Add(lblRangoHotel);
             grpFiltrosHotel.Controls.Add(dtpInicioHotel);
             grpFiltrosHotel.Controls.Add(lblTituloHoteles);
@@ -491,7 +491,7 @@
             // 
             // BuscarHotelButton
             // 
-            BuscarHotelButton.Location = new Point(614, 64);
+            BuscarHotelButton.Location = new Point(626, 64);
             BuscarHotelButton.Name = "BuscarHotelButton";
             BuscarHotelButton.Size = new Size(155, 39);
             BuscarHotelButton.TabIndex = 21;

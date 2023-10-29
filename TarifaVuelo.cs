@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace grupo3.prototipos.CAI.Entidades
+namespace grupo3.prototipos.CAI
 {
     public class TarifaVuelo
     {

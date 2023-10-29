@@ -4,27 +4,27 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using grupo3.prototipos.CAI.Archivos;
 using grupo3.prototipos.CAI.Entidades;
+using grupo3.prototipos.CAI.Models;
 
 namespace grupo3.prototipos.CAI
 {
     public partial class CrearItinerario : Form
     {
-        private ArchivoItinerarios archivoItinerarios;
+        private ItinerariosModel modeloItinerarios;
         public VueloEnt VueloSeleccionado { get; set; }
-        public static CrearItinerario Instancia { get; private set; }
+        public static CrearItinerario Instancia { get; set; }
 
         public CrearItinerario()
         {
             InitializeComponent();
 
-            archivoItinerarios = new ArchivoItinerarios();
+            modeloItinerarios = new ItinerariosModel();
 
             Instancia = this; // Creo la instancia
         }
@@ -41,12 +41,9 @@ namespace grupo3.prototipos.CAI
             hotelesForm.Show();
         }
 
-
-
-        //Carga del form
         public void CrearItinerario_Load(object sender, EventArgs e)
         {
-            Itinerario nuevoItinerario = archivoItinerarios.GenerarItinerarioUnico();
+            Itinerario nuevoItinerario = modeloItinerarios.GenerarItinerarioUnico();
 
             NumeroItinerarioLabel.Text = Convert.ToString(nuevoItinerario.NumeroItinerario);
 
@@ -56,9 +53,6 @@ namespace grupo3.prototipos.CAI
             EliminarVueloButton.Enabled = false;
             EliminarHotelButton.Enabled = false;
             CotizarButton.Enabled = false;
-            //CargaPasajerosGroupBox.Enabled = false;
-
-            //int numeroDeItinerario = CrearNumeroDeItinerario();
         }
 
         //Carga vuelo seleccionado
@@ -84,6 +78,7 @@ namespace grupo3.prototipos.CAI
             VuelosListView.Items.Add(item);
             CotizarButton.Enabled = true;
         }
+
 
         private void MenuPrincipalButton_Click(object sender, EventArgs e)
         {
@@ -122,6 +117,7 @@ namespace grupo3.prototipos.CAI
 
             EliminarVueloButton.Enabled = false;
             EsconderCotizarButton();
+            ValorDeLaCotizacionLabel.Text = "";
         }
 
         private void EsconderCotizarButton()

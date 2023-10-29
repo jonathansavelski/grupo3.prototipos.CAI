@@ -1,4 +1,5 @@
 using grupo3.prototipos.CAI.Archivos;
+using grupo3.prototipos.CAI.Models;
 
 namespace grupo3.prototipos.CAI
 {
@@ -20,7 +21,7 @@ namespace grupo3.prototipos.CAI
             }
             finally
             {
-                ArchivoItinerarios.GuardarItinerariosEnJSON();
+                ItinerariosModel.GuardarItinerariosEnJSON();
             }
         }
     }

@@ -4,27 +4,24 @@ using System.Globalization;
 using System.Text.Unicode;
 using grupo3.prototipos.CAI.Archivos;
 using grupo3.prototipos.CAI.Entidades;
+using grupo3.prototipos.CAI.Models;
 
 namespace grupo3.prototipos.CAI
 {
     public partial class VuelosForm : Form
     {
-        //VuelosModel modeloVuelos;
-        ArchivoVuelos archivoVuelos;
-
+        VuelosModel modeloVuelos;
+        ItinerariosModel modeloItinerarios;
 
         public VuelosForm()
         {
             InitializeComponent();
         }
 
-        public List<VueloEnt> VuelosDisponibles;
-
         private void VuelosForm_Load(object sender, EventArgs e)
         {
 
-            //modeloVuelos = new VuelosModel();
-            archivoVuelos = new ArchivoVuelos();
+            modeloVuelos = new VuelosModel();
             VuelosDisponiblesGroupBox.Enabled = false;
         }
 
@@ -38,13 +35,11 @@ namespace grupo3.prototipos.CAI
 
             string errores = "";
 
-            archivoVuelos = new ArchivoVuelos();
-
-            errores += archivoVuelos.ValidarVacio(ciudadOrigenVuelo, "Lugar de origen");
-            errores += archivoVuelos.ValidarVacio(ciudadDestinoVuelo, "Lugar de destino");
-            errores += archivoVuelos.ValidarFechaDesde(fechaDesde);
-            errores += archivoVuelos.ValidarFechaHasta(fechaDesde, fechaHasta);
-            errores += archivoVuelos.ValidarVacio(tipoPasajero, "Tipo de pasajero");
+            errores += modeloVuelos.ValidarVacio(ciudadOrigenVuelo, "Lugar de origen");
+            errores += modeloVuelos.ValidarVacio(ciudadDestinoVuelo, "Lugar de destino");
+            errores += modeloVuelos.ValidarFechaDesde(fechaDesde);
+            errores += modeloVuelos.ValidarFechaHasta(fechaDesde, fechaHasta);
+            errores += modeloVuelos.ValidarVacio(tipoPasajero, "Tipo de pasajero");
 
             if (!string.IsNullOrEmpty(errores))
             {
@@ -56,14 +51,14 @@ namespace grupo3.prototipos.CAI
                 AñadirAlItinerarioVueloButton.Enabled = false;
 
                 VuelosListView.Items.Clear();
-                archivoVuelos.BuscarVuelos(ciudadOrigenVuelo, ciudadDestinoVuelo, fechaDesde, fechaHasta, tipoPasajero, VuelosListView);
+                modeloVuelos.BuscarVuelos(ciudadOrigenVuelo, ciudadDestinoVuelo, fechaDesde, fechaHasta, tipoPasajero, VuelosListView);
             }
 
         }
 
-        //Cuando se selecciona un item del List View
         private void VuelosListView_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Cuando se selecciona un item del List View
             AñadirAlItinerarioVueloButton.Enabled = true;
         }
 
@@ -107,8 +102,7 @@ namespace grupo3.prototipos.CAI
                         }
                     }
                 };
-
-
+                
                 // Verifica si ya existe una instancia de CrearItinerario
                 if (CrearItinerario.Instancia == null)
                 {
@@ -122,10 +116,8 @@ namespace grupo3.prototipos.CAI
                 CrearItinerario.Instancia.VuelosListView.Enabled = true;
                 CrearItinerario.Instancia.CargarVueloSeleccionado(vueloSeleccionado);
 
-                // Cierra el formulario actual
-                this.Close();
-
                 MessageBox.Show($"Se ha añadido correctamente al itinerario.", "Itinerario añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
 
         }
